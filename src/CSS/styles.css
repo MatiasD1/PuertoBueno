@@ -36,7 +36,7 @@
 }
 
 .fotoCosta {
-  opacity: 90%;
+  opacity: 70%;
   position: absolute;
   top: 0;
   left: 0;
@@ -46,9 +46,23 @@
 }
 
 .textoContacto {
-  align-self: center;
+  display: flex; /* Activar flexbox */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
   z-index: 1;
-  /* Padding eliminado para alinear el texto correctamente */
+  flex-direction: column;
+  padding-left: 200px;
+}
+.textoContacto h3 {
+  color: wheat;
+  font-size: 30px;
+  font-family: "Libre Baskerville";
+  font-style: italic;
+  white-space: nowrap;
+  letter-spacing: 1.5px; /* Espaciado entre letras */
+  word-spacing: 4px; /* Espaciado entre palabras */
+  line-height: 1.5; /* Altura de línea (interlineado) */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .contact-form {
@@ -65,63 +79,87 @@
   margin-right: 48px;
   z-index: 1;
 }
-
-h2 {
+.contact-form h2 {
   color: wheat;
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: "Libre Baskerville";
   font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 label {
   display: block;
   margin-bottom: 5px;
   color: wheat;
+  text-align: start;
+  padding-left: 20px; /* Para alinear los label con el comienzo de los inputs */
 }
 
-input[type=text],
-input[type=date],
-input[type=number],
-input[type=email] {
+input[type=text], input[type=date], input[type=number], input[type=email] {
   background-color: rgba(0, 0, 0, 0.3490196078);
   color: wheat;
   width: 90%;
   padding: 6px; /* Reducir el relleno */
-  margin-bottom: 8px; /* Reducir el margen inferior */
+  margin-bottom: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  height: 30px; /* Reducir la altura */
+  height: 30px;
 }
 
 textarea {
   background-color: rgba(0, 0, 0, 0.3490196078);
   color: wheat;
   width: 90%;
-  padding: 6px; /* Reducir el relleno */
-  margin-bottom: 8px; /* Reducir el margen inferior */
+  padding: 6px;
+  margin-bottom: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  height: 100px; /* Reducir la altura */
+  height: 100px;
 }
 
+/* Contenedor para las fechas de entrada y salida */
 .fechasContacto {
   display: flex;
-  width: auto;
-  justify-content: space-around;
-  margin-bottom: 8px; /* Agregar margen inferior para separarlos de los demás inputs */
+  justify-content: space-between; /* Distribuye el espacio entre los grupos de fecha */
+  width: 90%; /* Asegura que el ancho del contenedor de fechas se alinee con los demás inputs */
+  margin-bottom: 8px;
+  margin-left: 19px;
+  gap: 20px; /* Espacio entre los grupos de fecha */
+  align-items: center; /* Centra verticalmente los elementos */
 }
 
-#fecha-entrada {
-  width: 150px;
+/* Ajustes específicos para los contenedores de fecha */
+.fechasContacto .fecha1,
+.fechasContacto .fecha2 {
+  display: flex;
+  flex-direction: column; /* Coloca el label sobre el input */
+  align-items: flex-start; /* Alinea los elementos al principio del contenedor */
+  width: 50%; /* Ocupa la mitad del espacio disponible para centrar horizontalmente */
 }
 
-#fecha-salida {
-  width: 150px;
+/* Ajuste específico para los label de fechas */
+.fechasContacto label {
+  margin-bottom: 5px; /* Espacio entre el label y el input */
+  color: wheat;
+  padding-left: 0; /* Quita cualquier padding añadido anteriormente */
 }
 
+.fechasContacto input {
+  width: 100%; /* Asegura que los inputs ocupen todo el ancho del contenedor de fecha */
+  background-color: rgba(0, 0, 0, 0.3490196078);
+  color: wheat;
+  padding: 6px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 30px;
+}
+
+/* Estilos para el botón de submit */
 button[type=submit] {
   background-color: #B7472A;
   color: white;
@@ -130,7 +168,6 @@ button[type=submit] {
   border-radius: 4px;
   cursor: pointer;
 }
-
 button[type=submit]:hover {
   background-color: #bb3614;
 }
@@ -141,10 +178,9 @@ button[type=submit]:hover {
   height: auto;
   overflow: hidden;
 }
-
 .carrusel2 .carousel-item1 img {
-  height: 450px; /* Ajusta este valor según la altura deseada */
-  object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor */
+  height: 450px;
+  object-fit: cover;
 }
 
 .departamentos {
@@ -169,7 +205,7 @@ button[type=submit]:hover {
 .item {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Dos columnas, una para la foto y otra para el texto */
-  align-items: center; /* Centra verticalmente el contenido */
+  align-items: center;
   height: 450px; /* Altura de cada elemento */
 }
 
@@ -197,13 +233,13 @@ button[type=submit]:hover {
 .fotosDeptos {
   position: relative;
   width: 100%; /* Ajusta el ancho del contenedor de la foto al 100% */
-  height: 100%; /* Ajusta la altura del contenedor de la foto al 100% */
+  height: 100%;
   overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del contenedor */
   background-color: black;
 }
 
 .fotoSimbolo {
-  position: absolute; /* Establece la posición absoluta para que la imagen se pueda mover libremente */
+  position: absolute;
   top: 50%; /* Coloca la parte superior de la imagen en el centro vertical */
   left: 50%; /* Coloca la parte izquierda de la imagen en el centro horizontal */
   transform: translate(-50%, -50%) scale(0.1); /* Centra la imagen horizontal y verticalmente y la escala al 50% del tamaño original */
@@ -213,7 +249,7 @@ button[type=submit]:hover {
 .fotoDepto {
   width: 100%; /* La imagen ocupa todo el ancho del contenedor de la foto */
   height: 100%; /* La imagen ocupa todo el alto del contenedor de la foto */
-  object-fit: cover; /* La imagen se ajusta manteniendo la relación de aspecto y cubriendo el contenedor */
+  object-fit: cover;
   transition: 0.3s;
 }
 
@@ -230,6 +266,7 @@ button[type=submit]:hover {
 .EnlaceContacto {
   position: relative;
   text-align: center;
+  background-color: black;
 }
 
 .contenedorEnlaceContacto {
@@ -237,9 +274,27 @@ button[type=submit]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.contenedorEnlaceContacto h3 {
+  font-family: "Libre Baskerville";
+  position: absolute;
+  top: 20%;
+  color: wheat;
+  font-size: 42px;
+  z-index: 1;
+}
+
+.FraseEnlaceContacto {
+  position: absolute;
+  color: white;
+  top: 36%;
+  font-size: 25px;
+  z-index: 1;
 }
 
 .fotoEnlaceContacto {
+  opacity: 50%;
   display: block;
   width: 100%; /* La imagen ocupará todo el ancho del contenedor */
   height: 500px; /* Ajusta la altura según sea necesario */
@@ -248,19 +303,18 @@ button[type=submit]:hover {
 
 .textoEnlaceContacto {
   position: absolute;
-  top: 60%;
+  top: 72%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(245, 222, 179); /* Cambia el color del texto si es necesario */
-  font-size: 5rem; /* Ajusta el tamaño del texto según sea necesario */
+  font-size: 4.3rem; /* Ajusta el tamaño del texto según sea necesario */
   font-family: "Libre Baskerville";
   background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejorar la legibilidad */
-  padding: 0.5rem; /* Espaciado interno para el texto */
+  padding: 18px 25px 18px 25px; /* Espaciado interno para el texto */
   border: 2px solid rgb(245, 222, 179);
   text-decoration: none;
   transition: 0.3s;
 }
-
 .textoEnlaceContacto:hover {
   color: rgb(211, 211, 211);
   border: 2px solid rgb(211, 211, 211);
@@ -268,17 +322,11 @@ button[type=submit]:hover {
   cursor: pointer;
 }
 
-.FraseEnlaceContacto {
-  position: absolute;
-  color: white;
-  top: 25%;
-}
-
 footer {
   padding-top: 20px;
   width: 100%;
-  height: 200px;
-  background-color: #f1ad6d;
+  height: 225px;
+  background-color: #af0e0e;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
@@ -292,12 +340,13 @@ footer {
   flex-direction: column;
   font-family: "Khula", sans-serif;
 }
-
 .columnaFooter h3 {
   margin-bottom: 10px; /* Esto elimina el margen inferior predeterminado */
   font-size: 25px;
+  color: wheat;
+  font-family: "Libre Baskerville";
+  font-style: italic;
 }
-
 .columnaFooter p {
   font-size: 14px;
   max-width: 150px;
@@ -309,6 +358,10 @@ footer {
 .accesoNav {
   color: white;
   text-decoration: none;
+  transition: text-shadow 0.3s ease;
+}
+.accesoNav:hover {
+  text-shadow: 2px 2px 5px rgb(255, 255, 255);
 }
 
 .logosRedes {
@@ -320,6 +373,26 @@ footer {
 .logoRed img { /*faltaba el img para influir en el tamaño de las img*/
   width: 50px;
   height: 50px;
+}
+
+.footer-bottom {
+  grid-column: 1/-1; /* Se extiende a lo largo de todas las columnas del grid */
+  text-align: center;
+  margin-top: 20px; /* Añade espacio antes de la nueva sección */
+}
+
+.footer-line {
+  width: 90%; /* Anchura de la línea */
+  height: 1px; /* Grosor de la línea */
+  background-color: white; /* Color de la línea */
+  margin: 0 auto; /* Centra la línea horizontalmente */
+}
+
+.copyright {
+  margin-top: 10px; /* Espacio entre la línea y el texto de copyright */
+  color: white; /* Color del texto de copyright */
+  font-size: 14px; /* Tamaño del texto de copyright */
+  font-family: "Khula", sans-serif; /* Mantiene la coherencia de la fuente */
 }
 
 .frase {
@@ -401,8 +474,7 @@ footer {
   z-index: 1200;
 }
 
-/* Establece las propiedades para cada punto de navegación */
-.dot {
+.dot { /* Establece las propiedades para cada punto de navegación */
   width: 10px;
   height: 10px;
   background-color: #000000;
@@ -410,8 +482,6 @@ footer {
   margin: 0 5px;
   cursor: pointer;
 }
-
-/* Establece las propiedades para el punto de navegación activo */
 .dot.active {
   background-color: #FFFFFF; /* Cambiado a blanco para mayor visibilidad */
 }
@@ -431,22 +501,20 @@ footer {
 
 .nav-link {
   color: #FFF2E5;
-  margin-top: 1rem; /* Cambiado a unidad de medida relativa */
+  margin-top: 1rem;
   /*margin-right: 30px; Ajusta este valor según sea necesario para agregar espacio entre los enlaces */
-  border-bottom: 2px solid transparent; /* Subrayado transparente por defecto */
+  border-bottom: 2px solid transparent; /* Subrayado transparente*/
   padding: 20px 20px; /* Ajusta el relleno del botón */
-  font-size: 16px; /* Ajusta el tamaño del texto del botón */
+  font-size: 18px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-family: "Libre Baskerville";
 }
-
 .nav-link:hover {
   color: white;
   border-bottom-color: rgb(255, 255, 255); /* Cambia el color del subrayado al pasar el cursor */
   transition: border-bottom-color 0.5s ease; /* Agregado para una transición suave del subrayado */
   text-shadow: 2px 2px 4px rgba(245, 240, 240, 0.26);
 }
-
 .nav-link:visited {
   color: rgb(255, 222, 203);
 }
@@ -470,12 +538,11 @@ footer {
   display: flex;
   align-items: center;
 }
-
 .NavBar h2 {
   font-size: 40px;
   position: absolute; /* Cambiado a relativo para que no se pierda el flujo normal del documento */
   font-family: "Dancing Script", cursive;
-  color: white;
+  color: wheat;
   margin-left: 40px;
   margin-top: 105px;
   z-index: 1200; /* Asegura que esté por encima del NavBar */
@@ -489,7 +556,6 @@ footer {
   width: 100%;
   z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
 }
-
 .fixed .nav {
   background-color: rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(to bottom, rgba(61, 61, 61, 0.5), transparent);
@@ -500,7 +566,6 @@ footer {
   height: 600px;
   margin-top: 45px;
 }
-
 .servicios h1 {
   color: white;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -528,23 +593,18 @@ footer {
   height: 90px;
   transition: transform 0.3s;
 }
-
 .icono img {
   width: 65px;
 }
-
 .icono:hover {
   transform: scale(1.1);
 }
-
 .icono:hover img {
   transform: scale(1.1);
 }
-
 .icono:hover p {
   transform: scale(1); /* Aplica la escala inversa al texto para compensar la escala del contenedor */
 }
-
 .icono p {
   padding-top: 5px;
   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
@@ -590,7 +650,7 @@ footer {
   transition: opacity 0.5s;
   color: wheat;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  left: 315px;
+  left: 295px;
   white-space: pre; /* Mantiene los espacios en blanco tal como están */
 }
 
@@ -640,7 +700,6 @@ footer {
   background-size: cover;
   background-position: center;
 }
-
 .carruselUbicacion .carousel {
   padding-top: 150px;
   padding-left: 70px;

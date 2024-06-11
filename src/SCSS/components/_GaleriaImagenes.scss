@@ -65,17 +65,15 @@
     z-index: 1200;
 }
 
-/* Establece las propiedades para cada punto de navegación */
-.dot {
+.dot {/* Establece las propiedades para cada punto de navegación */
     width: 10px;
     height: 10px;
     background-color: #000000;
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
-}
-
-/* Establece las propiedades para el punto de navegación activo */
-.dot.active {
-    background-color: #FFFFFF; /* Cambiado a blanco para mayor visibilidad */
+    
+    &.active {
+        background-color: #FFFFFF;/* Cambiado a blanco para mayor visibilidad */
+    }
 }

@@ -4,7 +4,8 @@ const EnlaceContacto = ({ imageSrc }) => {
     return (
         <div className='EnlaceContacto'>
             <div className="contenedorEnlaceContacto">
-                <p className='FraseEnlaceContacto'>lorem ipsum lorem ipsum lorem <br /> ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                <h3 className='TituloEnlaceContacto'>Consultá disponibilidad </h3>
+                <p className='FraseEnlaceContacto'>Enviá tu consulta detallando fecha deseada de viaje para enviarte nuestras tarifas. </p>
                 <img src={imageSrc} className="fotoEnlaceContacto" alt="Enlace Contacto" />
                 <a href="/contacto" className="textoEnlaceContacto">Contacto</a>
             </div>

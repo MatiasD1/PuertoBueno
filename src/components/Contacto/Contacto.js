@@ -7,7 +7,7 @@ const Contacto = () => {
                 <img src={fotoCosta} className="fotoCosta" alt="Costa marplatense" />
 
                 <div className="textoContacto">
-                    <p>lorem ipsum lorem ipsum lorem ipsum</p>
+                    <h3>"Tu hogar en la costa marplatense, <br/> a solo unos pasos del mar."</h3>
                 </div>
                 
                 <div className="contact-form">
@@ -17,11 +17,11 @@ const Contacto = () => {
                         <input type="text" id="nombre" name="nombre" required />
                         <div className="fechasContacto">
                             <div className="fecha1">
-                                <label htmlFor="fecha-entrada">Fecha de Entrada:</label>
+                                <label className="fechaEntrada">Fecha de Entrada:</label>
                                 <input type="date" id="fecha-entrada" name="fecha-entrada" required />
                             </div>                          
                             <div className="fecha2">
-                                <label htmlFor="fecha-salida">Fecha de Salida:</label>
+                                <label className="fechaSalida">Fecha de Salida:</label>
                                 <input type="date" id="fecha-salida" name="fecha-salida" required />       
                             </div>
 

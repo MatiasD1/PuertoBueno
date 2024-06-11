@@ -1,15 +1,15 @@
 .contacto {
     display: flex;
     width: 100%;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-between;
     height: 100vh;
     padding: 20px;
     background-color: black;
-}
+}  
 
 .fotoCosta {
-    opacity: 90%;
+    opacity: 70%;
     position: absolute;
     top: 0;
     left: 0;
@@ -19,80 +19,124 @@
 }
 
 .textoContacto {
-    align-self: center;
+    display: flex; /* Activar flexbox */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
     z-index: 1;
-    /* Padding eliminado para alinear el texto correctamente */
+    flex-direction: column;
+    padding-left: 200px;
+
+    h3 {
+        color: wheat;
+        font-size: 30px;
+        font-family: 'Libre Baskerville';
+        font-style: italic;
+        white-space: nowrap;
+        letter-spacing: 1.5px; /* Espaciado entre letras */
+        word-spacing: 4px; /* Espaciado entre palabras */
+        line-height: 1.5; /* Altura de línea (interlineado) */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
 }
 
 .contact-form {
     margin-top: 63px;
     width: 400px; /* Ancho ajustado para entrar en el espacio */
-    max-width: 100%; 
+    max-width: 100%;
     max-height: 550px;
     height: auto;
     background-color: #00000059;
     padding: 10px;
     border-radius: 5px;
-    font-family:'Khula', sans-serif;
+    font-family: 'Khula', sans-serif;
     font-size: 16px;
     margin-right: 48px;
     z-index: 1;
-}
 
-h2 {
-    color: wheat;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: 'Libre Baskerville';
-    font-style: italic;
+    h2 {
+        color: wheat;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: 'Libre Baskerville';
+        font-style: italic;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
 }
 
 label {
     display: block;
     margin-bottom: 5px;
     color: wheat;
+    text-align: start;
+    padding-left: 20px; /* Para alinear los label con el comienzo de los inputs */
 }
 
-input[type="text"],
-input[type="date"],
-input[type="number"],
-input[type="email"]
-{
-    background-color: #00000059;
-    color: wheat;
-    width: 90%;
-    padding: 6px; /* Reducir el relleno */
-    margin-bottom: 8px; /* Reducir el margen inferior */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    height: 30px; /* Reducir la altura */
+input {
+    &[type="text"], &[type="date"], &[type="number"], &[type="email"] {
+        background-color: #00000059;
+        color: wheat;
+        width: 90%;
+        padding: 6px; /* Reducir el relleno */
+        margin-bottom: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 30px;
+    }
 }
+
 textarea {
     background-color: #00000059;
     color: wheat;
     width: 90%;
-    padding: 6px; /* Reducir el relleno */
-    margin-bottom: 8px; /* Reducir el margen inferior */
+    padding: 6px;
+    margin-bottom: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    height: 100px; /* Reducir la altura */
+    height: 100px;
 }
+
+/* Contenedor para las fechas de entrada y salida */
 .fechasContacto {
     display: flex;
-    width: auto;
-    justify-content: space-around;
-    margin-bottom: 8px; /* Agregar margen inferior para separarlos de los demás inputs */
+    justify-content: space-between; /* Distribuye el espacio entre los grupos de fecha */
+    width: 90%; /* Asegura que el ancho del contenedor de fechas se alinee con los demás inputs */
+    margin-bottom: 8px;
+    margin-left: 19px;
+    gap: 20px; /* Espacio entre los grupos de fecha */
+    align-items: center; /* Centra verticalmente los elementos */
 }
 
-#fecha-entrada{
-    width: 150px;
-}
-#fecha-salida{
-    width: 150px;
+/* Ajustes específicos para los contenedores de fecha */
+.fechasContacto .fecha1,
+.fechasContacto .fecha2 {
+    display: flex;
+    flex-direction: column; /* Coloca el label sobre el input */
+    align-items: flex-start; /* Alinea los elementos al principio del contenedor */
+    width: 50%; /* Ocupa la mitad del espacio disponible para centrar horizontalmente */
 }
 
+/* Ajuste específico para los label de fechas */
+.fechasContacto label {
+    margin-bottom: 5px; /* Espacio entre el label y el input */
+    color: wheat;
+    padding-left: 0; /* Quita cualquier padding añadido anteriormente */
+}
+
+.fechasContacto input {
+    width: 100%; /* Asegura que los inputs ocupen todo el ancho del contenedor de fecha */
+    background-color: #00000059;
+    color: wheat;
+    padding: 6px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+/* Estilos para el botón de submit */
 button[type="submit"] {
     background-color: #B7472A;
     color: white;
@@ -100,8 +144,9 @@ button[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+
+    &:hover {
+        background-color: #bb3614;
+    }
 }
 
-button[type="submit"]:hover {
-    background-color: #bb3614;
-}

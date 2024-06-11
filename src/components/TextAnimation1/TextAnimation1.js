@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 const TextAnimation = () => {
   const words = [
-    "    disfrute.",
-    "mar.",
-    "    confort.",
-    "     descanso.",
-    "     bienestar."
+    "       descanso",
+    "      confort",
+    "       bienestar",
+    "mar"
   ];
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);

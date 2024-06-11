@@ -30,7 +30,11 @@ function Footer() {
                     </a>
                 </div>
                 
-            </div>        
+            </div>  
+            <div class="footer-bottom">
+                <div class="footer-line"></div>
+                <p class="copyright">&copy; 2024 Matías Durand. Todos los derechos reservados.</p>
+            </div>      
         </footer>
     );
 }

@@ -1,6 +1,7 @@
 .EnlaceContacto {
     position: relative;
     text-align: center;
+    background-color: black;
 }
 
 .contenedorEnlaceContacto {
@@ -8,9 +9,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    flex-direction: column;
 
+    h3{
+        font-family: 'Libre Baskerville';
+        position: absolute;
+        top: 20%;
+        color: wheat;
+        font-size: 42px;
+        z-index: 1;
+    }
+}
+.FraseEnlaceContacto{
+    position: absolute;
+    color: white;
+    top: 36%;
+    font-size: 25px;
+    z-index: 1;
+}
 .fotoEnlaceContacto {
+    opacity: 50%;
     display: block;
     width: 100%; /* La imagen ocupará todo el ancho del contenedor */
     height: 500px; /* Ajusta la altura según sea necesario */
@@ -19,28 +37,23 @@
 
 .textoEnlaceContacto {
     position: absolute;
-    top: 60%;
+    top: 72%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(245, 222, 179); /* Cambia el color del texto si es necesario */
-    font-size: 5rem; /* Ajusta el tamaño del texto según sea necesario */
+    font-size: 4.3rem; /* Ajusta el tamaño del texto según sea necesario */
     font-family: 'Libre Baskerville';
     background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejorar la legibilidad */
-    padding: 0.5rem; /* Espaciado interno para el texto */
+    padding: 18px 25px 18px 25px; /* Espaciado interno para el texto */
     border: 2px solid rgb(245, 222, 179);
     text-decoration: none;
     transition: 0.3s;
+
+    &:hover {
+        color: rgb(211, 211, 211);
+        border: 2px solid rgb(211, 211, 211);
+        background: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    }
 }
 
-.textoEnlaceContacto:hover{
-    color: rgb(211, 211, 211);
-    border: 2px solid rgb(211, 211, 211);;
-    background: rgba(0, 0, 0, 0.6);
-    cursor: pointer;
-}
-
-.FraseEnlaceContacto{
-    position: absolute;
-    color: white;
-    top: 25%;
-}

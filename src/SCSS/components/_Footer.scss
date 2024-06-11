@@ -1,43 +1,71 @@
-footer{
+footer {
     padding-top: 20px;
     width: 100%;
-    height: 200px;
-    background-color: #f1ad6d;
+    height: 225px;
+    background-color: #af0e0e;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: start;
     justify-content: center;
     margin-bottom: 0;
-    margin-top: auto; /* Empuja el footer hacia abajo hasta el final de la página */
-    
-} 
-.columnaFooter{
+    margin-top: auto;/* Empuja el footer hacia abajo hasta el final de la página */
+}
+  
+.columnaFooter {
     display: flex;
     flex-direction: column;
-    font-family:'Khula', sans-serif;;
-}
-.columnaFooter h3 {
-    margin-bottom: 10px; /* Esto elimina el margen inferior predeterminado */
-    font-size: 25px;
-}  
-.columnaFooter p{
-    font-size: 14px;
-    max-width: 150px;
-    margin: auto;
-    color: white;
-    text-decoration: none;
+    font-family: 'Khula', sans-serif;
+
+    h3 {
+        margin-bottom: 10px;/* Esto elimina el margen inferior predeterminado */
+        font-size: 25px;
+        color: wheat;
+        font-family: 'Libre Baskerville';
+    font-style: italic;
+    }
+    p {
+        font-size: 14px;
+        max-width: 150px;
+        margin: auto;
+        color: white;
+        text-decoration: none;
+    }
 }
 .accesoNav {
     color: white;
     text-decoration: none;
+    transition: text-shadow 0.3s ease; // Aplica una transición suave de 0.3s para la sombra del texto
+
+    &:hover {
+        text-shadow: 2px 2px 5px rgb(255, 255, 255); // Añade sombra al texto al pasar el ratón
+    }
 }
-.logosRedes{
+
+.logosRedes {
     display: flex;
     justify-content: space-between;
     margin: 25px 70px 20px 70px;/*sup, der, inf, izq*/
-
 }
-.logoRed img{/*faltaba el img para influir en el tamaño de las img*/
+.logoRed img {/*faltaba el img para influir en el tamaño de las img*/
     width: 50px;
     height: 50px;
+}
+.footer-bottom {
+    grid-column: 1 / -1; /* Se extiende a lo largo de todas las columnas del grid */
+    text-align: center;
+    margin-top: 20px; /* Añade espacio antes de la nueva sección */
+}
+
+.footer-line {
+    width: 90%; /* Anchura de la línea */
+    height: 1px; /* Grosor de la línea */
+    background-color: white; /* Color de la línea */
+    margin: 0 auto; /* Centra la línea horizontalmente */
+}
+
+.copyright {
+    margin-top: 10px; /* Espacio entre la línea y el texto de copyright */
+    color: white; /* Color del texto de copyright */
+    font-size: 14px; /* Tamaño del texto de copyright */
+    font-family: 'Khula', sans-serif; /* Mantiene la coherencia de la fuente */
 }
