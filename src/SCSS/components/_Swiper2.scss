@@ -1,0 +1,6 @@
+// Sobrescribe las variables de Swiper para personalizar los puntos de paginación
+:root {
+  --swiper-pagination-bullet-active-opacity: 1; // Opacidad del punto activo
+  --swiper-pagination-color: #af0e0e; // Color de los puntos de paginación
+  --swiper-pagination-bullet-inactive-color: rgb(0, 0, 0); // Color de los puntos inactivos
+}

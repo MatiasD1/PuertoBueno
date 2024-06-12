@@ -1,0 +1,62 @@
+/* Estilos para el contenedor principal */
+.encabezado {
+    position: relative; /* Para posicionar absolutamente los elementos hijos */
+    height: 400px; 
+    background: linear-gradient(to bottom, #000000 0%, #000000 33%, #333333 100%); /* Degradado de fondo */
+    overflow: hidden; /* Esconde cualquier contenido que desborde el contenedor */
+    display: flex; /* Usa Flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    border-bottom: 20px solid wheat; /* Agrega un borde inferior blanco de 2px */
+}
+
+/* Estilos para la imagen */
+.fotoEncabezado {
+    position: absolute; /* Coloca la imagen detrás del contenido del contenedor */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsión */
+    opacity: 0.5; /* Aplica opacidad para permitir que el gradiente se vea a través de la imagen */
+    z-index: 2; /* Coloca la imagen detrás de los otros elementos */
+}
+
+/* Estilos para el contenedor del título */
+.tituloEncabezado {
+    position: relative; /* Permite el centrado del título */
+    display: flex; /* Aplica Flexbox al contenedor del título */
+    justify-content: center; /* Centra horizontalmente el título */
+    align-items: center; /* Centra verticalmente el título */ 
+    height: 100%; /* Asegura que el contenedor del título ocupe toda la altura del contenedor principal */
+    z-index: 2; /* Asegura que el título esté por encima de la imagen */
+}
+
+/* Estilos para el título */
+.tituloEncabezado h1 {
+    font-family: 'Libre Baskerville';
+    font-size: 60px; /* Tamaño del texto del título */
+    color: #ffca8d; /* Color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Elimina márgenes predeterminados */
+    text-align: center; /* Centra el texto */
+}
+
+.tituloEncabezado::before,
+.tituloEncabezado::after {
+    content: ""; /* Contenido vacío para los pseudo-elementos */
+    position: absolute; /* Posiciona absolutamente las líneas */
+    left: 0; /* Ajusta la posición izquierda a 0 */
+    right: 0; /* Ajusta la posición derecha a 0 */
+    width: 100%; /* Anchura de las líneas */
+    height: 2px; /* Altura (grosor) de las líneas */
+    background-color: #ffe8a9; /* Color de las líneas */
+}
+
+.tituloEncabezado::before {
+    top: calc(30% - 1px); /* Posiciona la línea superior en la mitad vertical del contenedor del título */
+}
+
+.tituloEncabezado::after {
+    bottom: calc(30% - 1px); /* Posiciona la línea inferior en la mitad vertical del contenedor del título */
+}
