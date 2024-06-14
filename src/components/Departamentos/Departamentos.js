@@ -14,6 +14,8 @@ import imagenPlaya from '../../img/playa.jpg'
 import EnlaceContacto from '../EnlaceContacto/EnlaceContacto.js';
 import Encabezado from '../Encabezado/Encabezado.js'
 import fotoEncabezado from '../../img/costa.jpeg'
+import Swiper3 from '../../components/Swiper3/Swiper3.js';
+
 
 const Departamentos = () => {
     const [showCarrusel, setShowCarrusel] = useState(false);
@@ -33,10 +35,10 @@ const Departamentos = () => {
             <Encabezado imageSrc={fotoEncabezado} seccion={"Departamentos"}/>
             <div class="containerDepartamentos">
                 <div className="item">
-                      <div className='fotosDeptos' onClick={handleImageClick}>
+                    <div className='fotosDeptos' onClick={handleImageClick}>
                             <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
                             <img src={fotoSala} alt="Imagen 1" className='fotoDepto'/>
-                      </div>
+                    </div>
                     <div className="textoDepartamentos">
                         <h2 className='tituloDepto'>Departamento PB1</h2>
                         <p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>
@@ -54,7 +56,7 @@ const Departamentos = () => {
                     </div>
                 </div>
                 <div className="item">
-                <div className="textoDepartamentos">
+                    <div className="textoDepartamentos">
                         <h2 className='tituloDepto'>Departamento PB2</h2>
                         <p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>
                         <p className='textoDepto'>
@@ -119,6 +121,12 @@ const Departamentos = () => {
             </div>
             {showCarrusel && <GaleriaImagenes images={selectedImage} onClose={() => setShowCarrusel(false)} />} {/* Renderiza el carrusel si showCarrusel es true */}
             <Servicios/>
+            <div className='quincho'>
+                <h3> Quincho </h3>
+                <Swiper3/>
+                <h3> Estacionamiento </h3>
+                <Swiper3/>
+            </div>
             <EnlaceContacto imageSrc={imagenPlaya} /> 
         </div>
     );
