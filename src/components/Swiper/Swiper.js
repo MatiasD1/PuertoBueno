@@ -7,69 +7,72 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 
-import Aldrey from "../../img/Aldrey.png"
-import parqueSanMartin from "../../img/parqueSanMartin.jpg"
-import centroPuerto from "../../img/centroPuerto.jpg"
-import balnearioPuntaMogotes from "../../img/balnearioPuntaMogotes.jpg"
-import playaChica from "../../img/playaChica.jpg"
-import playaGrande from "../../img/playaGrande.jpg"
-import villaVictoria from "../../img/villaVictoria.jpg"
-import torreAgua from "../../img/torreDelAgua.jpg"
-import centroGuemes from "../../img/centroGuemes.jpg"
-import playaVarese from "../../img/playaVarese.jpg"
+// Importar imágenes
+import Aldrey from "../../img/Aldrey.png";
+import parqueSanMartin from "../../img/parqueSanMartin.jpg";
+import centroPuerto from "../../img/centroPuerto.jpg";
+import balnearioPuntaMogotes from "../../img/balnearioPuntaMogotes.jpg";
+import playaChica from "../../img/playaChica.jpg";
+import playaGrande from "../../img/playaGrande.jpg";
+import villaVictoria from "../../img/villaVictoria.jpg";
+import torreAgua from "../../img/torreDelAgua.jpg";
+import centroGuemes from "../../img/centroGuemes.jpg";
+import playaVarese from "../../img/playaVarese.jpg";
 
-export default () => {
+
+const SwiperComponent = () => {
   return (
     <Swiper
-      // install Swiper modules
       modules={[Autoplay, A11y]}
       spaceBetween={30}
       slidesPerView={4}
       autoplay={{ delay: 3000 }}
+      className="custom-swiper" // Aplicar clase específica al contenedor Swiper
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
-      style={{ margin: '20px 30px' }} // Establece un ancho máximo y centra el carrusel
     >
-      <SwiperSlide>
-        <img src={Aldrey} alt="Paseo Aldrey" style={{ width: '100%', height: '400px' }} />
+      <SwiperSlide className="custom-slide"> {/* Aplicar clase específica a cada slide */}
+        <img src={Aldrey} alt="Paseo Aldrey"/>
         <p className='textoSlides'>Paseo Aldrey 1.2Km</p>
       </SwiperSlide>
-      <SwiperSlide>
-        <img src={parqueSanMartin} alt="Slide 2" style={{ width: '100%', height: '400px' }} />
+      <SwiperSlide className="custom-slide">
+        <img src={parqueSanMartin} alt="Parque San Martín"/>
         <p className='textoSlides'>Parque San Martín 1.2Km</p>
       </SwiperSlide>
-      <SwiperSlide>
-        <img src={centroPuerto} alt="Slide 3" style={{ width: '100%', height: '400px' }} />
-        <p className='textoSlides'>Centro Gastronómico del Puerto 1.2Km</p>
+      <SwiperSlide className="custom-slide">
+        <img src={centroPuerto} alt="Centro Gastronómico del Puerto"/>
+        <p className='textoSlides'>Centro Gastronómico<br/> del Puerto 1.2Km</p>
       </SwiperSlide>
-      <SwiperSlide>
-        <img src={balnearioPuntaMogotes} alt="Slide 3" style={{ width: '100%', height: '400px' }} />
-        <p className='textoSlides'>Balnearios de Punta Mogotes 1.2Km</p>
+      <SwiperSlide className="custom-slide">
+        <img src={balnearioPuntaMogotes} alt="Balnearios de Punta Mogotes"/>
+        <p className='textoSlides'>Balnearios de<br/>Punta Mogotes 1.2Km</p>
       </SwiperSlide>
-      <SwiperSlide>
-        <img src={playaChica} alt="Slide 3" style={{ width: '100%', height: '400px' }} />
+      <SwiperSlide className="custom-slide">
+        <img src={playaChica} alt="Playa Chica"/>
         <p className='textoSlides'>Playa Chica 1.2Km</p>
       </SwiperSlide>
-      <SwiperSlide>
-        <img src={playaGrande} alt="Slide 3" style={{ width: '100%', height: '400px' }} />
+      <SwiperSlide className="custom-slide">
+        <img src={playaGrande} alt="Playa Grande"/>
         <p className='textoSlides'>Playa Grande 1.2Km</p>
       </SwiperSlide>
-      <SwiperSlide>
-        <img src={villaVictoria} alt="Slide 3" style={{ width: '100%', height: '400px' }} />
+      <SwiperSlide className="custom-slide">
+        <img src={villaVictoria} alt="Villa Victoria"/>
         <p className='textoSlides'>Villa Victoria 1.2Km</p>
       </SwiperSlide>
-      <SwiperSlide>
-        <img src={torreAgua} alt="Slide 3" style={{ width: '100%', height: '400px' }} />
+      <SwiperSlide className="custom-slide">
+        <img src={torreAgua} alt="Torre del Agua"/>
         <p className='textoSlides'>Torre del Agua 1.2Km</p>
       </SwiperSlide>
-      <SwiperSlide>
-        <img src={centroGuemes} alt="Slide 3" style={{ width: '100%', height: '400px' }} />
+      <SwiperSlide className="custom-slide">
+        <img src={centroGuemes} alt="Centro Comercial Güemes"/>
         <p className='textoSlides'>Centro Comercial Güemes 1.2Km</p>
       </SwiperSlide>
-      <SwiperSlide>
-        <img src={playaVarese} alt="Slide 3" style={{ width: '100%', height: '400px' }} />
+      <SwiperSlide className="custom-slide">
+        <img src={playaVarese} alt="Playa Varese"/>
         <p className='textoSlides'>Playa Varese 1.2Km</p>
       </SwiperSlide>
     </Swiper>
   );
 };
+
+export default SwiperComponent;

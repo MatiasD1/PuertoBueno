@@ -9,13 +9,12 @@ import fotoSala from "../../img/fotoSala.jpg"
 import living from "../../img/Living.JPG"
 import simboloMas from "../../img/icons/simboloMas.png" 
 import Servicios from '../Servicios/Servicios.js';
-import florFooter from '../../img/icons/florFooter.png' 
+import aloeFooter from '../../img/icons/aloeFooter.png' 
 import imagenPlaya from '../../img/playa.jpg'
 import EnlaceContacto from '../EnlaceContacto/EnlaceContacto.js';
 import Encabezado from '../Encabezado/Encabezado.js'
 import fotoEncabezado from '../../img/costa.jpeg'
 import Swiper3 from '../../components/Swiper3/Swiper3.js';
-
 
 const Departamentos = () => {
     const [showCarrusel, setShowCarrusel] = useState(false);
@@ -49,11 +48,9 @@ const Departamentos = () => {
                             Dormitorio principal: cama de dos plazas. <br />
                             Baño: Cómo es. ventilación natural<br />
                         </p>
-                        <img src={florFooter} alt="icono flor decorativo" className='florFooter'/>
+                        <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
-                    <div className="contenidoOverlay">
-                        <img src={simboloMas} alt="Simbolo más" className='simboloMas'/>
-                    </div>
+        
                 </div>
                 <div className="item">
                     <div className="textoDepartamentos">
@@ -66,15 +63,13 @@ const Departamentos = () => {
                             Dormitorio principal: cama de dos plazas. <br />
                             Baño: Cómo es. ventilación natural<br />
                         </p>
-                        <img src={florFooter} alt="icono flor decorativo" className='florFooter'/>
+                        <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
                     <div className='fotosDeptos' onClick={handleImageClick}> 
                         <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
                         <img src={fotoDucha} alt="Imagen 2" className='fotoDepto'/>
                     </div>
-                    <div className="contenidoOverlay">
-                        <img src={simboloMas} alt="Simbolo más" className='simboloMas'/>
-                    </div>
+                  
                 </div>
                 <div className="item">
                     <div className='fotosDeptos' onClick={handleImageClick}>
@@ -91,11 +86,9 @@ const Departamentos = () => {
                             Dormitorio principal: cama de dos plazas. <br />
                             Baño: Cómo es. ventilación natural<br />
                         </p>
-                        <img src={florFooter} alt="icono flor decorativo" className='florFooter'/>
+                        <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
-                    <div className="contenidoOverlay">
-                        <img src={simboloMas} alt="Simbolo más" className='simboloMas'/>
-                    </div>
+             
                 </div>
                 <div className="item">
                 <div className="textoDepartamentos">
@@ -108,15 +101,13 @@ const Departamentos = () => {
                             Dormitorio principal: cama de dos plazas. <br />
                             Baño: Cómo es. ventilación natural<br />
                         </p>
-                        <img src={florFooter} alt="icono flor decorativo" className='florFooter'/>
+                        <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
                     <div className='fotosDeptos' onClick={handleImageClick}>
                         <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
                         <img src={living} alt="Imagen 4" className='fotoDepto'/>
                     </div>
-                    <div className="contenidoOverlay">
-                        <img src={simboloMas} alt="Simbolo más" className='simboloMas'/>
-                    </div>
+             
                 </div>                
             </div>
             {showCarrusel && <GaleriaImagenes images={selectedImage} onClose={() => setShowCarrusel(false)} />} {/* Renderiza el carrusel si showCarrusel es true */}

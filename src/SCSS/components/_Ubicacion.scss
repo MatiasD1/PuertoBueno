@@ -1,7 +1,7 @@
 .ubicacion {
     min-height: calc(100vh - 200px); /* Calcula la altura mínima de la ubicación para que el footer quede al final de la página para solucionar el problema de que el footer quedaba en el medio */
     width: 100%;
-    background-color: #af0e0e;
+    background-color: wheat;
     display: flex;
     flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
 }
@@ -42,8 +42,14 @@
     color: #464646;
 }
 .serviciosCercanos{
-    height: 440px;
-    background-color: wheat;
+    height: 520px;
+    background-color: #af0e0e;
+
+    h2{
+        color: white;
+        font-family: 'Libre Baskerville';
+        padding-top: 20px;
+    }
 }
 .mapaUbicacion{
     display: flex;

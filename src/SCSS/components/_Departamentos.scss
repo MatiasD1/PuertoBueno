@@ -7,7 +7,7 @@
 .textoDepartamentos {
     padding: 0px 20px;/* Espaciado interno para el texto */
     font-family: 'Khula', sans-serif;
-    color: rgb(70, 70, 70);
+    color: #464646;
 }
 .item {
     display: grid;
@@ -28,9 +28,9 @@
 .textoDepto {
     font-family: 'Imprima', serif;
 }
-.florFooter {
+.aloeFooter {
     position: relative;
-    width: 50px;
+    width: 40px;
 }
 .fotosDeptos {
     position: relative;
@@ -38,13 +38,17 @@
     height: 100%;
     overflow: hidden;/* Oculta cualquier parte de la imagen que se desborde del contenedor */
     background-color: black;
+    transition: 0.3s;
+    
 }
 .fotoSimbolo {
+    display: none;
     position: absolute;
-    top: 50%;/* Coloca la parte superior de la imagen en el centro vertical */
-    left: 50%;/* Coloca la parte izquierda de la imagen en el centro horizontal */
-    transform: translate(-50%, -50%) scale(0.1);/* Centra la imagen horizontal y verticalmente y la escala al 50% del tamaño original */
-    z-index: 1;/* Coloca la imagen del símbolo encima de la imagen de la ducha */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    z-index: 1;
+    transition: opacity 0.3s, transform 0.3s; /* Transición para la opacidad y transformación */
 }
 .fotoDepto {
     width: 100%;/* La imagen ocupa todo el ancho del contenedor de la foto */
@@ -52,11 +56,15 @@
     object-fit: cover;
     transition: 0.3s;
 }
-.simboloMas {
-    position: absolute;
-    display: none;
-}
-.fotosDeptos img:hover {
+
+.fotoDepto:hover {
     cursor: pointer;
     opacity: 50%;
+}
+.fotosDeptos:hover .fotoSimbolo {
+    display: block; /* Mostrar al hacer hover en .fotosDeptos */
+    cursor: pointer;
+}
+.fotoSimbolo:hover + .fotoDepto {
+    opacity: 0.5; /* Reducir la opacidad al hacer hover en .fotoSimbolo */
 }
