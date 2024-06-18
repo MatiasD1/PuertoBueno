@@ -9,17 +9,21 @@ const Ubicacion = () => {
         
         <div className='ubicacion'>
             <Encabezado imageSrc={fotoEncabezado} seccion={"Ubicación"} />
-            <div className='textoUbicacion'>
-                <Swiper2/>
+            <div className='presentacionUbicacion'>
+                <p className='tituloUbicacion'>Frase</p>
+                <p className='fraseUbicacion'>TextoChico TextoChico TextoChico TextoChico TextoChico TextoChico</p>
+                <p className='textoUbicacion'>Texto largo Texto largo Texto largo Texto largo Texto largo Texto Texto largo Texto largo Texto largo Texto largo Texto largo Texto largo Texto largo Texto largo Texto largo Texto largo</p>
             </div>
             <div className='owlComponenteCarrusel'>
-
+            <Swiper2/>
             </div>
             <div className='serviciosCercanos'>
+                <h2 className='tituloSwiper'>Puntos de interés</h2>
                 <Swiper/>
-            </div>
+            </div>     
             <div className='mapaUbicacion'>
-                <Mapa/>
+                <h2 className='tituloMapa'>Mapa</h2>
+                {/* <Mapa/> */}
             </div>
             
         </div>

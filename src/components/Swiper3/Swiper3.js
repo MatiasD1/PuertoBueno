@@ -1,10 +1,9 @@
 // Importa los componentes de Swiper necesarios
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, A11y, Navigation } from 'swiper/modules';
+import { Pagination, A11y, Navigation } from 'swiper/modules';
 
 // Importa los estilos de Swiper
 import 'swiper/css';
-import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
@@ -16,14 +15,13 @@ export default () => {
   return (
     <div className="swiper-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
       <Swiper
-        modules={[Pagination, Autoplay, A11y, Navigation]}
+        modules={[Pagination, A11y, Navigation]}
         spaceBetween={30}
         slidesPerView={1}
         navigation={{
             prevEl: '.swiper-button-prev',
             nextEl: '.swiper-button-next',
         }}
-        autoplay={{ delay: 5000 }}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}

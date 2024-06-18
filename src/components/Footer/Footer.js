@@ -6,7 +6,7 @@ function Footer() {
     return (
         <footer>
             <div className='columnaFooter'>
-                <h3>Nombre Genial</h3>
+                <h3>Puerto Bueno</h3>
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
             </div>
             <div className='columnaFooter'>
@@ -33,7 +33,7 @@ function Footer() {
             </div>  
             <div class="footer-bottom">
                 <div class="footer-line"></div>
-                <p class="copyright">&copy; 2024 Matías Durand. Todos los derechos reservados.</p>
+                <p class="copyright">Desarrollo - Matías Durand &copy; 2024</p>
             </div>      
         </footer>
     );

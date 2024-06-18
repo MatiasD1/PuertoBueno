@@ -47,7 +47,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor sin distorsionarse */
+  -o-object-fit: cover;
+     object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor sin distorsionarse */
 }
 
 .textoContacto {
@@ -189,7 +190,8 @@ button[type=submit]:hover {
 }
 .carrusel2 .carousel-item1 img {
   height: 450px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .departamentos {
@@ -252,7 +254,8 @@ button[type=submit]:hover {
 .fotoDepto {
   width: 100%; /* La imagen ocupa todo el ancho del contenedor de la foto */
   height: 100%; /* La imagen ocupa todo el alto del contenedor de la foto */
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: 0.3s;
 }
 
@@ -285,7 +288,8 @@ button[type=submit]:hover {
   left: 0;
   width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
   height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
-  object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsión */
+  -o-object-fit: cover;
+     object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsión */
   opacity: 0.5; /* Aplica opacidad para permitir que el gradiente se vea a través de la imagen */
   z-index: 2; /* Coloca la imagen detrás de los otros elementos */
 }
@@ -365,7 +369,8 @@ button[type=submit]:hover {
   display: block;
   width: 100%; /* La imagen ocupará todo el ancho del contenedor */
   height: 500px; /* Ajusta la altura según sea necesario */
-  object-fit: cover; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
+  -o-object-fit: cover;
+     object-fit: cover; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
 }
 
 .textoEnlaceContacto {
@@ -663,7 +668,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
-  column-gap: 0px;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
   row-gap: 40px;
   color: white;
   padding-top: 20px;
@@ -831,7 +837,9 @@ footer {
 
 .tituloMapa {
   padding-top: 20px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .textoSlides {
@@ -855,6 +863,4 @@ footer {
 .swiper-button-prev,
 .swiper-button-next {
   color: #af0e0e; /* Cambia el color de las flechas a rojo, por ejemplo */
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

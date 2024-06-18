@@ -19,9 +19,27 @@
     }
 }
 
-.textoUbicacion{
-    height: 600px;
-    background-color: wheat;
+.presentacionUbicacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    grid-template-areas:
+        "tituloUbicacion fraseUbicacion"
+        ".               textoUbicacion"; 
+    padding: 40px;
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.tituloUbicacion {
+    grid-area: tituloUbicacion;
+}
+
+.fraseUbicacion {
+    grid-area: fraseUbicacion;
+}
+
+.textoUbicacion {
+    grid-area: textoUbicacion;
+    color: #464646;
 }
 .serviciosCercanos{
     height: 440px;
@@ -30,7 +48,11 @@
 .mapaUbicacion{
     display: flex;
     justify-content: center;
-    height: 520px;
+    height: 720px;
     padding: 20px;
     background-color: wheat;
 } 
+.tituloMapa{
+    padding-top: 20px;
+    user-select: none;
+}

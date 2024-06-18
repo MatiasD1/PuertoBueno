@@ -2,6 +2,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Había que importarlo par
 import fotoPieza from "../../img/fotoPieza.jpg";
 import fotoExterior from "../../img/fotoExterior.jpg";
 import fotoSala from "../../img/fotoSala.jpg";
+import flechaDer from "../../img/icons/flechaDer.png";
+import flechaIzq from "../../img/icons/flechaIzq.png";
+
 
 const Carrusel = () => {
     return (
@@ -19,11 +22,11 @@ const Carrusel = () => {
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <img src={flechaIzq} alt="Anterior" className="flecha"/>
                     <span className="visually-hidden">Previous</span>
                 </button>
                 <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <img src={flechaDer} alt="Siguiente" className="flecha"/>
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
