@@ -13,11 +13,13 @@ import primerosAuxilios from '../../img/icons/primerosAuxilios.png'
 import alarma from '../../img/icons/alarma.png' 
 import cajaSeguridad from '../../img/icons/cajaSeguridad.png' 
 import secador from '../../img/icons/secador.png' 
+import arena from '../../img/arena.jpg' 
 
 const Servicios = () => {
     return (
         <div className='servicios'>
             <h1>Servicios y Facilidades</h1>
+            <img src={arena} className="serviciosFondo" alt="orilla del mar"/>
             <div className='iconos'>
 
                 <div className='icono'>

@@ -18,9 +18,9 @@
     top: 70%;
     margin-top: -20px;
     color: white;
-    font-family: 'Libre Baskerville';
-    font-weight: 600;
-    font-size: 40px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    font-size: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     white-space: nowrap; /* Previene el salto de línea */
     opacity: 0; /* Comienza con opacidad 0 para el efecto de fade in */
@@ -38,7 +38,7 @@
     width: 220px;
     opacity: 0;
     transition: opacity 0.5s;
-    color: wheat;
+    color: rgb(252, 208, 127);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     left: 295px;
     white-space: pre; /* Mantiene los espacios en blanco tal como están */
@@ -70,11 +70,13 @@
 }
 
 .subtituloTextAnimation{
-    font-family: 'Libre Baskerville';
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 300;
     position: absolute;
+    color: white;
     display: flex;
     top: 65px;
     left: 200px;
-    font-size: 25px;
+    font-size: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

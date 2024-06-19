@@ -24,12 +24,14 @@
     justify-content: center; /* Centrar horizontalmente */
     z-index: 1;
     flex-direction: column;
-    padding-left: 200px;
+    padding-left: 155px;
+    padding-bottom: 20px;
 
     h3 {
-        color: wheat;
-        font-size: 30px;
-        font-family: 'Libre Baskerville';
+        color: #f7c686;
+        font-size: 36px;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 400;
         font-style: italic;
         white-space: nowrap;
         letter-spacing: 1.5px; /* Espaciado entre letras */
@@ -48,17 +50,18 @@
     background-color: #00000059;
     padding: 10px;
     border-radius: 5px;
-    font-family: 'Khula', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 300;
     font-size: 16px;
     margin-right: 48px;
     z-index: 1;
 
     h2 {
-        color: wheat;
+        color: #f7c686;
         padding-top: 10px;
         padding-bottom: 10px;
-        font-family: 'Libre Baskerville';
-        font-style: italic;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 500;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 }
@@ -141,15 +144,18 @@ textarea {
 }
 /* Estilos para el botón de submit */
 button[type="submit"] {
-    background-color: #B7472A;
-    color: white;
+    color: wheat;
+    background: #af0e0e;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: 0.2s;
 
     &:hover {
-        background-color: #bb3614;
+        color: white;
+        background-color: #af340e;
+        cursor: pointer;
     }
 }
 

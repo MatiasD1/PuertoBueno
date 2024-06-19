@@ -56,12 +56,14 @@
   justify-content: center; /* Centrar horizontalmente */
   z-index: 1;
   flex-direction: column;
-  padding-left: 200px;
+  padding-left: 155px;
+  padding-bottom: 20px;
 }
 .textoContacto h3 {
-  color: wheat;
-  font-size: 30px;
-  font-family: "Libre Baskerville";
+  color: #f7c686;
+  font-size: 36px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
   font-style: italic;
   white-space: nowrap;
   letter-spacing: 1.5px; /* Espaciado entre letras */
@@ -79,17 +81,18 @@
   background-color: rgba(0, 0, 0, 0.3490196078);
   padding: 10px;
   border-radius: 5px;
-  font-family: "Khula", sans-serif;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 300;
   font-size: 16px;
   margin-right: 48px;
   z-index: 1;
 }
 .contact-form h2 {
-  color: wheat;
+  color: #f7c686;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: "Libre Baskerville";
-  font-style: italic;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -170,15 +173,18 @@ textarea {
 
 /* Estilos para el botón de submit */
 button[type=submit] {
-  background-color: #B7472A;
-  color: white;
+  color: wheat;
+  background: #af0e0e;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.2s;
 }
 button[type=submit]:hover {
-  background-color: #bb3614;
+  color: white;
+  background-color: #af340e;
+  cursor: pointer;
 }
 
 .carrusel2 {
@@ -199,6 +205,10 @@ button[type=submit]:hover {
   z-index: 1; /* Un valor más alto que el carrusel si es necesario */
 }
 
+.containerDepartamentos {
+  padding: 20px;
+}
+
 .textoDepartamentos {
   padding: 0px 20px; /* Espaciado interno para el texto */
   font-family: "Khula", sans-serif;
@@ -213,19 +223,22 @@ button[type=submit]:hover {
 }
 
 .tituloDepto {
-  font-family: "Libre Baskerville";
-  font-style: italic;
-  font-size: 35px;
-  color: black;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  color: rgb(37, 37, 37);
 }
 
 .subtituloDepto {
-  font-family: "Khula", sans-serif;
-  font-size: 20px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
 }
 
 .textoDepto {
-  font-family: "Imprima", serif;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .aloeFooter {
@@ -273,67 +286,87 @@ button[type=submit]:hover {
   opacity: 0.5; /* Reducir la opacidad al hacer hover en .fotoSimbolo */
 }
 
+/* Estilos generales */
+.otrosServicios {
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* Espacio entre los items */
+}
+
+.item2 {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos en cada lado */
+  align-items: center;
+  height: auto; /* Altura para que queden pegadas las puntitas y no sobresalgan */
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+}
+.item2 h3 {
+  flex: 1;
+  text-align: center; /* Centra el texto en su columna */
+}
+.item2 .swiper-container {
+  flex: 1; /* Cada Swiper ocupa 50% del contenedor padre */
+  max-width: 60%; /* Asegura que no se expanda más allá del 50% */
+  height: 100%; /* Asegura que ocupe toda la altura del contenedor */
+  padding: 20px;
+}
+.item2 .swiper-container .slide-image {
+  width: 100%; /* La imagen ocupa el 100% del ancho del Swiper */
+  height: 100%; /* La imagen ocupa el 100% de la altura del Swiper */
+  object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+}
+
 /* Estilos para el contenedor principal */
 .encabezado {
-  position: relative; /* Para posicionar absolutamente los elementos hijos */
+  position: relative;
   height: 400px;
-  background: linear-gradient(to bottom, #000000 0%, #000000 33%, #333333 100%); /* Degradado de fondo */
-  overflow: hidden; /* Esconde cualquier contenido que desborde el contenedor */
-  display: flex; /* Usa Flexbox para centrar contenido */
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
-  border-bottom: 20px solid wheat; /* Agrega un borde inferior blanco de 2px */
+  background: linear-gradient(to bottom, #000000 0%, #000000 33%, #333333 100%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilos para la imagen */
 .fotoEncabezado {
-  position: absolute; /* Coloca la imagen detrás del contenido del contenedor */
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-  height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
-  object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsión */
-  opacity: 0.5; /* Aplica opacidad para permitir que el gradiente se vea a través de la imagen */
-  z-index: 2; /* Coloca la imagen detrás de los otros elementos */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: 2;
 }
 
 /* Estilos para el contenedor del título */
 .tituloEncabezado {
-  position: relative; /* Permite el centrado del título */
-  display: flex; /* Aplica Flexbox al contenedor del título */
-  justify-content: center; /* Centra horizontalmente el título */
-  align-items: center; /* Centra verticalmente el título */
-  height: 100%; /* Asegura que el contenedor del título ocupe toda la altura del contenedor principal */
-  z-index: 2; /* Asegura que el título esté por encima de la imagen */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Ajustar la altura según el contenido */
+  z-index: 3; /* Elevar por encima de la imagen */
+  padding: 20px 40px; /* Espaciado interno para crear margen dentro del borde */
+  border: 2px solid #ffe8a9; /* Borde alrededor del contenedor del título */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para dar efecto de elevación */
 }
 
 /* Estilos para el título */
 .tituloEncabezado h1 {
-  font-family: "Libre Baskerville";
-  font-size: 60px; /* Tamaño del texto del título */
-  color: #ffca8d; /* Color del texto */
+  font-family: "Urbanist", sans-serif; /* 'sans-serif' como fallback (como alternativa si por un error no puede usarse urbanist)*/
+  font-weight: 400;
+  font-size: 60px;
+  color: #ffca8d;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin: 0; /* Elimina márgenes predeterminados */
-  text-align: center; /* Centra el texto */
+  margin: 0;
+  text-align: center;
 }
 
+/* Elimina los pseudo-elementos que crean las líneas */
 .tituloEncabezado::before,
 .tituloEncabezado::after {
-  content: ""; /* Contenido vacío para los pseudo-elementos */
-  position: absolute; /* Posiciona absolutamente las líneas */
-  left: 0; /* Ajusta la posición izquierda a 0 */
-  right: 0; /* Ajusta la posición derecha a 0 */
-  width: 100%; /* Anchura de las líneas */
-  height: 2px; /* Altura (grosor) de las líneas */
-  background-color: #ffe8a9; /* Color de las líneas */
-}
-
-.tituloEncabezado::before {
-  top: calc(30% - 1px); /* Posiciona la línea superior en la mitad vertical del contenedor del título */
-}
-
-.tituloEncabezado::after {
-  bottom: calc(30% - 1px); /* Posiciona la línea inferior en la mitad vertical del contenedor del título */
+  content: none;
 }
 
 .EnlaceContacto {
@@ -350,16 +383,19 @@ button[type=submit]:hover {
   flex-direction: column;
 }
 .contenedorEnlaceContacto h3 {
-  font-family: "Libre Baskerville";
+  font-family: "Urbanist";
+  font-style: 400;
   position: absolute;
   top: 20%;
-  color: wheat;
-  font-size: 42px;
+  color: #f7c686;
+  font-size: 46px;
   z-index: 1;
-  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .FraseEnlaceContacto {
+  font-family: "Urbanist", sans-serif;
+  font-style: 300;
   position: absolute;
   color: #ffffff;
   top: 36%;
@@ -382,7 +418,8 @@ button[type=submit]:hover {
   transform: translate(-50%, -50%);
   color: #f5deb3; /* Cambia el color del texto si es necesario */
   font-size: 4.3rem; /* Ajusta el tamaño del texto según sea necesario */
-  font-family: "Libre Baskerville";
+  font-family: "Urbanist", sans-serif;
+  font-style: 500;
   background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejorar la legibilidad */
   padding: 18px 25px 18px 25px; /* Espaciado interno para el texto */
   border: 2px solid rgb(245, 222, 179);
@@ -417,20 +454,22 @@ footer {
 .columnaFooter h3 {
   margin-bottom: 10px; /* Esto elimina el margen inferior predeterminado */
   font-size: 25px;
-  color: wheat;
-  font-family: "Libre Baskerville";
-  font-style: italic;
+  color: #f7c686;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
 }
 .columnaFooter p {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 300;
   font-size: 14px;
   max-width: 150px;
   margin: auto;
-  color: white;
+  color: wheat;
   text-decoration: none;
 }
 
 .accesoNav {
-  color: white;
+  color: wheat;
   text-decoration: none;
   transition: text-shadow 0.3s ease;
 }
@@ -458,15 +497,16 @@ footer {
 .footer-line {
   width: 90%; /* Anchura de la línea */
   height: 1px; /* Grosor de la línea */
-  background-color: white; /* Color de la línea */
+  background-color: wheat; /* Color de la línea */
   margin: 0 auto; /* Centra la línea horizontalmente */
 }
 
 .copyright {
   margin-top: 10px; /* Espacio entre la línea y el texto de copyright */
-  color: white; /* Color del texto de copyright */
+  color: wheat; /* Color del texto de copyright */
   font-size: 14px; /* Tamaño del texto de copyright */
-  font-family: "Khula", sans-serif; /* Mantiene la coherencia de la fuente */
+  font-family: "Urbanist", sans-serif;
+  font-weight: 300;
 }
 
 .frase {
@@ -567,6 +607,7 @@ footer {
   grid-template-areas: "fraseInicio tituloInicio" ". textoInicio"; /* La fraseInicio ocupará la segunda columna */
   padding: 40px;
   gap: 20px; /* Espacio entre columnas */
+  font-family: "Urbanist", sans-serif;
 }
 
 .tituloInicio {
@@ -593,14 +634,14 @@ footer {
 }
 
 .nav-link {
-  color: #FFF2E5;
+  color: wheat;
   margin-top: 1rem;
   /*margin-right: 30px; Ajusta este valor según sea necesario para agregar espacio entre los enlaces */
   border-bottom: 2px solid transparent; /* Subrayado transparente*/
-  padding: 20px 20px; /* Ajusta el relleno del botón */
-  font-size: 18px;
+  padding: 17px 20px; /* Ajusta el relleno del botón */
+  font-size: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: "Libre Baskerville";
+  font-family: "Urbanist", sans-serif;
 }
 .nav-link:hover {
   color: white;
@@ -623,7 +664,6 @@ footer {
   top: 0;
   width: 100%;
   z-index: 1000; /* Asegura que esté por encima del carrusel */
-  margin-bottom: 72px;
   padding-right: 30px; /*PARA MOVER LA BARRA*/
 }
 
@@ -634,7 +674,9 @@ footer {
 .NavBar h2 {
   font-size: 40px;
   position: absolute; /* Cambiado a relativo para que no se pierda el flujo normal del documento */
-  font-family: "Dancing Script", cursive;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-style: italic;
   color: wheat;
   margin-left: 40px;
   margin-top: 105px;
@@ -655,15 +697,31 @@ footer {
 }
 
 .servicios {
-  background-color: #b63333;
+  position: relative;
   height: 600px;
   margin-top: 20px;
 }
 .servicios h1 {
-  color: white;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: relative;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  color: #f7c686;
   padding-top: 50px;
   padding-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.serviciosFondo {
+  position: absolute; /* Permite que la imagen ocupe todo el contenedor */
+  padding: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre todo el contenedor, manteniendo la proporción */
+  z-index: 0; /* Coloca la imagen detrás de otros elementos */
+  opacity: 80%;
 }
 
 .iconos {
@@ -673,6 +731,9 @@ footer {
   column-gap: 0px;
   row-gap: 40px;
   color: white;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
   padding-top: 20px;
   transition: 0.5s;
 }
@@ -721,9 +782,9 @@ footer {
   top: 70%;
   margin-top: -20px;
   color: white;
-  font-family: "Libre Baskerville";
-  font-weight: 600;
-  font-size: 40px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   white-space: nowrap; /* Previene el salto de línea */
   opacity: 0; /* Comienza con opacidad 0 para el efecto de fade in */
@@ -741,7 +802,7 @@ footer {
   width: 220px;
   opacity: 0;
   transition: opacity 0.5s;
-  color: wheat;
+  color: rgb(252, 208, 127);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   left: 295px;
   white-space: pre; /* Mantiene los espacios en blanco tal como están */
@@ -773,12 +834,14 @@ footer {
 }
 
 .subtituloTextAnimation {
-  font-family: "Libre Baskerville";
+  font-family: "Urbanist", sans-serif;
+  font-weight: 300;
   position: absolute;
+  color: white;
   display: flex;
   top: 65px;
   left: 200px;
-  font-size: 25px;
+  font-size: 30px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -828,9 +891,12 @@ footer {
   background-color: #af0e0e;
 }
 .serviciosCercanos h2 {
-  color: white;
-  font-family: "Libre Baskerville";
+  color: wheat;
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 40px;
   padding-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .mapaUbicacion {
@@ -856,6 +922,8 @@ footer {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
   font-size: 20px; /* Reducido el tamaño de la fuente para que se ajuste mejor */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   text-align: center; /* Centra el texto */
@@ -891,10 +959,31 @@ footer {
   object-fit: cover; /* Ajusta la imagen para que cubra el contenedor manteniendo la proporción */
 }
 
-:root {
-  --swiper-pagination-bullet-active-opacity: 1;
-  --swiper-pagination-color: #af0e0e;
-  --swiper-pagination-bullet-inactive-color: rgb(0, 0, 0);
+/* swiperCustom.scss */
+.swiper-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+.swiper-container .slide-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.swiper-container .swiper-button-custom {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.swiper-container .swiper-button-prev-custom {
+  left: 10px;
+}
+.swiper-container .swiper-button-next-custom {
+  right: 10px;
 }
 
 .swiper-button-prev,

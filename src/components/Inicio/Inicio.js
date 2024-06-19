@@ -11,12 +11,12 @@ const Inicio = () => {
             <TextAnimation/>
             
             <div className='presentacionInicio'>
-                <h2 className='fraseInicio'>Al final, no os preguntarán qué habéis sabido, sino qué habéis hecho.</h2>
+                <h2 className='fraseInicio'>Una frase aleatoria para rellenar,<br/> el espacio del contenedor de inicio.</h2>
                 <h3 className='tituloInicio'>Titulo de inicio</h3>
                 <p className='textoInicio'>
                     Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion
                     Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion
-                    Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion
+                    Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion
                 </p> 
             </div>
            

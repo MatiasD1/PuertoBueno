@@ -1,12 +1,12 @@
 .nav-link {
-    color: #FFF2E5;
+    color: wheat;
     margin-top: 1rem;
     /*margin-right: 30px; Ajusta este valor según sea necesario para agregar espacio entre los enlaces */
     border-bottom: 2px solid transparent;/* Subrayado transparente*/
-    padding: 20px 20px; /* Ajusta el relleno del botón */
-    font-size: 18px;
+    padding: 17px 20px; /* Ajusta el relleno del botón */
+    font-size: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-family: 'Libre Baskerville';
+    font-family: 'Urbanist', sans-serif;
 
     &:hover {
         color: white;
@@ -29,7 +29,7 @@
     top: 0;
     width: 100%;
     z-index: 1000;/* Asegura que esté por encima del carrusel */
-    margin-bottom: 72px;
+    //margin-bottom: 40px;
     padding-right: 30px;/*PARA MOVER LA BARRA*/
 }
 .NavBar {
@@ -39,7 +39,9 @@
     h2 {
         font-size: 40px;
         position: absolute;/* Cambiado a relativo para que no se pierda el flujo normal del documento */
-        font-family: 'Dancing Script', cursive;
+        font-family:"Urbanist", sans-serif;
+        font-weight: 400;
+        font-style: italic;
         color: wheat;
         margin-left: 40px;
         margin-top: 105px;

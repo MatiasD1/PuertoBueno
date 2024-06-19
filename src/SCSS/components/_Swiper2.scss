@@ -1,6 +1,31 @@
-// Sobrescribe las variables de Swiper para personalizar los puntos de paginación
-:root {
-  --swiper-pagination-bullet-active-opacity: 1; // Opacidad del punto activo
-  --swiper-pagination-color: #af0e0e; // Color de los puntos de paginación
-  --swiper-pagination-bullet-inactive-color: rgb(0, 0, 0); // Color de los puntos inactivos
+/* swiperCustom.scss */
+
+.swiper-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative; // Para asegurar que las flechas se posicionen dentro del contenedor
+
+  .slide-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; // Asegura que la imagen ocupe todo el espacio del contenedor
+  }
+
+  .swiper-button-custom {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .swiper-button-prev-custom {
+    left: 10px;
+  }
+
+  .swiper-button-next-custom {
+    right: 10px;
+  }
 }

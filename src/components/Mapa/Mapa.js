@@ -1,5 +1,5 @@
 // src/components/Mapa/Mapa.js
-import React, { useEffect } from 'react';
+/*import React, { useEffect } from 'react';
 import { loadGoogleMaps } from '../../index.js';
 
 const Mapa = () => {
@@ -34,4 +34,4 @@ const Mapa = () => {
 }
 
 export default Mapa;
-
+*/

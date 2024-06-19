@@ -1,3 +1,5 @@
+//SWIPER PUNTOS DE INTERÉS
+
 // import Swiper core and required modules
 import { A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';

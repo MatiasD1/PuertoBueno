@@ -4,6 +4,9 @@
     position: relative;/* O static si no necesitas posicionamiento especial */
     z-index: 1;/* Un valor más alto que el carrusel si es necesario */
 }
+.containerDepartamentos{
+    padding: 20px;
+}
 .textoDepartamentos {
     padding: 0px 20px;/* Espaciado interno para el texto */
     font-family: 'Khula', sans-serif;
@@ -16,17 +19,20 @@
     height: 450px;/* Altura de cada elemento */
 }
 .tituloDepto {
-    font-family: 'Libre Baskerville';
-    font-style: italic;
-    font-size: 35px;
-    color: black;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    color: rgb(37, 37, 37);
 }
 .subtituloDepto {
-    font-family: 'Khula', sans-serif;
-    font-size: 20px; 
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 25px; 
 }
 .textoDepto {
-    font-family: 'Imprima', serif;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 18px; 
 }
 .aloeFooter {
     position: relative;
@@ -68,3 +74,38 @@
 .fotoSimbolo:hover + .fotoDepto {
     opacity: 0.5; /* Reducir la opacidad al hacer hover en .fotoSimbolo */
 }
+
+/* Estilos generales */
+
+.otrosServicios {
+    display: flex;
+    flex-direction: column;
+    gap: 0px; /* Espacio entre los items */
+  }
+  
+  .item2 {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos en cada lado */
+    align-items: center; 
+    height: auto; /* Altura para que queden pegadas las puntitas y no sobresalgan */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  
+    h3 {
+      flex: 1;
+      text-align: center; /* Centra el texto en su columna */
+    }
+  
+    .swiper-container {
+      flex: 1; /* Cada Swiper ocupa 50% del contenedor padre */
+      max-width: 60%; /* Asegura que no se expanda más allá del 50% */
+      height: 100%; /* Asegura que ocupe toda la altura del contenedor */
+      padding: 20px;
+  
+      .slide-image {
+        width: 100%; /* La imagen ocupa el 100% del ancho del Swiper */
+        height: 100%; /* La imagen ocupa el 100% de la altura del Swiper */
+        object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+      }
+    }
+  }
+  
