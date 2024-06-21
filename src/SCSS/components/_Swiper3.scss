@@ -1,4 +1,25 @@
-.swiper-button-prev,
-.swiper-button-next {
-  color: #af0e0e; /* Cambia el color de las flechas a rojo, por ejemplo */
+// Estilos para los bullets de la paginación
+.swiper-container {
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      background-color: #af0e0e; // Color de fondo base
+      opacity: 0.5; // Opacidad base
+      transition: opacity 0.15s ease; // Transición de opacidad
+      
+      &:hover {
+        opacity: 1; // Opacidad al pasar el mouse
+      }
+    }
+    
+    .swiper-pagination-bullet-active {
+      opacity: 1; // Opacidad cuando está activo
+      
+      // Otros estilos adicionales si es necesario
+    }
+  }
+  
+  // Estilos para las imágenes de las diapositivas
+  .slide-image {
+    height: 500px !important; // Altura de las imágenes
+  }
 }

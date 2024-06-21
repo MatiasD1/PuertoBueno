@@ -16,7 +16,6 @@
 }
 .serviciosFondo {
     position: absolute; /* Permite que la imagen ocupe todo el contenedor */
-    padding: 20px;
     top: 0;
     left: 0;
     width: 100%;
@@ -31,9 +30,9 @@
     justify-items: center;
     column-gap: 0px;
     row-gap: 40px;
-    color: white;
+    color: wheat;
     font-family: 'Urbanist', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 20px;
     padding-top: 20px;
     transition: 0.5s;

@@ -23,6 +23,7 @@ export default () => {
         modules={[Pagination, A11y, Navigation]}
         spaceBetween={30}
         slidesPerView={1}
+        loop={true}
         navigation={{
             prevEl: '.swiper-button-prev-custom',
             nextEl: '.swiper-button-next-custom',

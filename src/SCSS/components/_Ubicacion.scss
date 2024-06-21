@@ -1,7 +1,7 @@
 .ubicacion {
     min-height: calc(100vh - 200px); /* Calcula la altura mínima de la ubicación para que el footer quede al final de la página para solucionar el problema de que el footer quedaba en el medio */
     width: 100%;
-    background-color: wheat;
+    background-color: #f7c686;
     display: flex;
     flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
 }
@@ -59,7 +59,7 @@
     justify-content: center;
     height: 720px;
     padding: 20px;
-    background-color: wheat;
+    background-color: #f7c686;
 } 
 .tituloMapa{
     padding-top: 20px;
