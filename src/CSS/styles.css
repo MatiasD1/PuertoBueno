@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 .App {
   text-align: center;
-  background-color: #EDCFA9;
+  background-color: #f7c686;
 }
 
 .carrusel {
@@ -99,14 +99,14 @@
 label {
   display: block;
   margin-bottom: 5px;
-  color: wheat;
+  color: #f5deb3;
   text-align: start;
   padding-left: 20px; /* Para alinear los label con el comienzo de los inputs */
 }
 
 input[type=text], input[type=date], input[type=number], input[type=email] {
   background-color: rgba(0, 0, 0, 0.3490196078);
-  color: wheat;
+  color: #f5deb3;
   width: 90%;
   padding: 6px; /* Reducir el relleno */
   margin-bottom: 8px;
@@ -118,7 +118,7 @@ input[type=text], input[type=date], input[type=number], input[type=email] {
 
 textarea {
   background-color: rgba(0, 0, 0, 0.3490196078);
-  color: wheat;
+  color: #f5deb3;
   width: 90%;
   padding: 6px;
   margin-bottom: 8px;
@@ -151,14 +151,14 @@ textarea {
 /* Ajuste específico para los label de fechas */
 .fechasContacto label {
   margin-bottom: 5px; /* Espacio entre el label y el input */
-  color: wheat;
+  color: #f5deb3;
   padding-left: 0; /* Quita cualquier padding añadido anteriormente */
 }
 
 .fechasContacto input {
   width: 100%; /* Asegura que los inputs ocupen todo el ancho del contenedor de fecha */
   background-color: rgba(0, 0, 0, 0.3490196078);
-  color: wheat;
+  color: #f5deb3;
   padding: 6px;
   margin-bottom: 8px;
   border: 1px solid #ccc;
@@ -173,8 +173,8 @@ textarea {
 
 /* Estilos para el botón de submit */
 button[type=submit] {
-  color: wheat;
-  background: #af0e0e;
+  color: #f5deb3;
+  background: rgba(209, 53, 48, 0.5411764706);
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -438,7 +438,7 @@ footer {
   padding-top: 20px;
   width: 100%;
   height: 225px;
-  background-color: #af0e0e;
+  background-color: #d13630;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
@@ -465,12 +465,12 @@ footer {
   font-size: 14px;
   max-width: 150px;
   margin: auto;
-  color: wheat;
+  color: #f5deb3;
   text-decoration: none;
 }
 
 .accesoNav {
-  color: wheat;
+  color: #f5deb3;
   text-decoration: none;
   transition: text-shadow 0.3s ease;
 }
@@ -498,13 +498,13 @@ footer {
 .footer-line {
   width: 90%; /* Anchura de la línea */
   height: 1px; /* Grosor de la línea */
-  background-color: wheat; /* Color de la línea */
+  background-color: #f5deb3; /* Color de la línea */
   margin: 0 auto; /* Centra la línea horizontalmente */
 }
 
 .copyright {
   margin-top: 10px; /* Espacio entre la línea y el texto de copyright */
-  color: wheat; /* Color del texto de copyright */
+  color: #f5deb3; /* Color del texto de copyright */
   font-size: 14px; /* Tamaño del texto de copyright */
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
@@ -601,6 +601,12 @@ footer {
   background-color: #FFFFFF; /* Cambiado a blanco para mayor visibilidad */
 }
 
+.galeriaInicio {
+  height: 400px;
+  margin: 20px;
+  background-color: brown;
+}
+
 /* CSS */
 .presentacionInicio {
   display: grid;
@@ -637,7 +643,7 @@ footer {
 }
 
 .nav-link {
-  color: wheat;
+  color: #f5deb3;
   margin-top: 1rem;
   /*margin-right: 30px; Ajusta este valor según sea necesario para agregar espacio entre los enlaces */
   border-bottom: 2px solid transparent; /* Subrayado transparente*/
@@ -680,7 +686,7 @@ footer {
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-style: italic;
-  color: wheat;
+  color: #f5deb3;
   margin-left: 40px;
   margin-top: 105px;
   z-index: 1200; /* Asegura que esté por encima del NavBar */
@@ -732,7 +738,7 @@ footer {
   justify-items: center;
   column-gap: 0px;
   row-gap: 40px;
-  color: wheat;
+  color: #f5deb3;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -890,10 +896,10 @@ footer {
 
 .serviciosCercanos {
   height: 520px;
-  background-color: #af0e0e;
+  background-color: #d13630;
 }
 .serviciosCercanos h2 {
-  color: wheat;
+  color: #f5deb3;
   font-family: "Urbanist";
   font-weight: 500;
   font-size: 40px;
@@ -964,8 +970,7 @@ footer {
 /* swiperCustom.scss */
 .bordeSwiper2 {
   padding: 20px; /* Espacio entre el borde y el contenido del carrusel */
-  border: 4px solid wheat;
-  /* Color y grosor del borde */
+  border: 4px solid #f5deb3; /* Color y grosor del borde */
   margin: 20px auto; /* Ajusta según sea necesario */
   max-width: 1000px; /* Ajusta según sea necesario para incluir padding y tamaño del carrusel */
   position: relative;
@@ -1029,7 +1034,7 @@ footer {
 }
 
 .swiper-container .swiper-pagination .swiper-pagination-bullet {
-  background-color: #af0e0e;
+  background-color: #d13630;
   opacity: 0.5;
   transition: opacity 0.15s ease;
 }

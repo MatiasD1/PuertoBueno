@@ -1,8 +1,7 @@
 /* swiperCustom.scss */
 .bordeSwiper2{
   padding: 20px; /* Espacio entre el borde y el contenido del carrusel */
-  border: 4px solid wheat;
-  ; /* Color y grosor del borde */
+  border: 4px solid $color2; /* Color y grosor del borde */
   margin: 20px auto; /* Ajusta según sea necesario */
   max-width: 1000px; /* Ajusta según sea necesario para incluir padding y tamaño del carrusel */
   position: relative; 
@@ -40,7 +39,7 @@
     &:hover{
       opacity: 100;
     }
-    
+
   }
 
   .swiper-button-prev-custom {

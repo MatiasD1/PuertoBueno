@@ -7,7 +7,7 @@ function Footer() {
         <footer>
             <div className='columnaFooter'>
                 <h3>Puerto Bueno</h3>
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                <p>Una descripcion del complejo de deptos para rellenar el espacio del footer.</p>
             </div>
             <div className='columnaFooter'>
                 <h3>Accesos Rápidos</h3>

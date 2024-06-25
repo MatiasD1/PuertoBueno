@@ -16,7 +16,7 @@
         font-style: 400;
         position: absolute;
         top: 20%;
-        color: #f7c686;
+        color: $color3;
         font-size: 46px;
         z-index: 1;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -44,7 +44,7 @@
     top: 72%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #f5deb3; /* Cambia el color del texto si es necesario */
+    color: $color2; /* Cambia el color del texto si es necesario */
     font-size: 4.3rem; /* Ajusta el tamaño del texto según sea necesario */
     font-family: 'Urbanist', sans-serif;
     font-style: 500;

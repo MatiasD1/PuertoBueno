@@ -23,16 +23,16 @@ const Servicios = () => {
             <div className='iconos'>
 
                 <div className='icono'>
-                    <img src={calefaccion} alt="Icono calefaccion más"/>
-                    <p>Calefacción</p>
-                </div>
-                <div className='icono'>
                     <img src={cochera} alt="Icono cochera"/>
                     <p>Cochera</p>
                 </div>
                 <div className='icono'>
-                    <img src={frazadasSabanas} alt="Icono frazadasSabanas"/>
-                    <p>Sábanas y Frazadas</p>
+                    <img src={calefaccion} alt="Icono calefaccion más"/>
+                    <p>Calefacción por radiadores</p>
+                </div>
+                <div className='icono'>
+                    <img src={wifi} alt="Icono wifi"/>
+                    <p>Wi-fi</p>
                 </div>
 
                 <div className='icono'>
@@ -66,8 +66,8 @@ const Servicios = () => {
                     <p>Vajilla y Utensillos</p>
                 </div>
                 <div className='icono'>
-                    <img src={wifi} alt="Icono wifi"/>
-                    <p>Wi-fi</p>
+                    <img src={frazadasSabanas} alt="Icono frazadasSabanas"/>
+                    <p>Sábanas y Frazadas</p>
                 </div>
                 <div className='icono'>
                     <img src={sommier} alt="Icono sommier"/>

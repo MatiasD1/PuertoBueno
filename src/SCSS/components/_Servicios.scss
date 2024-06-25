@@ -7,7 +7,7 @@
         position: relative;//#2...hay que aclarar que los que van adelante son relative
         font-family: 'Urbanist', sans-serif;
         font-weight: 500;
-        color: #f7c686;
+        color: $color3;
         padding-top: 50px;
         padding-bottom: 20px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -30,7 +30,7 @@
     justify-items: center;
     column-gap: 0px;
     row-gap: 40px;
-    color: wheat;
+    color: $color2;
     font-family: 'Urbanist', sans-serif;
     font-weight: 400;
     font-size: 20px;

@@ -2,7 +2,7 @@
 .swiper-container {
   .swiper-pagination {
     .swiper-pagination-bullet {
-      background-color: #af0e0e; // Color de fondo base
+      background-color: $color4; // Color de fondo base
       opacity: 0.5; // Opacidad base
       transition: opacity 0.15s ease; // Transición de opacidad
       

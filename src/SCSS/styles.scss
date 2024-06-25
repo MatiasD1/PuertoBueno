@@ -1,3 +1,4 @@
+@import "./utilities/Variables";//debe importarse antes de cualquier componente que lo use
 @import "./components/App";
 @import "./components/CarruselApp";
 @import "./components/Contacto";
@@ -8,6 +9,7 @@
 @import "./components/Footer";
 @import "./components/Frase"; 
 @import "./components/GaleriaImagenes";
+@import "./components/GaleriaInicio"; 
 @import "./components/Inicio"; 
 @import "./components/Mapa";
 @import "./components/NavBar"; 

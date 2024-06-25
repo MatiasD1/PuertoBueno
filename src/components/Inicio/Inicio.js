@@ -2,6 +2,7 @@ import Carrusel from '../Carrusel/Carrusel';
 import EnlaceContacto from '../EnlaceContacto/EnlaceContacto';
 import imagenPlaya from '../../img/playa2.jpg'
 import TextAnimation from '../TextAnimation1/TextAnimation1';
+import GaleriaInicio from '../GaleriaInicio/GaleriaInicio'; 
 
 const Inicio = () => {
     
@@ -19,7 +20,7 @@ const Inicio = () => {
                     Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion Descripcion
                 </p> 
             </div>
-           
+            <GaleriaInicio/>       
             <EnlaceContacto imageSrc={imagenPlaya} />
         </div>  
     );
