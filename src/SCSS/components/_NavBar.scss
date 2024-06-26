@@ -37,15 +37,26 @@
     align-items: center;
 
     h2 {
-        font-size: 40px;
+        font-size: 36px;
         position: absolute;/* Cambiado a relativo para que no se pierda el flujo normal del documento */
         font-family:"Urbanist", sans-serif;
         font-weight: 400;
-        font-style: italic;
         color: $color2;
         margin-left: 40px;
-        margin-top: 105px;
+        margin-top: 82px;
         z-index: 1200;/* Asegura que esté por encima del NavBar */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    h3{
+        position: absolute;
+        z-index: 1200;
+        margin-left: 60px;
+        margin-top: 139px;
+        font-size: 17px;
+        font-family:"Urbanist", sans-serif;
+        font-weight: 400;
+        color: #f5deb3;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 }

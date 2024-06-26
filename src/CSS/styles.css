@@ -182,7 +182,7 @@ button[type=submit] {
   transition: 0.2s;
 }
 button[type=submit]:hover {
-  color: white;
+  color: #fff1d8;
   background-color: #af340e;
   cursor: pointer;
 }
@@ -398,7 +398,7 @@ button[type=submit]:hover {
   font-family: "Urbanist", sans-serif;
   font-style: 300;
   position: absolute;
-  color: #ffffff;
+  color: #fff1d8;
   top: 36%;
   font-size: 25px;
   z-index: 1;
@@ -475,7 +475,7 @@ footer {
   transition: text-shadow 0.3s ease;
 }
 .accesoNav:hover {
-  text-shadow: 2px 2px 5px rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px #fff1d8;
 }
 
 .logosRedes {
@@ -559,7 +559,7 @@ footer {
   background: none;
   border: none;
   cursor: pointer;
-  color: white;
+  color: fff1d8;
   font-size: 24px;
   padding: 20px;
 }
@@ -598,13 +598,92 @@ footer {
   cursor: pointer;
 }
 .dot.active {
-  background-color: #FFFFFF; /* Cambiado a blanco para mayor visibilidad */
+  background-color: #fff1d8; /* Cambiado a blanco para mayor visibilidad */
 }
 
 .galeriaInicio {
-  height: 400px;
-  margin: 20px;
+  height: auto;
+  margin: auto;
   background-color: brown;
+  text-align: center; /* Centramos el contenido del contenedor */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr); /* 2 filas de igual altura */
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+}
+
+.fotosDeptosInicio {
+  position: relative;
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor de la foto */
+  height: 100%; /* La imagen ocupa todo el alto del contenedor de la foto */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del contenedor */
+  transition: 0.3s;
+}
+
+.fotoSimboloInicio {
+  display: none;
+  position: absolute;
+  width: 15%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  z-index: 1;
+  transition: opacity 0.3s, transform 0.3s; /* Transición para la opacidad y transformación */
+}
+
+.fotoDeptoInicio {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor de la foto */
+  height: 100%; /* La imagen ocupa todo el alto del contenedor de la foto */
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.fotoDeptoInicio:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.fotosDeptosInicio:hover .fotoSimboloInicio {
+  display: block; /* Mostrar al hacer hover en .fotosDeptos */
+  cursor: pointer;
+  transform: translate(-50%, -50%) scale(1); /* Escala a tamaño completo */
+  opacity: 1; /* Hace el icono visible */
+}
+
+.fotoSimboloInicio:hover + .fotoDeptoInicio {
+  opacity: 0.5; /* Reducir la opacidad al hacer hover en .fotoSimbolo */
+}
+
+/* Estilos para el overlay y el contenedor del carrusel */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+}
+
+.carrusel-container {
+  position: relative;
+  z-index: 1001; /* Asegúrate de que esté sobre el overlay */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 90%; /* Para hacerlo responsive */
+  max-height: 90%; /* Para hacerlo responsive */
+  overflow: auto; /* Permitir scroll si es necesario */
 }
 
 /* CSS */
@@ -681,15 +760,25 @@ footer {
   align-items: center;
 }
 .NavBar h2 {
-  font-size: 40px;
+  font-size: 36px;
   position: absolute; /* Cambiado a relativo para que no se pierda el flujo normal del documento */
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  font-style: italic;
   color: #f5deb3;
   margin-left: 40px;
-  margin-top: 105px;
+  margin-top: 82px;
   z-index: 1200; /* Asegura que esté por encima del NavBar */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.NavBar h3 {
+  position: absolute;
+  z-index: 1200;
+  margin-left: 60px;
+  margin-top: 139px;
+  font-size: 17px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  color: #f5deb3;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -709,6 +798,7 @@ footer {
   position: relative;
   height: 600px;
   margin-top: 20px;
+  background-color: black;
 }
 .servicios h1 {
   position: relative;
@@ -789,7 +879,7 @@ footer {
   height: 40px;
   top: 70%;
   margin-top: -20px;
-  color: white;
+  color: #fff1d8;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
   font-size: 50px;
@@ -810,7 +900,7 @@ footer {
   width: 220px;
   opacity: 0;
   transition: opacity 0.5s;
-  color: rgb(252, 208, 127);
+  color: #fcd07f;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   left: 295px;
   white-space: pre; /* Mantiene los espacios en blanco tal como están */
@@ -845,7 +935,7 @@ footer {
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
   position: absolute;
-  color: white;
+  color: #fff1d8;
   display: flex;
   top: 65px;
   left: 200px;
@@ -929,7 +1019,7 @@ footer {
   margin: 0;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  color: #fff1d8;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-size: 20px; /* Reducido el tamaño de la fuente para que se ajuste mejor */
@@ -999,7 +1089,7 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 0;
-  color: #fff;
+  color: #fff1d8;
   text-align: center;
   background: 0 0;
   border: 0;
@@ -1025,7 +1115,7 @@ footer {
   justify-content: center;
   width: 15%;
   padding: 0;
-  color: #fff;
+  color: #fff1d8;
   text-align: center;
   background: 0 0;
   border: 0;

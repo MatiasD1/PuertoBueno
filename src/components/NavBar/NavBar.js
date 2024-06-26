@@ -3,7 +3,8 @@ import React from 'react';
 const NavBar = ({ isVisible }) => {
   return (
     <nav className={`NavBar ${isVisible ? 'fixed' : ''}`}>
-      <h2>Puerto Bueno</h2>
+      <h2 className="tituloNavBar">Puerto Bueno</h2>
+      <h3 className="subtituloNavBar">- Alquiler temporario -</h3>
 
       <ul className="nav justify-content-end">
         <li className="nav-item">

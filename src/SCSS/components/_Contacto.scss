@@ -153,7 +153,7 @@ button[type="submit"] {
     transition: 0.2s;
 
     &:hover {
-        color: white;
+        color: $color1;
         background-color: #af340e;
         cursor: pointer;
     }

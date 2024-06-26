@@ -2,6 +2,7 @@
     position: relative;//#1 Para que la foto absolute quede atras de los elementos...
     height: 600px;
     margin-top: 20px;
+    background-color: black;
 
     h1 {
         position: relative;//#2...hay que aclarar que los que van adelante son relative
@@ -22,7 +23,8 @@
     height: 100%;
     object-fit: cover; /* Cubre todo el contenedor, manteniendo la proporción */
     z-index: 0; /* Coloca la imagen detrás de otros elementos */
-    opacity: 100%;
+    opacity: 80%;
+    
 }
 .iconos {
     display: grid;

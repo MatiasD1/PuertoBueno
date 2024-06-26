@@ -17,7 +17,7 @@
     height: 40px;
     top: 70%;
     margin-top: -20px;
-    color: white;
+    color: $color1;
     font-family: 'Urbanist', sans-serif;
     font-weight: 500;
     font-size: 50px;
@@ -38,7 +38,7 @@
     width: 220px;
     opacity: 0;
     transition: opacity 0.5s;
-    color: rgb(252, 208, 127);
+    color: #fcd07f;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     left: 295px;
     white-space: pre; /* Mantiene los espacios en blanco tal como están */
@@ -73,7 +73,7 @@
     font-family: 'Urbanist', sans-serif;
     font-weight: 300;
     position: absolute;
-    color: white;
+    color: $color1;
     display: flex;
     top: 65px;
     left: 200px;

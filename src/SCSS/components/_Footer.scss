@@ -39,7 +39,7 @@ footer {
     transition: text-shadow 0.3s ease; // Aplica una transición suave de 0.3s para la sombra del texto
 
     &:hover {
-        text-shadow: 2px 2px 5px rgb(255, 255, 255); // Añade sombra al texto al pasar el ratón
+        text-shadow: 2px 2px 5px $color1; // Añade sombra al texto al pasar el ratón
     }
 }
 

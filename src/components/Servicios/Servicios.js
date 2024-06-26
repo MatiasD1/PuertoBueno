@@ -1,18 +1,18 @@
-import calefaccion from '../../img/icons/calefaccion2.png'
-import cochera from '../../img/icons/cochera.png'
+import calefaccion from '../../img/icons/calefaccion.png'
+import cochera from '../../img/icons/cochera3.png'
 import frazadasSabanas from '../../img/icons/frazadasSabanas.png'
 import heladeraFreezer from '../../img/icons/heladeraFreezer.png'
 import microondas from '../../img/icons/microondas.png'
-import playa from '../../img/icons/playa3.png'
+import playa from '../../img/icons/playa.png'
 import sommier from '../../img/icons/sommier.png'
-import toallas from '../../img/icons/toallas5.png'
-import TV from '../../img/icons/TV2.png'
-import vajillaUtensillos from '../../img/icons/vajillaUtensillos2.png'
+import toallas from '../../img/icons/toallas.png'
+import TV from '../../img/icons/TV.png'
+import vajillaUtensillos from '../../img/icons/vajillaUtensillos.png'
 import wifi from '../../img/icons/wifi.png'
 import primerosAuxilios from '../../img/icons/primerosAuxilios.png'
 import alarma from '../../img/icons/alarma.png' 
 import cajaSeguridad from '../../img/icons/cajaSeguridad.png' 
-import secador from '../../img/icons/secador2.png' 
+import secador from '../../img/icons/secador.png' 
 import arena from '../../img/arena.jpg' 
 
 const Servicios = () => {
@@ -63,7 +63,7 @@ const Servicios = () => {
 
                 <div className='icono'>
                     <img src={vajillaUtensillos} alt="Icono vajillaUtensillos"/>
-                    <p>Vajilla y Utensillos</p>
+                    <p>Vajilla y Utensilios</p>
                 </div>
                 <div className='icono'>
                     <img src={frazadasSabanas} alt="Icono frazadasSabanas"/>
