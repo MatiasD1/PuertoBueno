@@ -55,13 +55,14 @@
     }
 }
 .mapaUbicacion{
-    display: flex;
-    justify-content: center;
-    height: 720px;
+    height: 600px;
     padding: 20px;
     background-color: $color3;
+    
+    img{
+        width: 56%;
+    }
 } 
 .tituloMapa{
-    padding-top: 20px;
     user-select: none;
 }

@@ -4,7 +4,7 @@ const NavBar = ({ isVisible }) => {
   return (
     <nav className={`NavBar ${isVisible ? 'fixed' : ''}`}>
       <h2 className="tituloNavBar">Puerto Bueno</h2>
-      <h3 className="subtituloNavBar">- Alquiler temporario -</h3>
+      <h3 className="subtituloNavBar">- Mar del Plata -</h3>
 
       <ul className="nav justify-content-end">
         <li className="nav-item">

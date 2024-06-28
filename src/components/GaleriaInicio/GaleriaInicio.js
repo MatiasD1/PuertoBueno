@@ -28,7 +28,7 @@ const GaleriaInicio = () => {
 
     return (
         <div className='galeriaInicio'>
-            <h2 className='tituloGaleriaInicio'>Galería</h2>
+            <h2 className='tituloGaleriaInicio'>Galería de Fotos</h2>
             <div className='grid-container'>
                 {/* Fila 1 */}
                 <div className='grid-row'>

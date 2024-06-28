@@ -3,7 +3,7 @@ import Mapa from '../Mapa/Mapa.js'
 import Swiper from '../Swiper/Swiper.js';
 import Swiper2 from '../Swiper2/Swiper2.js';
 import fotoEncabezado from '../../img/arena.png'; 
-
+import MapaFoto from '../../img/Mapa.png';
 const Ubicacion = () => {
     return (
         
@@ -23,7 +23,7 @@ const Ubicacion = () => {
             </div>     
             <div className='mapaUbicacion'>
                 <h2 className='tituloMapa'>Mapa</h2>
-                {/* <Mapa/> */}
+                <img src={MapaFoto} alt="Mapa"/>
             </div>
             
         </div>

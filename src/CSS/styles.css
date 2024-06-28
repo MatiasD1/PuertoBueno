@@ -287,7 +287,6 @@ button[type=submit]:hover {
   opacity: 0.5; /* Reducir la opacidad al hacer hover en .fotoSimbolo */
 }
 
-/* Estilos generales */
 .otrosServicios {
   display: flex;
   flex-direction: column;
@@ -606,6 +605,9 @@ footer {
   margin: auto;
   background-color: brown;
   text-align: center; /* Centramos el contenido del contenedor */
+  padding-bottom: 20px;
+  color: #f5deb3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .grid-container {
@@ -998,15 +1000,15 @@ footer {
 }
 
 .mapaUbicacion {
-  display: flex;
-  justify-content: center;
-  height: 720px;
+  height: 600px;
   padding: 20px;
   background-color: #f7c686;
 }
+.mapaUbicacion img {
+  width: 56%;
+}
 
 .tituloMapa {
-  padding-top: 20px;
   user-select: none;
 }
 
