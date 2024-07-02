@@ -1,94 +1,45 @@
-import calefaccion from '../../img/icons/calefaccion.png'
-import cochera from '../../img/icons/cochera3.png'
-import frazadasSabanas from '../../img/icons/frazadasSabanas.png'
-import heladeraFreezer from '../../img/icons/heladeraFreezer.png'
-import microondas from '../../img/icons/microondas.png'
-import playa from '../../img/icons/playa.png'
-import sommier from '../../img/icons/sommier.png'
-import toallas from '../../img/icons/toallas.png'
-import TV from '../../img/icons/TV.png'
-import vajillaUtensillos from '../../img/icons/vajillaUtensillos.png'
-import wifi from '../../img/icons/wifi.png'
-import primerosAuxilios from '../../img/icons/primerosAuxilios.png'
-import alarma from '../../img/icons/alarma.png' 
-import cajaSeguridad from '../../img/icons/cajaSeguridad.png' 
-import secador from '../../img/icons/secador.png' 
-import arena from '../../img/arena.jpg' 
+import React, { useState } from 'react';
+import Encabezado from '../Encabezado/Encabezado' 
+import fotoEncabezado from '../../img/arena.jpg'
+import EnlaceContacto from '../EnlaceContacto/EnlaceContacto'
+import imagenPlaya from '../../img/playa.jpg'
+import Swiper3 from '../../components/Swiper3/Swiper3.js';
+import CostaImagen from "../../img/costa.jpeg";
+import fotoExterior from "../../img/fotoExterior.jpg";
+import fotoPieza from "../../img/fotoPieza.jpg"; 
+import GaleriaImagenes from '../GaleriaImagenes/GaleriaImagenes';
+import IconosServicios from '../IconosServicios/IconosServicios.js'; 
+import fotoMardel from '../../img/fotoMardel.jpg'
 
 const Servicios = () => {
+    const [showCarrusel, setShowCarrusel] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [images] = useState([
+        fotoPieza,
+        CostaImagen,
+        fotoExterior,
+        // Agrega más URLs de imágenes aquí según sea necesario
+    ]);
+    const handleImageClick = () => {
+        setSelectedImage(images);
+        setShowCarrusel(true);
+    };
     return (
         <div className='servicios'>
-            <h1>Servicios y Facilidades</h1>
-            <img src={arena} className="serviciosFondo" alt="orilla del mar"/>
-            <div className='iconos'>
-
-                <div className='icono'>
-                    <img src={cochera} alt="Icono cochera"/>
-                    <p>Cochera</p>
+            <Encabezado imageSrc={fotoMardel} seccion={"Servicios"}/>
+            <IconosServicios/>
+            {showCarrusel && <GaleriaImagenes images={selectedImage} onClose={() => setShowCarrusel(false)} />} {/* Renderiza el carrusel si showCarrusel es true */}
+            <div className='otrosServicios'>
+            <div className='item2'>
+                    <h3> Quincho </h3>
+                    <Swiper3/>
                 </div>
-                <div className='icono'>
-                    <img src={calefaccion} alt="Icono calefaccion más"/>
-                    <p>Calefacción por radiadores</p>
+                <div className='item2'>
+                    <Swiper3/>
+                    <h3> Estacionamiento </h3>  
                 </div>
-                <div className='icono'>
-                    <img src={wifi} alt="Icono wifi"/>
-                    <p>Wi-fi</p>
-                </div>
-
-                <div className='icono'>
-                    <img src={heladeraFreezer} alt="Icono heladeraFreezer"/>
-                    <p>Heladera y Freezer</p>
-                </div>
-                <div className='icono'>
-                    <img src={microondas} alt="Icono microondas"/>
-                    <p>Microondas</p>
-                </div>
-                <div className='icono'>
-                    <img src={playa} alt="Icono playa"/>
-                    <p>Playa cercana</p>
-                </div>
-
-                <div className='icono'>
-                    <img src={secador} alt="Icono secador"/>
-                    <p>Secador</p>
-                </div>
-                <div className='icono'>
-                    <img src={cajaSeguridad} alt="Icono caja de seguridad"/>
-                    <p>Caja de Seguridad</p>
-                </div>
-                <div className='icono'>
-                    <img src={alarma} alt="Icono alarma"/>
-                    <p>Alarma</p>
-                </div>
-
-                <div className='icono'>
-                    <img src={vajillaUtensillos} alt="Icono vajillaUtensillos"/>
-                    <p>Vajilla y Utensilios</p>
-                </div>
-                <div className='icono'>
-                    <img src={frazadasSabanas} alt="Icono frazadasSabanas"/>
-                    <p>Sábanas y Frazadas</p>
-                </div>
-                <div className='icono'>
-                    <img src={sommier} alt="Icono sommier"/>
-                    <p>Sommier</p>
-                </div>
-
-                <div className='icono'>
-                    <img src={TV} alt="Icono TV"/>
-                    <p>TV</p>
-                </div>
-                <div className='icono'>
-                    <img src={toallas} alt="Icono toallas"/>
-                    <p>Toallas</p>
-                </div>
-                <div className='icono'>
-                    <img src={primerosAuxilios} alt="Icono primerosAuxilios"/>
-                    <p>Botiquín</p>
-                </div>
-                
-
             </div>
+            <EnlaceContacto imageSrc={imagenPlaya} /> 
         </div>  
     );
 }

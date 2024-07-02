@@ -18,25 +18,34 @@ import Swiper3 from '../../components/Swiper3/Swiper3.js';
 
 const Departamentos = () => {
     const [showCarrusel, setShowCarrusel] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
-    const [images] = useState([
+    const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+    // Lista completa de imágenes para el carrusel
+    const images = [
         fotoPieza,
         CostaImagen,
         fotoExterior,
-        // Agrega más URLs de imágenes aquí según sea necesario
-    ]);
-    const handleImageClick = () => {
-        setSelectedImage(images);
+        fotoDucha,
+        fotoHabitacion,
+        fotoSala,
+        living,
+        // Agrega más imágenes aquí según sea necesario
+    ];
+
+    // Maneja el clic en una imagen, abriendo el carrusel desde esa imagen específica
+    const handleImageClick = (index) => {
+        setSelectedImageIndex(index);
         setShowCarrusel(true);
     };
+
     return (
         <div className='departamentos'>    
             <Encabezado imageSrc={fotoEncabezado} seccion={"Departamentos"}/>
-            <div class="containerDepartamentos">
+            <div className="containerDepartamentos">
                 <div className="item">
-                    <div className='fotosDeptos' onClick={handleImageClick}>
-                            <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
-                            <img src={fotoSala} alt="Imagen 1" className='fotoDepto'/>
+                    <div className='fotosDeptos' onClick={() => handleImageClick(0)}>
+                        <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
+                        <img src={fotoSala} alt="Imagen 1" className='fotoDepto'/>
                     </div>
                     <div className="textoDepartamentos">
                         <h2 className='tituloDepto'>Departamento PB1</h2>
@@ -50,7 +59,6 @@ const Departamentos = () => {
                         </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
-        
                 </div>
                 <div className="item">
                     <div className="textoDepartamentos">
@@ -65,14 +73,13 @@ const Departamentos = () => {
                         </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
-                    <div className='fotosDeptos' onClick={handleImageClick}> 
+                    <div className='fotosDeptos' onClick={() => handleImageClick(1)}> 
                         <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
                         <img src={fotoDucha} alt="Imagen 2" className='fotoDepto'/>
                     </div>
-                  
                 </div>
                 <div className="item">
-                    <div className='fotosDeptos' onClick={handleImageClick}>
+                    <div className='fotosDeptos' onClick={() => handleImageClick(2)}>
                         <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
                         <img src={fotoHabitacion} alt="Imagen 3" className='fotoDepto'/>
                     </div>
@@ -88,10 +95,9 @@ const Departamentos = () => {
                         </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
-             
                 </div>
                 <div className="item">
-                <div className="textoDepartamentos">
+                    <div className="textoDepartamentos">
                         <h2 className='tituloDepto'>Departamento PA2</h2>
                         <p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>
                         <p className='textoDepto'>
@@ -103,43 +109,25 @@ const Departamentos = () => {
                         </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
-                    <div className='fotosDeptos' onClick={handleImageClick}>
+                    <div className='fotosDeptos' onClick={() => handleImageClick(3)}>
                         <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
                         <img src={living} alt="Imagen 4" className='fotoDepto'/>
                     </div>
-             
                 </div>                
             </div>
-            {showCarrusel && <GaleriaImagenes images={selectedImage} onClose={() => setShowCarrusel(false)} />} {/* Renderiza el carrusel si showCarrusel es true */}
-            <Servicios/>
-            <div className='otrosServicios'>
-               <div className='item2'>
-                    <h3> Quincho </h3>
-                    <Swiper3/>
-                </div>
-                <div className='item2'>
-                    <Swiper3/>
-                    <h3> Estacionamiento </h3>  
-                </div>
-            </div>
+
+            {/* Renderiza el carrusel si showCarrusel es true */}
+            {showCarrusel && (
+                <GaleriaImagenes 
+                    images={images} 
+                    initialIndex={selectedImageIndex} 
+                    onClose={() => setShowCarrusel(false)} 
+                />
+            )}
+
             <EnlaceContacto imageSrc={imagenPlaya} /> 
         </div>
     );
 }
 
 export default Departamentos;
-
-
-/*
-import './Departamentos.css'; 
-
-const Departamentos = () => {
-    return (
-        <div className='departamentos'>
-            <p>Hola</p>
-        </div>  
-    );
-}
-
-export default Departamentos;
-*/ 

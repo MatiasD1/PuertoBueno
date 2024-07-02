@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const GaleriaImagenes = ({ images, onClose }) => {
-    const [currentSlide, setCurrentSlide] = useState(0);
+const GaleriaImagenes = ({ images, initialIndex, onClose }) => {
+    const [currentSlide, setCurrentSlide] = useState(initialIndex);
+
+    // Actualizar el currentSlide cuando initialIndex cambia
+    useEffect(() => {
+        setCurrentSlide(initialIndex);
+    }, [initialIndex]);
 
     const nextSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide === images.length - 1 ? 0 : prevSlide + 1));
@@ -35,4 +40,3 @@ const GaleriaImagenes = ({ images, onClose }) => {
 }
 
 export default GaleriaImagenes;
-

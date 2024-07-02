@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import Inicio from './components/Inicio/Inicio';
 import Departamentos from './components/Departamentos/Departamentos';
+import Servicios from './components/Servicios/Servicios'
 import Contacto from './components/Contacto/Contacto';
 import Footer from './components/Footer/Footer';
 import Ubicacion from './components/Ubicacion/Ubicacion';
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/departamentos" element={<Departamentos />} />
+          <Route path="/servicios" element={<Servicios />} />
           <Route path="/ubicacion" element={<Ubicacion />} />
           <Route path="/contacto" element={<Contacto />} />
         </Routes>
