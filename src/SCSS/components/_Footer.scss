@@ -19,9 +19,10 @@ footer {
     h3 {
         margin-bottom: 10px;/* Esto elimina el margen inferior predeterminado */
         font-size: 25px;
-        color: $color3;
+        color: $color1;
         font-family: 'Urbanist', sans-serif;
         font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     p {
         font-family: 'Urbanist', sans-serif;
@@ -29,12 +30,12 @@ footer {
         font-size: 14px;
         max-width: 150px;
         margin: auto;
-        color: $color2;
+        color: $color1;
         text-decoration: none;
     }
 }
 .accesoNav {
-    color: $color2;
+    color: $color1;
     text-decoration: none;
     transition: text-shadow 0.3s ease; // Aplica una transición suave de 0.3s para la sombra del texto
 
@@ -62,13 +63,13 @@ footer {
 .footer-line {
     width: 90%; /* Anchura de la línea */
     height: 1px; /* Grosor de la línea */
-    background-color: $color2; /* Color de la línea */
+    background-color: $color1; /* Color de la línea */
     margin: 0 auto; /* Centra la línea horizontalmente */
 }
 
 .copyright {
     margin-top: 10px; /* Espacio entre la línea y el texto de copyright */
-    color: $color2; /* Color del texto de copyright */
+    color: $color1; /* Color del texto de copyright */
     font-size: 14px; /* Tamaño del texto de copyright */
     font-family: 'Urbanist', sans-serif;
     font-weight: 300;

@@ -8,9 +8,7 @@ const Inicio = () => {
     
     return (
         <div className='Inicio'>
-            <Carrusel/>
-            <TextAnimation/>
-            
+            <Carrusel/>            
             <div className='presentacionInicio'>
                 <h2 className='fraseInicio'>Una frase aleatoria para rellenar,<br/> el espacio del contenedor de inicio.</h2>
                 <h3 className='tituloInicio'>Titulo de inicio</h3>

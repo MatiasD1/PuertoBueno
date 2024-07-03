@@ -1,6 +1,6 @@
 import facebookLogo from '../../img/icons/facebook.png';
 import xLogo from '../../img/icons/x.png';
-import instagramLogo from '../../img/icons/instagram.png';
+import instagramLogo from '../../img/icons/instagramLogo.svg';
 
 function Footer() {
     return (

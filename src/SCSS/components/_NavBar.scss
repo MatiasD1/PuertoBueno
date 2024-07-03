@@ -41,7 +41,7 @@
         position: absolute;/* Cambiado a relativo para que no se pierda el flujo normal del documento */
         font-family:"Urbanist", sans-serif;
         font-weight: 400;
-        color: $color2;
+        color: $color1;
         margin-left: 40px;
         margin-top: 82px;
         z-index: 1200;/* Asegura que esté por encima del NavBar */
@@ -56,7 +56,7 @@
         font-size: 19px;
         font-family:"Urbanist", sans-serif;
         font-weight: 400;
-        color: #f5deb3;
+        color: $color1;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 }

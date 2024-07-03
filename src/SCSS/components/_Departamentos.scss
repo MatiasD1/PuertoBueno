@@ -11,7 +11,7 @@
 .textoDepartamentos {
     padding: 0px 20px;/* Espaciado interno para el texto */
     font-family: 'Khula', sans-serif;
-    color: #464646;
+    color: $color6;
 }
 .item {
     display: grid;
@@ -23,7 +23,7 @@
     font-family: 'Urbanist', sans-serif;
     font-weight: 500;
     font-size: 50px;
-    color: rgb(37, 37, 37);
+    color: $color5;
 }
 .subtituloDepto {
     font-family: 'Urbanist', sans-serif;

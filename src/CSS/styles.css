@@ -1,8 +1,12 @@
 @charset "UTF-8";
+/*$color1: #EEEEEE;
+$color2: #00ADB5; //iconos servicios
+$color3: #393E46;
+$color4: #222831;*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 .App {
   text-align: center;
-  background-color: #f7c686;
+  background-color: #f5deb3;
 }
 
 .carrusel {
@@ -60,7 +64,7 @@
   padding-bottom: 20px;
 }
 .textoContacto h3 {
-  color: #f7c686;
+  color: #f5deb3;
   font-size: 36px;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
@@ -88,7 +92,7 @@
   z-index: 1;
 }
 .contact-form h2 {
-  color: #f7c686;
+  color: #f5deb3;
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: "Urbanist", sans-serif;
@@ -227,7 +231,7 @@ button[type=submit]:hover {
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
   font-size: 50px;
-  color: rgb(37, 37, 37);
+  color: #252525;
 }
 
 .subtituloDepto {
@@ -357,7 +361,7 @@ button[type=submit]:hover {
   font-family: "Urbanist", sans-serif; /* 'sans-serif' como fallback (como alternativa si por un error no puede usarse urbanist)*/
   font-weight: 400;
   font-size: 60px;
-  color: #ffca8d;
+  color: #f7c686;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 0;
   text-align: center;
@@ -454,9 +458,10 @@ footer {
 .columnaFooter h3 {
   margin-bottom: 10px; /* Esto elimina el margen inferior predeterminado */
   font-size: 25px;
-  color: #f7c686;
+  color: #fff1d8;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .columnaFooter p {
   font-family: "Urbanist", sans-serif;
@@ -464,12 +469,12 @@ footer {
   font-size: 14px;
   max-width: 150px;
   margin: auto;
-  color: #f5deb3;
+  color: #fff1d8;
   text-decoration: none;
 }
 
 .accesoNav {
-  color: #f5deb3;
+  color: #fff1d8;
   text-decoration: none;
   transition: text-shadow 0.3s ease;
 }
@@ -497,13 +502,13 @@ footer {
 .footer-line {
   width: 90%; /* Anchura de la línea */
   height: 1px; /* Grosor de la línea */
-  background-color: #f5deb3; /* Color de la línea */
+  background-color: #fff1d8; /* Color de la línea */
   margin: 0 auto; /* Centra la línea horizontalmente */
 }
 
 .copyright {
   margin-top: 10px; /* Espacio entre la línea y el texto de copyright */
-  color: #f5deb3; /* Color del texto de copyright */
+  color: #fff1d8; /* Color del texto de copyright */
   font-size: 14px; /* Tamaño del texto de copyright */
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
@@ -603,10 +608,10 @@ footer {
 .galeriaInicio {
   height: 600px;
   margin: auto;
-  background-color: brown;
+  background-color: #d13630;
   text-align: center; /* Centramos el contenido del contenedor */
   padding-bottom: 20px;
-  color: #f5deb3;
+  color: #fff1d8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -698,11 +703,11 @@ footer {
   position: relative;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
-  color: #ffffff; /* Cambiado el uso de variable a color directo */
+  color: #fff1d8;
   padding-top: 50px;
   padding-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  z-index: 2;
 }
 
 .serviciosFondo {
@@ -724,7 +729,7 @@ footer {
   grid-template-columns: repeat(5, 1fr); /* Cambiado a repeat para uniformidad */
   justify-items: center;
   gap: 40px; /* Cambiado a gap para espacio entre columnas y filas */
-  color: #ffffff; /* Cambiado el uso de variable a color directo */
+  color: #fff1d8; /* Cambiado el uso de variable a color directo */
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -760,15 +765,18 @@ footer {
   padding: 40px;
   gap: 20px; /* Espacio entre columnas */
   font-family: "Urbanist", sans-serif;
-  background-color: #f7c686;
+  background-color: #f5deb3;
 }
 
 .tituloInicio {
   grid-area: tituloInicio;
+  color: #fff1d8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .fraseInicio {
   grid-area: fraseInicio;
+  color: #464646;
 }
 
 .textoInicio {
@@ -830,7 +838,7 @@ footer {
   position: absolute; /* Cambiado a relativo para que no se pierda el flujo normal del documento */
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  color: #f5deb3;
+  color: #fff1d8;
   margin-left: 40px;
   margin-top: 82px;
   z-index: 1200; /* Asegura que esté por encima del NavBar */
@@ -844,7 +852,7 @@ footer {
   font-size: 19px;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  color: #f5deb3;
+  color: #fff1d8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -943,7 +951,7 @@ footer {
 .ubicacion {
   min-height: calc(100vh - 200px); /* Calcula la altura mínima de la ubicación para que el footer quede al final de la página para solucionar el problema de que el footer quedaba en el medio */
   width: 100%;
-  background-color: #f7c686;
+  background-color: #f5deb3;
   display: flex;
   flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
 }
@@ -983,10 +991,10 @@ footer {
 
 .serviciosCercanos {
   height: 520px;
-  background-color: #d13630;
+  background-color: #f7c686;
 }
 .serviciosCercanos h2 {
-  color: #f5deb3;
+  color: #fff1d8;
   font-family: "Urbanist";
   font-weight: 500;
   font-size: 40px;
@@ -995,19 +1003,20 @@ footer {
 }
 
 .mapaUbicacion {
-  height: 600px;
+  height: 550px;
   padding: 20px;
-  background-color: #f7c686;
+  color: #fff1d8;
+  background-color: #f5deb3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .mapaUbicacion img {
-  width: 56%;
+  width: 90%;
 }
 
 .tituloMapa {
   user-select: none;
 }
 
-/* Estilos para el texto en las imágenes de los slides */
 .textoSlides {
   width: 100%;
   position: absolute;
@@ -1054,10 +1063,9 @@ footer {
   object-fit: cover; /* Ajusta la imagen para que cubra el contenedor manteniendo la proporción */
 }
 
-/* swiperCustom.scss */
 .bordeSwiper2 {
   padding: 20px; /* Espacio entre el borde y el contenido del carrusel */
-  border: 4px solid #f5deb3; /* Color y grosor del borde */
+  border: 4px solid #fff1d8; /* Color y grosor del borde */
   margin: 20px auto; /* Ajusta según sea necesario */
   max-width: 1000px; /* Ajusta según sea necesario para incluir padding y tamaño del carrusel */
   position: relative;
@@ -1121,7 +1129,7 @@ footer {
 }
 
 .swiper-container .swiper-pagination .swiper-pagination-bullet {
-  background-color: #d13630;
+  background-color: #f7c686;
   opacity: 0.5;
   transition: opacity 0.15s ease;
 }

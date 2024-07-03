@@ -8,18 +8,21 @@
     padding: 40px;
     gap: 20px; /* Espacio entre columnas */
     font-family: "Urbanist", sans-serif;
-    background-color: $color3;
+    background-color: $color2;
 }
 
 .tituloInicio {
     grid-area: tituloInicio;
+    color: $color1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .fraseInicio {
     grid-area: fraseInicio;
+    color: $color6;
 }
 
 .textoInicio {
     grid-area: textoInicio;
-    color: #464646;
+    color: $color6;
 }
