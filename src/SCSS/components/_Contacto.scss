@@ -28,7 +28,7 @@
     padding-bottom: 20px;
 
     h3 {
-        color: $color2;
+        color: $color5;
         font-size: 36px;
         font-family: 'Urbanist', sans-serif;
         font-weight: 400;
@@ -57,7 +57,7 @@
     z-index: 1;
 
     h2 {
-        color: $color2;
+        color: $color5;
         padding-top: 10px;
         padding-bottom: 10px;
         font-family: 'Urbanist', sans-serif;
@@ -69,7 +69,7 @@
 label {
     display: block;
     margin-bottom: 5px;
-    color: $color2;
+    color: $color6;
     text-align: start;
     padding-left: 20px; /* Para alinear los label con el comienzo de los inputs */
 }
@@ -77,11 +77,11 @@ label {
 input {
     &[type="text"], &[type="date"], &[type="number"], &[type="email"] {
         background-color: #00000059;
-        color: $color2;
+        color: $color6;
         width: 90%;
         padding: 6px; /* Reducir el relleno */
         margin-bottom: 8px;
-        border: 1px solid #ccc;
+        border: 1px solid $color6;
         border-radius: 4px;
         box-sizing: border-box;
         height: 30px;
@@ -94,7 +94,7 @@ textarea {
     width: 90%;
     padding: 6px;
     margin-bottom: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid $color6;
     border-radius: 4px;
     box-sizing: border-box;
     height: 100px;
@@ -123,17 +123,17 @@ textarea {
 /* Ajuste específico para los label de fechas */
 .fechasContacto label {
     margin-bottom: 5px; /* Espacio entre el label y el input */
-    color: $color2;
+    color: $color6;
     padding-left: 0; /* Quita cualquier padding añadido anteriormente */
 }
 
 .fechasContacto input {
     width: 100%; /* Asegura que los inputs ocupen todo el ancho del contenedor de fecha */
     background-color: #00000059;
-    color: $color2;
+    color: $color6;
     padding: 6px;
     margin-bottom: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid $color6;
     border-radius: 4px;
     box-sizing: border-box;
     height: 30px;
@@ -144,8 +144,8 @@ textarea {
 }
 /* Estilos para el botón de submit */
 button[type="submit"] {
-    color: $color2;
-    background: #d135308a;
+    color: $color6;
+    background: #00a29d;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -153,8 +153,8 @@ button[type="submit"] {
     transition: 0.2s;
 
     &:hover {
-        color: $color1;
-        background-color: #af340e;
+        color: white;
+        background-color: $color3;
         cursor: pointer;
     }
 }

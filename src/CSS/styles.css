@@ -1,12 +1,16 @@
 @charset "UTF-8";
-/*$color1: #EEEEEE;
-$color2: #00ADB5; //iconos servicios
-$color3: #393E46;
-$color4: #222831;*/
+/*$color1: #fff1d8; //texto claro
+$color2: #f5deb3; //fondo
+$color3: #f7c686; //elementos importantes
+$color4: #d13630; //seccion importante
+
+$color5: #252525; //titulo texto oscuro
+$color6: #464646; //texto oscuro 
+*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 .App {
   text-align: center;
-  background-color: #f5deb3;
+  background-color: #131313;
 }
 
 .carrusel {
@@ -26,7 +30,7 @@ $color4: #222831;*/
 }
 
 #carouselExampleAutoplaying {
-  opacity: 70%;
+  opacity: 60%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Alinea el contenido en la parte inferior */
@@ -64,7 +68,7 @@ $color4: #222831;*/
   padding-bottom: 20px;
 }
 .textoContacto h3 {
-  color: #f5deb3;
+  color: #f4f4f4;
   font-size: 36px;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
@@ -92,7 +96,7 @@ $color4: #222831;*/
   z-index: 1;
 }
 .contact-form h2 {
-  color: #f5deb3;
+  color: #f4f4f4;
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: "Urbanist", sans-serif;
@@ -103,18 +107,18 @@ $color4: #222831;*/
 label {
   display: block;
   margin-bottom: 5px;
-  color: #f5deb3;
+  color: #cdcdcd;
   text-align: start;
   padding-left: 20px; /* Para alinear los label con el comienzo de los inputs */
 }
 
 input[type=text], input[type=date], input[type=number], input[type=email] {
   background-color: rgba(0, 0, 0, 0.3490196078);
-  color: #f5deb3;
+  color: #cdcdcd;
   width: 90%;
   padding: 6px; /* Reducir el relleno */
   margin-bottom: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #cdcdcd;
   border-radius: 4px;
   box-sizing: border-box;
   height: 30px;
@@ -122,11 +126,11 @@ input[type=text], input[type=date], input[type=number], input[type=email] {
 
 textarea {
   background-color: rgba(0, 0, 0, 0.3490196078);
-  color: #f5deb3;
+  color: #131313;
   width: 90%;
   padding: 6px;
   margin-bottom: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #cdcdcd;
   border-radius: 4px;
   box-sizing: border-box;
   height: 100px;
@@ -155,17 +159,17 @@ textarea {
 /* Ajuste específico para los label de fechas */
 .fechasContacto label {
   margin-bottom: 5px; /* Espacio entre el label y el input */
-  color: #f5deb3;
+  color: #cdcdcd;
   padding-left: 0; /* Quita cualquier padding añadido anteriormente */
 }
 
 .fechasContacto input {
   width: 100%; /* Asegura que los inputs ocupen todo el ancho del contenedor de fecha */
   background-color: rgba(0, 0, 0, 0.3490196078);
-  color: #f5deb3;
+  color: #cdcdcd;
   padding: 6px;
   margin-bottom: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #cdcdcd;
   border-radius: 4px;
   box-sizing: border-box;
   height: 30px;
@@ -177,8 +181,8 @@ textarea {
 
 /* Estilos para el botón de submit */
 button[type=submit] {
-  color: #f5deb3;
-  background: rgba(209, 53, 48, 0.5411764706);
+  color: #cdcdcd;
+  background: #00a29d;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -186,8 +190,8 @@ button[type=submit] {
   transition: 0.2s;
 }
 button[type=submit]:hover {
-  color: #fff1d8;
-  background-color: #af340e;
+  color: white;
+  background-color: #00c1bb;
   cursor: pointer;
 }
 
@@ -207,7 +211,7 @@ button[type=submit]:hover {
   height: auto;
   position: relative; /* O static si no necesitas posicionamiento especial */
   z-index: 1; /* Un valor más alto que el carrusel si es necesario */
-  background-color: #f7c686;
+  background-color: #131313;
 }
 
 .containerDepartamentos {
@@ -217,7 +221,7 @@ button[type=submit]:hover {
 .textoDepartamentos {
   padding: 0px 20px; /* Espaciado interno para el texto */
   font-family: "Khula", sans-serif;
-  color: #464646;
+  color: #cdcdcd;
 }
 
 .item {
@@ -231,7 +235,7 @@ button[type=submit]:hover {
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
   font-size: 50px;
-  color: #252525;
+  color: #f4f4f4;
 }
 
 .subtituloDepto {
@@ -352,7 +356,7 @@ button[type=submit]:hover {
   height: auto; /* Ajustar la altura según el contenido */
   z-index: 3; /* Elevar por encima de la imagen */
   padding: 20px 40px; /* Espaciado interno para crear margen dentro del borde */
-  border: 2px solid #ffe8a9; /* Borde alrededor del contenedor del título */
+  border: 2px solid #EEEEEE; /* Borde alrededor del contenedor del título */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para dar efecto de elevación */
 }
 
@@ -361,7 +365,7 @@ button[type=submit]:hover {
   font-family: "Urbanist", sans-serif; /* 'sans-serif' como fallback (como alternativa si por un error no puede usarse urbanist)*/
   font-weight: 400;
   font-size: 60px;
-  color: #f7c686;
+  color: #EEEEEE;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 0;
   text-align: center;
@@ -391,7 +395,7 @@ button[type=submit]:hover {
   font-style: 400;
   position: absolute;
   top: 20%;
-  color: #f7c686;
+  color: #EEEEEE;
   font-size: 46px;
   z-index: 1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -401,7 +405,7 @@ button[type=submit]:hover {
   font-family: "Urbanist", sans-serif;
   font-style: 300;
   position: absolute;
-  color: #fff1d8;
+  color: #cdcdcd;
   top: 36%;
   font-size: 25px;
   z-index: 1;
@@ -420,19 +424,19 @@ button[type=submit]:hover {
   top: 72%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #f5deb3; /* Cambia el color del texto si es necesario */
+  color: #EEEEEE; /* Cambia el color del texto si es necesario */
   font-size: 4.3rem; /* Ajusta el tamaño del texto según sea necesario */
   font-family: "Urbanist", sans-serif;
   font-style: 500;
   background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejorar la legibilidad */
   padding: 18px 25px 18px 25px; /* Espaciado interno para el texto */
-  border: 2px solid rgb(245, 222, 179);
+  border: 2px solid #EEEEEE;
   text-decoration: none;
   transition: 0.3s;
 }
 .textoEnlaceContacto:hover {
   color: rgb(211, 211, 211);
-  border: 2px solid rgb(211, 211, 211);
+  border: 2px solid #00c1bb;
   background: rgba(0, 0, 0, 0.6);
   cursor: pointer;
 }
@@ -441,7 +445,7 @@ footer {
   padding-top: 20px;
   width: 100%;
   height: 225px;
-  background-color: #d13630;
+  background-color: #000000;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
@@ -458,7 +462,7 @@ footer {
 .columnaFooter h3 {
   margin-bottom: 10px; /* Esto elimina el margen inferior predeterminado */
   font-size: 25px;
-  color: #fff1d8;
+  color: #EEEEEE;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -469,17 +473,17 @@ footer {
   font-size: 14px;
   max-width: 150px;
   margin: auto;
-  color: #fff1d8;
+  color: #EEEEEE;
   text-decoration: none;
 }
 
 .accesoNav {
-  color: #fff1d8;
+  color: #EEEEEE;
   text-decoration: none;
   transition: text-shadow 0.3s ease;
 }
 .accesoNav:hover {
-  text-shadow: 2px 2px 5px #fff1d8;
+  text-shadow: 2px 2px 5px #EEEEEE;
 }
 
 .logosRedes {
@@ -502,13 +506,13 @@ footer {
 .footer-line {
   width: 90%; /* Anchura de la línea */
   height: 1px; /* Grosor de la línea */
-  background-color: #fff1d8; /* Color de la línea */
+  background-color: #00c1bb; /* Color de la línea */
   margin: 0 auto; /* Centra la línea horizontalmente */
 }
 
 .copyright {
   margin-top: 10px; /* Espacio entre la línea y el texto de copyright */
-  color: #fff1d8; /* Color del texto de copyright */
+  color: #EEEEEE; /* Color del texto de copyright */
   font-size: 14px; /* Tamaño del texto de copyright */
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
@@ -602,16 +606,16 @@ footer {
   cursor: pointer;
 }
 .dot.active {
-  background-color: #fff1d8; /* Cambiado a blanco para mayor visibilidad */
+  background-color: #EEEEEE; /* Cambiado a blanco para mayor visibilidad */
 }
 
 .galeriaInicio {
   height: 600px;
   margin: auto;
-  background-color: #d13630;
+  background-color: #000000;
   text-align: center; /* Centramos el contenido del contenedor */
   padding-bottom: 20px;
-  color: #fff1d8;
+  color: #EEEEEE;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -703,7 +707,7 @@ footer {
   position: relative;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
-  color: #fff1d8;
+  color: #EEEEEE;
   padding-top: 50px;
   padding-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -729,7 +733,7 @@ footer {
   grid-template-columns: repeat(5, 1fr); /* Cambiado a repeat para uniformidad */
   justify-items: center;
   gap: 40px; /* Cambiado a gap para espacio entre columnas y filas */
-  color: #fff1d8; /* Cambiado el uso de variable a color directo */
+  color: #EEEEEE; /* Cambiado el uso de variable a color directo */
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -765,23 +769,23 @@ footer {
   padding: 40px;
   gap: 20px; /* Espacio entre columnas */
   font-family: "Urbanist", sans-serif;
-  background-color: #f5deb3;
+  background-color: #131313;
 }
 
 .tituloInicio {
   grid-area: tituloInicio;
-  color: #fff1d8;
+  color: #EEEEEE;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .fraseInicio {
   grid-area: fraseInicio;
-  color: #464646;
+  color: #cdcdcd;
 }
 
 .textoInicio {
   grid-area: textoInicio;
-  color: #464646;
+  color: #cdcdcd;
 }
 
 .Mapa {
@@ -792,11 +796,11 @@ footer {
   padding-top: 50px;
   height: 500px;
   width: 70%;
-  background-color: #f7c686;
+  background-color: #00c1bb;
 }
 
 .nav-link {
-  color: #f5deb3;
+  color: #f4f4f4 !important;
   margin-top: 1rem;
   /*margin-right: 30px; Ajusta este valor según sea necesario para agregar espacio entre los enlaces */
   border-bottom: 2px solid transparent; /* Subrayado transparente*/
@@ -806,13 +810,10 @@ footer {
   font-family: "Urbanist", sans-serif;
 }
 .nav-link:hover {
-  color: white;
+  color: #00c1bb !important;
   border-bottom-color: rgb(255, 255, 255); /* Cambia el color del subrayado al pasar el cursor */
-  transition: border-bottom-color 0.5s ease; /* Agregado para una transición suave del subrayado */
+  transition: color 0.5s ease, border-bottom-color 0.5s ease;
   text-shadow: 2px 2px 4px rgba(245, 240, 240, 0.26);
-}
-.nav-link:visited {
-  color: rgb(255, 222, 203);
 }
 
 /*
@@ -838,7 +839,7 @@ footer {
   position: absolute; /* Cambiado a relativo para que no se pierda el flujo normal del documento */
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  color: #fff1d8;
+  color: #EEEEEE;
   margin-left: 40px;
   margin-top: 82px;
   z-index: 1200; /* Asegura que esté por encima del NavBar */
@@ -852,7 +853,7 @@ footer {
   font-size: 19px;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  color: #fff1d8;
+  color: #00c1bb;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -866,6 +867,10 @@ footer {
 .fixed .nav {
   background-color: rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(to bottom, rgba(61, 61, 61, 0.5), transparent);
+}
+
+.textoServicios {
+  color: #EEEEEE;
 }
 
 @keyframes fadeIn {
@@ -884,7 +889,7 @@ footer {
   height: 40px;
   top: 70%;
   margin-top: -20px;
-  color: #fff1d8;
+  color: #EEEEEE;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
   font-size: 50px;
@@ -940,7 +945,7 @@ footer {
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
   position: absolute;
-  color: #fff1d8;
+  color: #EEEEEE;
   display: flex;
   top: 65px;
   left: 200px;
@@ -951,7 +956,7 @@ footer {
 .ubicacion {
   min-height: calc(100vh - 200px); /* Calcula la altura mínima de la ubicación para que el footer quede al final de la página para solucionar el problema de que el footer quedaba en el medio */
   width: 100%;
-  background-color: #f5deb3;
+  background-color: #131313;
   display: flex;
   flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
 }
@@ -991,10 +996,10 @@ footer {
 
 .serviciosCercanos {
   height: 520px;
-  background-color: #f7c686;
+  background-color: #000000;
 }
 .serviciosCercanos h2 {
-  color: #fff1d8;
+  color: #EEEEEE;
   font-family: "Urbanist";
   font-weight: 500;
   font-size: 40px;
@@ -1005,8 +1010,8 @@ footer {
 .mapaUbicacion {
   height: 550px;
   padding: 20px;
-  color: #fff1d8;
-  background-color: #f5deb3;
+  color: #EEEEEE;
+  background-color: #131313;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .mapaUbicacion img {
@@ -1025,7 +1030,7 @@ footer {
   margin: 0;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
-  color: #fff1d8;
+  color: #EEEEEE;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-size: 20px; /* Reducido el tamaño de la fuente para que se ajuste mejor */
@@ -1065,7 +1070,7 @@ footer {
 
 .bordeSwiper2 {
   padding: 20px; /* Espacio entre el borde y el contenido del carrusel */
-  border: 4px solid #fff1d8; /* Color y grosor del borde */
+  border: 4px solid #EEEEEE; /* Color y grosor del borde */
   margin: 20px auto; /* Ajusta según sea necesario */
   max-width: 1000px; /* Ajusta según sea necesario para incluir padding y tamaño del carrusel */
   position: relative;
@@ -1094,7 +1099,7 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 0;
-  color: #fff1d8;
+  color: #EEEEEE;
   text-align: center;
   background: 0 0;
   border: 0;
@@ -1120,7 +1125,7 @@ footer {
   justify-content: center;
   width: 15%;
   padding: 0;
-  color: #fff1d8;
+  color: #EEEEEE;
   text-align: center;
   background: 0 0;
   border: 0;
@@ -1129,7 +1134,7 @@ footer {
 }
 
 .swiper-container .swiper-pagination .swiper-pagination-bullet {
-  background-color: #f7c686;
+  background-color: #00c1bb;
   opacity: 0.5;
   transition: opacity 0.15s ease;
 }

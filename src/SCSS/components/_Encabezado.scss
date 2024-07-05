@@ -30,7 +30,7 @@
     height: auto; /* Ajustar la altura según el contenido */
     z-index: 3; /* Elevar por encima de la imagen */
     padding: 20px 40px; /* Espaciado interno para crear margen dentro del borde */
-    border: 2px solid #ffe8a9; /* Borde alrededor del contenedor del título */
+    border: 2px solid $color1; /* Borde alrededor del contenedor del título */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para dar efecto de elevación */
 }
 
@@ -39,7 +39,7 @@
     font-family: 'Urbanist', sans-serif; /* 'sans-serif' como fallback (como alternativa si por un error no puede usarse urbanist)*/
     font-weight: 400; 
     font-size: 60px;
-    color: $color3;
+    color: $color1;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
     text-align: center;

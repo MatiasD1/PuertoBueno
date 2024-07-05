@@ -1,5 +1,5 @@
 .nav-link {
-    color: $color2;
+    color: $color5 !important; 
     margin-top: 1rem;
     /*margin-right: 30px; Ajusta este valor según sea necesario para agregar espacio entre los enlaces */
     border-bottom: 2px solid transparent;/* Subrayado transparente*/
@@ -9,14 +9,12 @@
     font-family: 'Urbanist', sans-serif;
 
     &:hover {
-        color: white;
+        color: $color3 !important ;
         border-bottom-color: rgb(255, 255, 255);/* Cambia el color del subrayado al pasar el cursor */
-        transition: border-bottom-color 0.5s ease;/* Agregado para una transición suave del subrayado */
+        transition: color 0.5s ease, border-bottom-color 0.5s ease;
         text-shadow: 2px 2px 4px rgba(245, 240, 240, 0.26);
     }
-    &:visited {
-        color: rgb(255, 222, 203);
-    }
+
 }
 /*
 .nav-link:focus {
@@ -56,7 +54,7 @@
         font-size: 19px;
         font-family:"Urbanist", sans-serif;
         font-weight: 400;
-        color: $color1;
+        color: $color3;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 }

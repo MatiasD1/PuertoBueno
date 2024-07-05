@@ -31,12 +31,12 @@ const Servicios = () => {
             {showCarrusel && <GaleriaImagenes images={selectedImage} onClose={() => setShowCarrusel(false)} />} {/* Renderiza el carrusel si showCarrusel es true */}
             <div className='otrosServicios'>
             <div className='item2'>
-                    <h3> Quincho </h3>
+                    <h3 className='textoServicios'> Quincho </h3>
                     <Swiper3/>
                 </div>
                 <div className='item2'>
                     <Swiper3/>
-                    <h3> Estacionamiento </h3>  
+                    <h3 className='textoServicios'> Estacionamiento </h3>  
                 </div>
             </div>
             <EnlaceContacto imageSrc={imagenPlaya} /> 

@@ -1,23 +1,12 @@
 import React, { useState } from 'react';
 
 const NavBar = ({ isVisible }) => {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
+  const [showMenu] = useState(false);
 
   return (
     <nav className={`NavBar ${isVisible ? 'fixed' : ''}`}>
       <h2 className="tituloNavBar">Puerto Bueno</h2>
       <h3 className="subtituloNavBar">- Mar del Plata -</h3>
-
-      {/* Menú hamburguesa visible en pantallas pequeñas */}
-      <div className="menu-hamburguesa" onClick={toggleMenu}>
-        <div className="barra"></div>
-        <div className="barra"></div>
-        <div className="barra"></div>
-      </div>
 
       {/* Menú principal */}
       <ul className={`nav justify-content-end ${showMenu ? 'show' : ''}`}>
