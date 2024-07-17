@@ -1,17 +1,19 @@
+/* Carrusel.css */
 .carrusel {
     margin-top: auto; /* Empuja el carrusel hacia la parte inferior */
     height: 100vh; /* Ajusta la altura al 100% de la altura de la vista */
     background-color: black;
-
+    display: flex;
 }
-.flecha{
+
+.flecha {
     width: 40px;
     margin: 20px;
 }
-.carousel-inner1 img {
+
+.carousel-inner img {
     width: 100%;
     height: auto; /* Mantiene la proporción de la imagen */
-
 }
 
 #carouselExampleAutoplaying {
@@ -21,5 +23,20 @@
     justify-content: flex-end; /* Alinea el contenido en la parte inferior */
     width: 100%;
     max-height: 100vh; /* Ajusta la altura al 100% de la vista */
-    
+}
+
+.carrusel .carousel-item {
+    position: relative; /* Necesario para posicionar el texto absolutamente dentro del item */
+}
+
+.textoCarruselInicio {
+    position: absolute; /* Posiciona el texto absolutamente dentro del carousel-item */
+    top: 70%; /* Ajusta según sea necesario */
+    left: 40%; /* Ajusta según sea necesario */
+    color: white; /* Cambia el color del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    z-index: 99999; /* Asegura que el texto esté por encima de la imagen */
 }
