@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 
 const NavBar = ({ isVisible }) => {
-  const [showMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <nav className={`NavBar ${isVisible ? 'fixed' : ''}`}>
       <h2 className="tituloNavBar">Puerto Bueno</h2>
       <h3 className="subtituloNavBar">- Mar del Plata -</h3>
+
+      <button className="hamburger" onClick={() => setShowMenu(!showMenu)}>
+        ☰
+      </button>
 
       {/* Menú principal */}
       <ul className={`nav justify-content-end ${showMenu ? 'show' : ''}`}>

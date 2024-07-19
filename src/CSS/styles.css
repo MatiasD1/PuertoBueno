@@ -8,6 +8,10 @@ $color5: #252525; //titulo texto oscuro
 $color6: #464646; //texto oscuro 
 */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+* {
+  margin: 0;
+}
+
 .App {
   text-align: center;
   background-color: #131313;
@@ -15,8 +19,6 @@ $color6: #464646; //texto oscuro
 
 /* Carrusel.css */
 .carrusel {
-  margin-top: auto; /* Empuja el carrusel hacia la parte inferior */
-  height: 100vh; /* Ajusta la altura al 100% de la altura de la vista */
   background-color: black;
   display: flex;
 }
@@ -779,7 +781,6 @@ footer {
   transition: transform 0.3s;
 }
 
-/* CSS */
 .presentacionInicio {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
@@ -789,21 +790,44 @@ footer {
   font-family: "Urbanist", sans-serif;
   background-color: #131313;
 }
+@media (max-width: 768px) {
+  .presentacionInicio { /* Pantallas más pequeñas que 768px */
+    grid-template-columns: 1fr; /* Una columna */
+    grid-template-areas: "fraseInicio" "tituloInicio" "textoInicio"; /* Cada área ocupa una fila completa */
+    padding: 20px;
+    gap: 10px; /* Espacio reducido entre filas */
+  }
+}
 
 .tituloInicio {
   grid-area: tituloInicio;
   color: #EEEEEE;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 768px) {
+  .tituloInicio {
+    font-size: 1.5rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+  }
+}
 
 .fraseInicio {
   grid-area: fraseInicio;
   color: #cdcdcd;
 }
+@media (max-width: 768px) {
+  .fraseInicio {
+    font-size: 1.25rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+  }
+}
 
 .textoInicio {
   grid-area: textoInicio;
   color: #cdcdcd;
+}
+@media (max-width: 768px) {
+  .textoInicio {
+    font-size: 1rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+  }
 }
 
 .Mapa {
@@ -817,58 +841,121 @@ footer {
   background-color: #00c1bb;
 }
 
+/* Estilos para el botón de hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #f4f4f4;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1200;
+}
+
+/* Media queries para la responsividad */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to bottom, rgba(61, 61, 61, 0.5), transparent);
+    position: absolute;
+    top: 140px; /* Ajustado para que los links aparezcan más abajo del título */
+    left: 0;
+    z-index: 1000;
+  }
+  .nav.show {
+    display: flex;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .nav-item {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .NavBar {
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos en la parte superior izquierda */
+    padding: 20px 0;
+  }
+  .NavBar h2, .NavBar h3 {
+    position: static;
+    text-align: left;
+    margin: 10px;
+    z-index: 5000;
+  }
+  .NavBar h2 {
+    font-size: 18px !important; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+  .NavBar h3 {
+    font-size: 12px !important; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+  .nav-link {
+    padding: 10px 0;
+    color: #f4f4f4 !important;
+    font-size: 18px;
+    text-shadow: none;
+    border-bottom: none;
+  }
+  .nav-link:hover {
+    color: #00c1bb !important;
+    transition: color 0.3s ease;
+  }
+}
+/* Resto de tus estilos */
 .nav-link {
   color: #f4f4f4 !important;
   margin-top: 1rem;
-  /*margin-right: 30px; Ajusta este valor según sea necesario para agregar espacio entre los enlaces */
-  border-bottom: 2px solid transparent; /* Subrayado transparente*/
-  padding: 17px 20px; /* Ajusta el relleno del botón */
+  border-bottom: 2px solid transparent;
+  padding: 17px 20px;
   font-size: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-family: "Urbanist", sans-serif;
 }
 .nav-link:hover {
   color: #00c1bb !important;
-  border-bottom-color: rgb(255, 255, 255); /* Cambia el color del subrayado al pasar el cursor */
+  border-bottom-color: rgb(255, 255, 255);
   transition: color 0.5s ease, border-bottom-color 0.5s ease;
   text-shadow: 2px 2px 4px rgba(245, 240, 240, 0.26);
 }
 
-/*
-.nav-link:focus {
-    Define aquí el color deseado cuando el enlace está enfocado (cuando se hace clic) 
-    color: rgb(197, 80, 12);  Puedes ajustar este color según tus necesidades 
-}
-*/
 .nav {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Asegura que esté por encima del carrusel */
-  padding-right: 30px; /*PARA MOVER LA BARRA*/
+  z-index: 1000;
+  padding-right: 30px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
 .NavBar {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Alinea los elementos en la esquina superior izquierda */
+  width: 100%; /* Asegura que ocupe el 100% del ancho */
+  position: relative; /* Para que los elementos se posicionen relativamente dentro del navbar */
 }
 .NavBar h2 {
-  font-size: 36px;
-  position: absolute; /* Cambiado a relativo para que no se pierda el flujo normal del documento */
+  font-size: 24px; /* Tamaño ajustado para pantallas grandes */
+  position: absolute;
+  top: 20px;
+  left: 20px;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   color: #EEEEEE;
-  margin-left: 40px;
-  margin-top: 82px;
-  z-index: 1200; /* Asegura que esté por encima del NavBar */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .NavBar h3 {
   position: absolute;
-  z-index: 1200;
-  margin-left: 73px;
-  margin-top: 139px;
-  font-size: 19px;
+  top: 50px;
+  left: 20px;
+  font-size: 16px; /* Tamaño ajustado para pantallas grandes */
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   color: #00c1bb;
@@ -880,11 +967,23 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 500; /* Asegúrate de que esté por encima de otros elementos */
+  z-index: 500;
 }
 .fixed .nav {
   background-color: rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(to bottom, rgba(61, 61, 61, 0.5), transparent);
+}
+
+/* Asegúrate de que el body y el html ocupen el 100% del ancho */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 .textoServicios {
