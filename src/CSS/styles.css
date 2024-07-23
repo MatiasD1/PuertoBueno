@@ -15,9 +15,9 @@ $color6: #464646; //texto oscuro
 .App {
   text-align: center;
   background-color: #131313;
+  overflow: hidden;
 }
 
-/* Carrusel.css */
 .carrusel {
   background-color: black;
   display: flex;
@@ -58,6 +58,43 @@ $color6: #464646; //texto oscuro
   z-index: 99999; /* Asegura que el texto esté por encima de la imagen */
 }
 
+/* Media Queries para diseño responsive */
+/* Teléfono Móvil */
+@media (max-width: 767px) {
+  .flecha {
+    width: 30px;
+    margin: 10px;
+  }
+  .textoCarruselInicio {
+    top: 80%; /* Ajusta según sea necesario */
+    left: 20%; /* Ajusta según sea necesario */
+    font-size: 14px;
+  }
+}
+/* Tableta/Escritorio Pequeño */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .flecha {
+    width: 35px;
+    margin: 15px;
+  }
+  .textoCarruselInicio {
+    top: 75%; /* Ajusta según sea necesario */
+    left: 30%; /* Ajusta según sea necesario */
+    font-size: 15px;
+  }
+}
+/* Escritorio/Laptop Grande */
+@media (min-width: 1200px) {
+  .flecha {
+    width: 40px;
+    margin: 20px;
+  }
+  .textoCarruselInicio {
+    top: 70%; /* Ajusta según sea necesario */
+    left: 40%; /* Ajusta según sea necesario */
+    font-size: 16px;
+  }
+}
 .contacto {
   display: flex;
   width: 100%;
@@ -410,7 +447,8 @@ button[type=submit]:hover {
   align-items: center;
   flex-direction: column;
 }
-.contenedorEnlaceContacto h3 {
+
+.TituloEnlaceContacto {
   font-family: "Urbanist";
   font-style: 400;
   position: absolute;
@@ -454,6 +492,7 @@ button[type=submit]:hover {
   text-decoration: none;
   transition: 0.3s;
 }
+
 .textoEnlaceContacto:hover {
   color: rgb(211, 211, 211);
   border: 2px solid #00c1bb;
@@ -461,26 +500,83 @@ button[type=submit]:hover {
   cursor: pointer;
 }
 
+/* Media Queries para diseño responsive */
+/* Teléfono Móvil */
+@media (max-width: 767px) {
+  .TituloEnlaceContacto {
+    font-size: 24px;
+    top: 15%;
+  }
+  .FraseEnlaceContacto {
+    font-size: 16px;
+    top: 30%;
+  }
+  .fotoEnlaceContacto {
+    height: 300px;
+  }
+  .textoEnlaceContacto {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    top: 65%;
+  }
+}
+/* Tableta/Escritorio Pequeño */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .TituloEnlaceContacto {
+    font-size: 32px;
+    top: 18%;
+  }
+  .FraseEnlaceContacto {
+    font-size: 20px;
+    top: 32%;
+  }
+  .fotoEnlaceContacto {
+    height: 400px;
+  }
+  .textoEnlaceContacto {
+    font-size: 2.5rem;
+    padding: 15px 20px;
+    top: 70%;
+  }
+}
+/* Escritorio/Laptop Grande */
+@media (min-width: 1200px) {
+  .TituloEnlaceContacto {
+    font-size: 46px;
+    top: 20%;
+  }
+  .FraseEnlaceContacto {
+    font-size: 25px;
+    top: 36%;
+  }
+  .fotoEnlaceContacto {
+    height: 500px;
+  }
+  .textoEnlaceContacto {
+    font-size: 4.3rem;
+    padding: 18px 25px;
+    top: 72%;
+  }
+}
 footer {
   padding-top: 20px;
   width: 100%;
-  height: 225px;
   background-color: #000000;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
   justify-content: center;
-  margin-bottom: 0;
-  margin-top: auto; /* Empuja el footer hacia abajo hasta el final de la página */
+  margin: 0;
 }
 
 .columnaFooter {
   display: flex;
   flex-direction: column;
   font-family: "Khula", sans-serif;
+  padding: 10px; /* Añadir relleno para evitar el desbordamiento */
 }
 .columnaFooter h3 {
-  margin-bottom: 10px; /* Esto elimina el margen inferior predeterminado */
+  margin-bottom: 10px;
   font-size: 25px;
   color: #EEEEEE;
   font-family: "Urbanist", sans-serif;
@@ -509,35 +605,67 @@ footer {
 .logosRedes {
   display: flex;
   justify-content: space-between;
-  margin: 20px 75px 20px 75px; /*sup, der, inf, izq*/
+  margin: 20px auto; /* Ajustar para que no cause desbordamiento */
+  max-width: 300px; /* Limitar el ancho máximo para evitar desbordamiento */
 }
 
-.logoRed img { /*faltaba el img para influir en el tamaño de las img*/
+.logoRed img {
   width: 50px;
   height: 50px;
 }
 
 .footer-bottom {
-  grid-column: 1/-1; /* Se extiende a lo largo de todas las columnas del grid */
+  grid-column: 1/-1;
   text-align: center;
-  margin-top: 20px; /* Añade espacio antes de la nueva sección */
+  margin-top: 20px;
 }
 
 .footer-line {
-  width: 90%; /* Anchura de la línea */
-  height: 1px; /* Grosor de la línea */
-  background-color: #00c1bb; /* Color de la línea */
-  margin: 0 auto; /* Centra la línea horizontalmente */
+  width: 90%;
+  height: 1px;
+  background-color: #00c1bb;
+  margin: 0 auto;
 }
 
 .copyright {
-  margin-top: 10px; /* Espacio entre la línea y el texto de copyright */
-  color: #EEEEEE; /* Color del texto de copyright */
-  font-size: 14px; /* Tamaño del texto de copyright */
+  margin-top: 10px;
+  color: #EEEEEE;
+  font-size: 14px;
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  footer {
+    height: 200px;
+    padding-top: 0px;
+    grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas más pequeñas */
+    text-align: center; /* Centrar contenido */
+  }
+  .accesoNav {
+    display: none;
+  }
+  .columnaFooter h3 {
+    display: none;
+  }
+  .columnaFooter p {
+    display: none;
+  }
+  .logosRedes {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los íconos se envuelvan si no hay suficiente espacio */
+    justify-content: center; /* Centra los íconos horizontalmente */
+    margin: 0px auto; /* Ajustar margen */
+    gap: 20px; /* Espacio entre los íconos ya que space-between a veces no tiene espacio en pantallas chicas */
+  }
+  .logoRed img {
+    width: 40px; /* Ajusta el tamaño de los íconos si es necesario */
+    height: 40px; /* Ajusta el tamaño de los íconos si es necesario */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0px;
+  }
+}
 .frase {
   width: 100%;
   height: auto;
@@ -551,84 +679,78 @@ footer {
   height: auto;
 }
 
-/* Establece las propiedades para el contenido de la galería */
-.galeria-content {
-  position: fixed; /* Cambiado a fixed para evitar desplazamientos inesperados */
-  top: 50%; /* Centra verticalmente */
-  left: 50%; /* Centra horizontalmente */
-  transform: translate(-50%, -50%);
-  background-color: rgb(0, 0, 0);
-  max-width: auto; /* Cambiado a un ancho máximo del 80% */
-  max-height: auto; /* Cambiado a una altura máxima del 80% */
-  overflow: auto; /* Añadido para manejar el desbordamiento de contenido */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  z-index: 1500;
-}
-
-/* Establece las propiedades para los contenedores de las diapositivas */
+/* Contenedor de diapositivas de la galería */
 .galeria-slides {
   display: flex;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
+  /* Establecer el contenedor para mostrar las imágenes en fila */
 }
 
-/* Establece las propiedades para las imágenes dentro de las diapositivas */
+/* Estilo de cada diapositiva */
+.galeria-slide {
+  flex: 0 0 auto; /* Permite que cada slide se ajuste automáticamente en tamaño */
+  width: 100%; /* Cada slide ocupa el 100% del contenedor */
+}
+
+/* Estilos para las imágenes dentro de las diapositivas */
 .galeria-slide img {
-  width: auto; /* Cambiado a auto para ajustar la imagen al tamaño del contenedor */
-  height: 80vh; /* Cambiado a una altura fija del 80% del viewport */
-  max-width: 100%; /* Cambiado a un ancho máximo del 100% */
+  width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor del slide */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 
-/* Establece las propiedades para el botón de diapositiva anterior y siguiente */
-.prev-btn, .next-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: fff1d8;
-  font-size: 24px;
-  padding: 20px;
+/* Media Queries para diseño responsive */
+/* Teléfono Móvil */
+@media (max-width: 767px) {
+  .galeria-slide {
+    width: 100%; /* Ocupa el 100% del contenedor en pantallas pequeñas */
+  }
+  .galeria-content {
+    max-width: 90%; /* Mayor espacio en pantallas pequeñas */
+    max-height: 90%;
+  }
+  .galeria-slide img {
+    height: 70vh; /* Ajuste para pantallas más pequeñas */
+  }
+  .prev-btn, .next-btn {
+    font-size: 18px; /* Tamaño de fuente más pequeño para botones */
+    padding: 10px;
+  }
 }
-
-.prev-btn {
-  left: 0; /* Alinear el botón de navegación izquierdo */
+/* Tableta/Escritorio Pequeño */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .galeria-slide {
+    width: 50%; /* Muestra dos imágenes a la vez */
+  }
+  .galeria-content {
+    max-width: 85%;
+    max-height: 85%;
+  }
+  .galeria-slide img {
+    height: 75vh; /* Ajuste para pantallas medianas */
+  }
+  .prev-btn, .next-btn {
+    font-size: 20px; /* Tamaño de fuente adecuado para pantallas medianas */
+    padding: 15px;
+  }
 }
-
-.next-btn {
-  right: 0; /* Alinear el botón de navegación derecho */
+/* Escritorio/Laptop Grande */
+@media (min-width: 1200px) {
+  .galeria-slide {
+    width: 25%; /* Muestra cuatro imágenes a la vez */
+  }
+  .galeria-content {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .galeria-slide img {
+    height: 80vh; /* Ajuste para pantallas grandes */
+  }
+  .prev-btn, .next-btn {
+    font-size: 24px; /* Tamaño de fuente grande para pantallas grandes */
+    padding: 20px;
+  }
 }
-
-/* Establece las propiedades para los puntos de navegación entre las diapositivas */
-.galeria-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.galeria-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1200;
-}
-
-.dot { /* Establece las propiedades para cada punto de navegación */
-  width: 10px;
-  height: 10px;
-  background-color: #000000;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-.dot.active {
-  background-color: #EEEEEE; /* Cambiado a blanco para mayor visibilidad */
-}
-
 .galeriaInicio {
   height: 600px;
   margin: auto;
@@ -781,66 +903,6 @@ footer {
   transition: transform 0.3s;
 }
 
-.presentacionInicio {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  grid-template-areas: "fraseInicio tituloInicio" ". textoInicio"; /* La fraseInicio ocupará la segunda columna */
-  padding: 40px;
-  gap: 20px; /* Espacio entre columnas */
-  font-family: "Urbanist", sans-serif;
-  background-color: #131313;
-}
-@media (max-width: 768px) {
-  .presentacionInicio { /* Pantallas más pequeñas que 768px */
-    grid-template-columns: 1fr; /* Una columna */
-    grid-template-areas: "fraseInicio" "tituloInicio" "textoInicio"; /* Cada área ocupa una fila completa */
-    padding: 20px;
-    gap: 10px; /* Espacio reducido entre filas */
-  }
-}
-
-.tituloInicio {
-  grid-area: tituloInicio;
-  color: #EEEEEE;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-@media (max-width: 768px) {
-  .tituloInicio {
-    font-size: 1.5rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
-  }
-}
-
-.fraseInicio {
-  grid-area: fraseInicio;
-  color: #cdcdcd;
-}
-@media (max-width: 768px) {
-  .fraseInicio {
-    font-size: 1.25rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
-  }
-}
-
-.textoInicio {
-  grid-area: textoInicio;
-  color: #cdcdcd;
-}
-@media (max-width: 768px) {
-  .textoInicio {
-    font-size: 1rem; /* Ajusta el tamaño del texto para pantallas más pequeñas */
-  }
-}
-
-.Mapa {
-  /*display: flex;
-  justify-content: center;
-  Esto se maneja desde el contenedor en Ubicacion
-  */
-  padding-top: 50px;
-  height: 500px;
-  width: 70%;
-  background-color: #00c1bb;
-}
-
 /* Estilos para el botón de hamburguesa */
 .hamburger {
   display: none;
@@ -884,18 +946,19 @@ footer {
     flex-direction: column;
     align-items: flex-start; /* Alinea los elementos en la parte superior izquierda */
     padding: 20px 0;
+    width: 100%;
   }
   .NavBar h2, .NavBar h3 {
     position: static;
     text-align: left;
     margin: 10px;
-    z-index: 5000;
+    word-wrap: break-word; /* Permite que el texto se ajuste a pantallas pequeñas */
   }
   .NavBar h2 {
-    font-size: 18px !important; /* Tamaño más pequeño para pantallas pequeñas */
+    font-size: 18px; /* Tamaño más pequeño para pantallas pequeñas */
   }
   .NavBar h3 {
-    font-size: 12px !important; /* Tamaño más pequeño para pantallas pequeñas */
+    font-size: 14px; /* Tamaño más pequeño para pantallas pequeñas */
   }
   .nav-link {
     padding: 10px 0;
@@ -984,6 +1047,212 @@ html, body {
 
 body {
   overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+/* Añadir estos estilos para asegurar que .Inicio ocupe el 100% del ancho y no cause desbordamiento */
+.Inicio {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carrusel,
+.galeria-container,
+.EnlaceContacto {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ajustar el estilo de las imágenes del carrusel */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.Mapa {
+  /*display: flex;
+  justify-content: center;
+  Esto se maneja desde el contenedor en Ubicacion
+  */
+  padding-top: 50px;
+  height: 500px;
+  width: 70%;
+  background-color: #00c1bb;
+}
+
+/* Estilos para el botón de hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #f4f4f4;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1200;
+}
+
+/* Media queries para la responsividad */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(to bottom, rgba(61, 61, 61, 0.5), transparent);
+    position: absolute;
+    top: 140px; /* Ajustado para que los links aparezcan más abajo del título */
+    left: 0;
+    z-index: 1000;
+  }
+  .nav.show {
+    display: flex;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .nav-item {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .NavBar {
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos en la parte superior izquierda */
+    padding: 20px 0;
+    width: 100%;
+  }
+  .NavBar h2, .NavBar h3 {
+    position: static;
+    text-align: left;
+    margin: 10px;
+    word-wrap: break-word; /* Permite que el texto se ajuste a pantallas pequeñas */
+  }
+  .NavBar h2 {
+    font-size: 18px; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+  .NavBar h3 {
+    font-size: 14px; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+  .nav-link {
+    padding: 10px 0;
+    color: #f4f4f4 !important;
+    font-size: 18px;
+    text-shadow: none;
+    border-bottom: none;
+  }
+  .nav-link:hover {
+    color: #00c1bb !important;
+    transition: color 0.3s ease;
+  }
+}
+/* Resto de tus estilos */
+.nav-link {
+  color: #f4f4f4 !important;
+  margin-top: 1rem;
+  border-bottom: 2px solid transparent;
+  padding: 17px 20px;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Urbanist", sans-serif;
+}
+.nav-link:hover {
+  color: #00c1bb !important;
+  border-bottom-color: rgb(255, 255, 255);
+  transition: color 0.5s ease, border-bottom-color 0.5s ease;
+  text-shadow: 2px 2px 4px rgba(245, 240, 240, 0.26);
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-right: 30px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.NavBar {
+  display: flex;
+  align-items: flex-start; /* Alinea los elementos en la esquina superior izquierda */
+  width: 100%; /* Asegura que ocupe el 100% del ancho */
+  position: relative; /* Para que los elementos se posicionen relativamente dentro del navbar */
+}
+.NavBar h2 {
+  font-size: 24px; /* Tamaño ajustado para pantallas grandes */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  color: #EEEEEE;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.NavBar h3 {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  font-size: 16px; /* Tamaño ajustado para pantallas grandes */
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  color: #00c1bb;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.NavBar .fixed .nav {
+  background-color: rgb(0, 0, 0), 0.5;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 500;
+}
+.fixed .nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to bottom, rgba(61, 61, 61, 0.5), transparent);
+}
+
+/* Asegúrate de que el body y el html ocupen el 100% del ancho */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+/* Añadir estos estilos para asegurar que .Inicio ocupe el 100% del ancho y no cause desbordamiento */
+.Inicio {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carrusel,
+.galeria-container,
+.EnlaceContacto {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ajustar el estilo de las imágenes del carrusel */
+.carousel-item img {
+  width: 100%;
+  height: auto;
 }
 
 .textoServicios {

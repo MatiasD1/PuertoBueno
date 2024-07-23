@@ -1,7 +1,6 @@
 import Carrusel from '../Carrusel/Carrusel';
 import EnlaceContacto from '../EnlaceContacto/EnlaceContacto';
 import imagenPlaya from '../../img/playa2.jpg'
-import TextAnimation from '../TextAnimation1/TextAnimation1';
 import GaleriaInicio from '../GaleriaInicio/GaleriaInicio'; 
 
 const Inicio = () => {

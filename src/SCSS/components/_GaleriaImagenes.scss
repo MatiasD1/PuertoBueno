@@ -1,79 +1,84 @@
-/* Establece las propiedades para el contenido de la galería */
-.galeria-content {
-    position: fixed; /* Cambiado a fixed para evitar desplazamientos inesperados */
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%);
-    background-color: rgb(0, 0, 0);
-    max-width: auto; /* Cambiado a un ancho máximo del 80% */
-    max-height: auto; /* Cambiado a una altura máxima del 80% */
-    overflow: auto; /* Añadido para manejar el desbordamiento de contenido */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.300);
-    z-index: 1500;
-}
-
-/* Establece las propiedades para los contenedores de las diapositivas */
+/* Contenedor de diapositivas de la galería */
 .galeria-slides {
     display: flex;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
+    /* Establecer el contenedor para mostrar las imágenes en fila */
 }
 
-/* Establece las propiedades para las imágenes dentro de las diapositivas */
+/* Estilo de cada diapositiva */
+.galeria-slide {
+    flex: 0 0 auto; /* Permite que cada slide se ajuste automáticamente en tamaño */
+    width: 100%; /* Cada slide ocupa el 100% del contenedor */
+}
+
+/* Estilos para las imágenes dentro de las diapositivas */
 .galeria-slide img {
-    width: auto; /* Cambiado a auto para ajustar la imagen al tamaño del contenedor */
-    height: 80vh; /* Cambiado a una altura fija del 80% del viewport */
-    max-width: 100%; /* Cambiado a un ancho máximo del 100% */
+    width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor del slide */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
-/* Establece las propiedades para el botón de diapositiva anterior y siguiente */
-.prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: fff1d8;
-    font-size: 24px;
-    padding: 20px;
-}
+/* Media Queries para diseño responsive */
 
-.prev-btn {
-    left: 0; /* Alinear el botón de navegación izquierdo */
-}
-
-.next-btn {
-    right: 0; /* Alinear el botón de navegación derecho */
-}
-
-
-/* Establece las propiedades para los puntos de navegación entre las diapositivas */
-.galeria-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.galeria-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1200;
-}
-
-.dot {/* Establece las propiedades para cada punto de navegación */
-    width: 10px;
-    height: 10px;
-    background-color: #000000;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
+/* Teléfono Móvil */
+@media (max-width: 767px) {
+    .galeria-slide {
+        width: 100%; /* Ocupa el 100% del contenedor en pantallas pequeñas */
+    }
     
-    &.active {
-        background-color: $color1;/* Cambiado a blanco para mayor visibilidad */
+    .galeria-content {
+        max-width: 90%; /* Mayor espacio en pantallas pequeñas */
+        max-height: 90%;
+    }
+
+    .galeria-slide img {
+        height: 70vh; /* Ajuste para pantallas más pequeñas */
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 18px; /* Tamaño de fuente más pequeño para botones */
+        padding: 10px;
+    }
+}
+
+/* Tableta/Escritorio Pequeño */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .galeria-slide {
+        width: 50%; /* Muestra dos imágenes a la vez */
+    }
+
+    .galeria-content {
+        max-width: 85%;
+        max-height: 85%;
+    }
+
+    .galeria-slide img {
+        height: 75vh; /* Ajuste para pantallas medianas */
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 20px; /* Tamaño de fuente adecuado para pantallas medianas */
+        padding: 15px;
+    }
+}
+
+/* Escritorio/Laptop Grande */
+@media (min-width: 1200px) {
+    .galeria-slide {
+        width: 25%; /* Muestra cuatro imágenes a la vez */
+    }
+
+    .galeria-content {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    .galeria-slide img {
+        height: 80vh; /* Ajuste para pantallas grandes */
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 24px; /* Tamaño de fuente grande para pantallas grandes */
+        padding: 20px;
     }
 }

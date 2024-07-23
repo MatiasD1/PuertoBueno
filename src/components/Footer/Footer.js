@@ -1,3 +1,4 @@
+import React from 'react';
 import facebookLogo from '../../img/icons/facebook.png';
 import xLogo from '../../img/icons/x.png';
 import instagramLogo from '../../img/icons/instagramLogo.svg';
@@ -29,12 +30,11 @@ function Footer() {
                         <img src={instagramLogo} alt="Instagram"/>
                     </a>
                 </div>
-                
-            </div>  
-            <div class="footer-bottom">
-                <div class="footer-line"></div>
-                <p class="copyright">Desarrollo - Matías Durand &copy; 2024</p>
-            </div>      
+            </div>
+            <div className="footer-bottom">
+                <div className="footer-line"></div>
+                <p className="copyright">Desarrollo - Matías Durand &copy; 2024</p>
+            </div>
         </footer>
     );
 }

@@ -1,4 +1,3 @@
-/* Carrusel.css */
 .carrusel {
     background-color: black;
     display: flex;
@@ -37,4 +36,48 @@
     border-radius: 5px; /* Bordes redondeados */
     font-size: 16px; /* Tamaño del texto */
     z-index: 99999; /* Asegura que el texto esté por encima de la imagen */
+}
+
+/* Media Queries para diseño responsive */
+
+/* Teléfono Móvil */
+@media (max-width: 767px) {
+    .flecha {
+        width: 30px;
+        margin: 10px;
+    }
+
+    .textoCarruselInicio {
+        top: 80%; /* Ajusta según sea necesario */
+        left: 20%; /* Ajusta según sea necesario */
+        font-size: 14px;
+    }
+}
+
+/* Tableta/Escritorio Pequeño */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .flecha {
+        width: 35px;
+        margin: 15px;
+    }
+
+    .textoCarruselInicio {
+        top: 75%; /* Ajusta según sea necesario */
+        left: 30%; /* Ajusta según sea necesario */
+        font-size: 15px;
+    }
+}
+
+/* Escritorio/Laptop Grande */
+@media (min-width: 1200px) {
+    .flecha {
+        width: 40px;
+        margin: 20px;
+    }
+
+    .textoCarruselInicio {
+        top: 70%; /* Ajusta según sea necesario */
+        left: 40%; /* Ajusta según sea necesario */
+        font-size: 16px;
+    }
 }

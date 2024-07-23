@@ -10,19 +10,20 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    h3{
-        font-family: 'Urbanist';
-        font-style: 400;
-        position: absolute;
-        top: 20%;
-        color: $color1;
-        font-size: 46px;
-        z-index: 1;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
 }
-.FraseEnlaceContacto{
+
+.TituloEnlaceContacto {
+    font-family: 'Urbanist';
+    font-style: 400;
+    position: absolute;
+    top: 20%;
+    color: $color1;
+    font-size: 46px;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.FraseEnlaceContacto {
     font-family: 'Urbanist', sans-serif;
     font-style: 300;
     position: absolute;
@@ -31,6 +32,7 @@
     font-size: 25px;
     z-index: 1;
 }
+
 .fotoEnlaceContacto {
     opacity: 50%;
     display: block;
@@ -53,12 +55,82 @@
     border: 2px solid $color1;
     text-decoration: none;
     transition: 0.3s;
+}
 
-    &:hover {
-        color: rgb(211, 211, 211);
-        border: 2px solid $color3;
-        background: rgba(0, 0, 0, 0.6);
-        cursor: pointer;
+.textoEnlaceContacto:hover {
+    color: rgb(211, 211, 211);
+    border: 2px solid $color3;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+/* Media Queries para diseño responsive */
+
+/* Teléfono Móvil */
+@media (max-width: 767px) {
+    .TituloEnlaceContacto {
+        font-size: 24px;
+        top: 15%;
+    }
+
+    .FraseEnlaceContacto {
+        font-size: 16px;
+        top: 30%;
+    }
+
+    .fotoEnlaceContacto {
+        height: 300px;
+    }
+
+    .textoEnlaceContacto {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+        top: 65%;
     }
 }
 
+/* Tableta/Escritorio Pequeño */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .TituloEnlaceContacto {
+        font-size: 32px;
+        top: 18%;
+    }
+
+    .FraseEnlaceContacto {
+        font-size: 20px;
+        top: 32%;
+    }
+
+    .fotoEnlaceContacto {
+        height: 400px;
+    }
+
+    .textoEnlaceContacto {
+        font-size: 2.5rem;
+        padding: 15px 20px;
+        top: 70%;
+    }
+}
+
+/* Escritorio/Laptop Grande */
+@media (min-width: 1200px) {
+    .TituloEnlaceContacto {
+        font-size: 46px;
+        top: 20%;
+    }
+
+    .FraseEnlaceContacto {
+        font-size: 25px;
+        top: 36%;
+    }
+
+    .fotoEnlaceContacto {
+        height: 500px;
+    }
+
+    .textoEnlaceContacto {
+        font-size: 4.3rem;
+        padding: 18px 25px;
+        top: 72%;
+    }
+}
