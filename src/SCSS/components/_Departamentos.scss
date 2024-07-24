@@ -1,53 +1,62 @@
+/* Estilos generales */
 .departamentos {
     width: 100%;
     height: auto;
-    position: relative;/* O static si no necesitas posicionamiento especial */
-    z-index: 1;/* Un valor más alto que el carrusel si es necesario */
+    position: relative;
+    z-index: 1;
     background-color: $color2;
 }
-.containerDepartamentos{
+
+.containerDepartamentos {
     padding: 20px;
 }
+
 .textoDepartamentos {
-    padding: 0px 20px;/* Espaciado interno para el texto */
+    padding: 20px 0px;
     font-family: 'Khula', sans-serif;
     color: $color6;
 }
+
 .item {
     display: grid;
-    grid-template-columns: 1fr 1fr;/* Dos columnas, una para la foto y otra para el texto */
-    align-items: center; 
-    height: 450px;/* Altura de cada elemento */
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 450px;
 }
+
 .tituloDepto {
     font-family: 'Urbanist', sans-serif;
     font-weight: 500;
-    font-size: 50px;
+    font-size: 42px;
     color: $color5;
 }
+
 .subtituloDepto {
     font-family: 'Urbanist', sans-serif;
     font-weight: 400;
-    font-size: 25px; 
+    font-size: 22px; 
 }
+
 .textoDepto {
     font-family: 'Urbanist', sans-serif;
     font-weight: 400;
-    font-size: 18px; 
+    font-size: 15px; 
 }
+
 .aloeFooter {
     position: relative;
     width: 40px;
 }
+
 .fotosDeptos {
     position: relative;
-    width: 100%;/* Ajusta el ancho del contenedor de la foto al 100% */
+    width: 100%;
     height: 100%;
-    overflow: hidden;/* Oculta cualquier parte de la imagen que se desborde del contenedor */
+    overflow: hidden;
     background-color: black;
     transition: 0.3s;
-    
 }
+
 .fotoSimbolo {
     display: none;
     position: absolute;
@@ -55,11 +64,12 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
     z-index: 1;
-    transition: opacity 0.3s, transform 0.3s; /* Transición para la opacidad y transformación */
+    transition: opacity 0.3s, transform 0.3s;
 }
+
 .fotoDepto {
-    width: 100%;/* La imagen ocupa todo el ancho del contenedor de la foto */
-    height: 100%;/* La imagen ocupa todo el alto del contenedor de la foto */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: 0.3s;
 }
@@ -68,43 +78,116 @@
     cursor: pointer;
     opacity: 50%;
 }
+
 .fotosDeptos:hover .fotoSimbolo {
-    display: block; /* Mostrar al hacer hover en .fotosDeptos */
+    display: block;
     cursor: pointer;
 }
-.fotoSimbolo:hover + .fotoDepto {
-    opacity: 0.5; /* Reducir la opacidad al hacer hover en .fotoSimbolo */
+
+.dep2 {
+    display: flex;
+    flex-direction: row-reverse; /* Ordena los elementos hijos de derecha a izquierda */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
 }
 
-.otrosServicios {
+.dep2 .textoDepartamentos {
+    flex: 1; /* Ocupa la mitad del contenedor */
+}
+
+.dep2 .fotosDeptos {
+    flex: 1; /* Ocupa la otra mitad del contenedor */
+    overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
+}
+
+.dep2 .fotoDepto {
+    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+}
+
+
+.dep4 {
     display: flex;
-    flex-direction: column;
-    gap: 0px; /* Espacio entre los items */
-  }
-  
-  .item2 {
-    display: flex;
-    justify-content: space-between; /* Distribuye los elementos en cada lado */
-    align-items: center; 
-    height: auto; /* Altura para que queden pegadas las puntitas y no sobresalgan */
-    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
-  
-    h3 {
-      flex: 1;
-      text-align: center; /* Centra el texto en su columna */
+    flex-direction: row-reverse; /* Ordena los elementos hijos de derecha a izquierda */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+}
+
+.dep4 .textoDepartamentos {
+    flex: 1; /* Ocupa la mitad del contenedor */
+}
+
+.dep4 .fotosDeptos {
+    flex: 1; /* Ocupa la otra mitad del contenedor */
+    overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
+}
+
+.dep4 .fotoDepto {
+    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+}
+
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    .item {
+        flex-direction: column;
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+        height: auto; /* Altura automática para mejor adaptabilidad */
     }
-  
-    .swiper-container {
-      flex: 1; /* Cada Swiper ocupa 50% del contenedor padre */
-      max-width: 60%; /* Asegura que no se expanda más allá del 50% */
-      height: 100%; /* Asegura que ocupe toda la altura del contenedor */
-      padding: 20px;
-  
-      .slide-image {
-        width: 100%; /* La imagen ocupa el 100% del ancho del Swiper */
-        height: 100%; /* La imagen ocupa el 100% de la altura del Swiper */
-        object-fit: cover; /* Asegura que la imagen mantenga su proporción */
-      }
+
+    .tituloDepto {
+        font-size: 30px; /* Tamaño más pequeño para pantallas pequeñas */
     }
-  }
-  
+
+    .subtituloDepto {
+        font-size: 20px; /* Tamaño ajustado para pantallas pequeñas */
+    }
+
+    .textoDepto {
+        font-size: 16px; /* Tamaño ajustado para pantallas pequeñas */
+    }
+
+}
+
+/* Tabletas (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .item {
+        
+        grid-template-columns: 1fr 1fr; /* Dos columnas en tabletas */
+        height: 400px; /* Ajusta la altura de cada elemento */
+    }
+
+    .tituloDepto {
+        font-size: 40px; /* Tamaño ajustado para pantallas medianas */
+    }
+
+    .subtituloDepto {
+        font-size: 22px; /* Tamaño ajustado para pantallas medianas */
+    }
+
+    .textoDepto {
+        font-size: 17px; /* Tamaño ajustado para pantallas medianas */
+    }
+
+}
+
+/* Escritorio (1025px y superior) */
+@media (min-width: 1025px) {
+    .item {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas grandes */
+        height: 450px; /* Altura estándar para pantallas grandes */
+    }
+
+    .tituloDepto {
+        font-size: 50px; /* Tamaño ajustado para pantallas grandes */
+    }
+
+    .subtituloDepto {
+        font-size: 25px; /* Tamaño ajustado para pantallas grandes */
+    }
+
+    .textoDepto {
+        font-size: 18px; /* Tamaño ajustado para pantallas grandes */
+    }
+
+}

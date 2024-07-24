@@ -13,7 +13,9 @@
 }
 
 /* Media queries para la responsividad */
-@media (max-width: 768px) {
+
+/* Móviles (hasta 767px) */
+@media (max-width: 849px) {
     .hamburger {
         display: block;
     }
@@ -22,8 +24,7 @@
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: rgb(0, 0, 0);
-        background-image: linear-gradient(to bottom, rgba(61, 61, 61, 0.5), transparent);
+        background-color: rgba(0, 0, 0) !important;
         position: absolute;
         top: 140px; /* Ajustado para que los links aparezcan más abajo del título */
         left: 0;
@@ -44,7 +45,7 @@
     .NavBar {
         flex-direction: column;
         align-items: flex-start; /* Alinea los elementos en la parte superior izquierda */
-        padding: 20px 0;
+        padding: 42px 0;
         width: 100%;
     }
 
@@ -75,9 +76,120 @@
         color: $color3 !important;
         transition: color 0.3s ease;
     }
+    
 }
 
-/* Resto de tus estilos */
+/* Tabletas (768px a 1024px) */
+@media (min-width: 850px) and (max-width: 1200) {
+    .hamburger {
+        display: none; /* Ocultar el botón de hamburguesa en tabletas */
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0) !important;
+    }
+
+    .nav-item {
+        margin: 0;
+        text-align: center;
+    }
+
+    .NavBar {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .NavBar h2, .NavBar h3 {
+        position: static;
+        text-align: center;
+        margin: 0;
+        font-size: 20px; /* Tamaño ajustado para tabletas */
+    }
+
+    .NavBar h2 {
+        font-size: 22px;
+    }
+
+    .NavBar h3 {
+        font-size: 18px;
+    }
+
+    .nav-link {
+        padding: 15px;
+        font-size: 18px; /* Ajuste para tamaño de fuente en tabletas */
+    }
+
+    .nav-link:hover {
+        color: $color3 !important;
+        transition: color 0.3s ease;
+    }
+}
+
+/* Escritorio (1025px y superior) */
+@media (min-width: 1201px) {
+    .hamburger {
+        display: none; /* Ocultar el botón de hamburguesa en escritorios */
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-image: linear-gradient(to bottom, rgba(61, 61, 61, 0.5), transparent);
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .nav-item {
+        margin: 0;
+        text-align: center;
+    }
+
+    .NavBar {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .NavBar h2, .NavBar h3 {
+        position: static;
+        text-align: center;
+        margin: 0;
+        font-size: 24px; /* Tamaño ajustado para pantallas grandes */
+    }
+
+    .NavBar h2 {
+        font-size: 24px;
+    }
+
+    .NavBar h3 {
+        font-size: 20px;
+    }
+
+    .nav-link {
+        padding: 17px 20px;
+        font-size: 20px; /* Tamaño de fuente ajustado para escritorios */
+    }
+
+    .nav-link:hover {
+        color: $color3 !important;
+        transition: color 0.5s ease, border-bottom-color 0.5s ease;
+    }
+}
+
 .nav-link {
     color: $color5 !important;
     margin-top: 1rem;
@@ -102,6 +214,7 @@
     z-index: 1000;
     padding-right: 30px;
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    
 }
 
 .NavBar {
@@ -109,6 +222,7 @@
     align-items: flex-start; /* Alinea los elementos en la esquina superior izquierda */
     width: 100%; /* Asegura que ocupe el 100% del ancho */
     position: relative; /* Para que los elementos se posicionen relativamente dentro del navbar */
+   
 
     h2 {
         font-size: 24px; /* Tamaño ajustado para pantallas grandes */
@@ -119,6 +233,7 @@
         font-weight: 400;
         color: $color1;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 1600;
     }
 
     h3 {
@@ -130,7 +245,9 @@
         font-weight: 400;
         color: $color3;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 1600;
     }
+
     .fixed {
 
         .nav {
@@ -138,6 +255,7 @@
         }
     }
 }
+
 
 .fixed {
     position: fixed;
@@ -160,29 +278,3 @@ html, body {
     box-sizing: border-box;
 }
 
-body {
-    overflow-x: hidden; /* Evita el desbordamiento horizontal */
-}
-
-/* Añadir estos estilos para asegurar que .Inicio ocupe el 100% del ancho y no cause desbordamiento */
-.Inicio {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.carrusel,
-.galeria-container,
-.EnlaceContacto {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Ajustar el estilo de las imágenes del carrusel */
-.carousel-item img {
-    width: 100%;
-    height: auto;
-}

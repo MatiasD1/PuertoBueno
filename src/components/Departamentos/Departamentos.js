@@ -42,7 +42,7 @@ const Departamentos = () => {
         <div className='departamentos'>    
             <Encabezado imageSrc={fotoEncabezado} seccion={"Departamentos"}/>
             <div className="containerDepartamentos">
-                <div className="item">
+                <div className="item dep1">
                     <div className='fotosDeptos' onClick={() => handleImageClick(0)}>
                         <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
                         <img src={fotoSala} alt="Imagen 1" className='fotoDepto'/>
@@ -60,48 +60,36 @@ const Departamentos = () => {
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
                 </div>
-                <div className="item">
-                    <div className="textoDepartamentos">
-                        <h2 className='tituloDepto'>Departamento PB2</h2>
-                        <p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>
-                        <p className='textoDepto'>
-                            Living-Comedor: mesa con cuántas sillas. Sillones cuántos. Smart TV 43”.<br /> 
-                            Escritorio con silla de oficina, 1 sofa cama de 1 plaza <br />
-                            Cocina completa con qué. <br />
-                            Dormitorio principal: cama de dos plazas. <br />
-                            Baño: Cómo es. ventilación natural<br />
-                        </p>
-                        <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
-                    </div>
-                    <div className='fotosDeptos' onClick={() => handleImageClick(1)}> 
-                        <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
-                        <img src={fotoDucha} alt="Imagen 2" className='fotoDepto'/>
-                    </div>
-                </div>
-                <div className="item">
-                    <div className='fotosDeptos' onClick={() => handleImageClick(2)}>
-                        <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
-                        <img src={fotoHabitacion} alt="Imagen 3" className='fotoDepto'/>
-                    </div>
-                    <div className="textoDepartamentos">
-                        <h2 className='tituloDepto'>Departamento PA1</h2>
-                        <p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>
-                        <p className='textoDepto'>
-                            Living-Comedor: mesa con cuántas sillas. Sillones cuántos. Smart TV 43”.<br /> 
-                            Escritorio con silla de oficina, 1 sofa cama de 1 plaza <br />
-                            Cocina completa con qué. <br />
-                            Dormitorio principal: cama de dos plazas. <br />
-                            Baño: Cómo es. ventilación natural<br />
-                        </p>
+                
+                <div className="item dep2">      
+                    <div className='fotosDeptos' onClick={() => handleImageClick(0)}>
+                            <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
+                            <img src={fotoSala} alt="Imagen 1" className='fotoDepto'/>
+                        </div>
+                        <div className="textoDepartamentos">
+                            <h2 className='tituloDepto'>Departamento PB1</h2>
+                            <p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>
+                            <p className='textoDepto'>
+                                Living-Comedor: mesa con cuántas sillas. Sillones cuántos. Smart TV 43”. <br /> 
+                                Escritorio con silla de oficina, 1 sofa cama de 1 plaza <br />
+                                Cocina completa con qué. <br />
+                                Dormitorio principal: cama de dos plazas. <br />
+                                Baño: Cómo es. ventilación natural<br />
+                            </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
                 </div>
-                <div className="item">
+               
+                <div className="item dep3">
+                <div className='fotosDeptos' onClick={() => handleImageClick(0)}>
+                        <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
+                        <img src={fotoSala} alt="Imagen 1" className='fotoDepto'/>
+                    </div>
                     <div className="textoDepartamentos">
-                        <h2 className='tituloDepto'>Departamento PA2</h2>
+                        <h2 className='tituloDepto'>Departamento PB1</h2>
                         <p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>
                         <p className='textoDepto'>
-                            Living-Comedor: mesa con cuántas sillas. Sillones cuántos. Smart TV 43”.<br /> 
+                            Living-Comedor: mesa con cuántas sillas. Sillones cuántos. Smart TV 43”. <br /> 
                             Escritorio con silla de oficina, 1 sofa cama de 1 plaza <br />
                             Cocina completa con qué. <br />
                             Dormitorio principal: cama de dos plazas. <br />
@@ -109,9 +97,23 @@ const Departamentos = () => {
                         </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
-                    <div className='fotosDeptos' onClick={() => handleImageClick(3)}>
+                </div>
+                <div className="item dep4">                 
+                   <div className='fotosDeptos' onClick={() => handleImageClick(0)}>
                         <img src={simboloMas} alt="Simbolo Mas" className='fotoSimbolo'/>
-                        <img src={living} alt="Imagen 4" className='fotoDepto'/>
+                        <img src={fotoSala} alt="Imagen 1" className='fotoDepto'/>
+                    </div>
+                    <div className="textoDepartamentos">
+                        <h2 className='tituloDepto'>Departamento PB1</h2>
+                        <p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>
+                        <p className='textoDepto'>
+                            Living-Comedor: mesa con cuántas sillas. Sillones cuántos. Smart TV 43”. <br /> 
+                            Escritorio con silla de oficina, 1 sofa cama de 1 plaza <br />
+                            Cocina completa con qué. <br />
+                            Dormitorio principal: cama de dos plazas. <br />
+                            Baño: Cómo es. ventilación natural<br />
+                        </p>
+                        <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
                 </div>                
             </div>

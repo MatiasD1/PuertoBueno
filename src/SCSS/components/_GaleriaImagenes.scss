@@ -1,84 +1,139 @@
-/* Contenedor de diapositivas de la galería */
+.galeria-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1500;
+}
+
+/* Establece las propiedades para los contenedores de las diapositivas */
 .galeria-slides {
     display: flex;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
-    /* Establecer el contenedor para mostrar las imágenes en fila */
 }
 
-/* Estilo de cada diapositiva */
-.galeria-slide {
-    flex: 0 0 auto; /* Permite que cada slide se ajuste automáticamente en tamaño */
-    width: 100%; /* Cada slide ocupa el 100% del contenedor */
-}
-
-/* Estilos para las imágenes dentro de las diapositivas */
+/* Establece las propiedades para las imágenes dentro de las diapositivas */
 .galeria-slide img {
-    width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor del slide */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
 }
 
-/* Media Queries para diseño responsive */
+/* Establece las propiedades para el botón de diapositiva anterior y siguiente */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff1d8;
+    font-size: 24px;
+    padding: 20px;
+}
 
-/* Teléfono Móvil */
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+/* Establece las propiedades para los puntos de navegación entre las diapositivas */
+.galeria-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.galeria-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1200;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: $color1;
+}
+
+/* Estilos responsivos */
+
+/* Móviles (hasta 767px) */
 @media (max-width: 767px) {
-    .galeria-slide {
-        width: 100%; /* Ocupa el 100% del contenedor en pantallas pequeñas */
-    }
-    
     .galeria-content {
-        max-width: 90%; /* Mayor espacio en pantallas pequeñas */
-        max-height: 90%;
+        margin-top: 20px;
+        max-width: 95%; /* Aumentado a 95% para llenar más la pantalla en móviles */
+        max-height: 95%; /* Aumentado a 95% para ocupar más espacio vertical */
     }
 
     .galeria-slide img {
-        height: 70vh; /* Ajuste para pantallas más pequeñas */
+        max-height: calc(70vh - 120px); /* Ajusta la altura de la imagen con el padding */
+        width: auto; /* Ajusta la imagen para que se adapte al contenedor */
+        height: 100%;
+        object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
     }
 
     .prev-btn, .next-btn {
-        font-size: 18px; /* Tamaño de fuente más pequeño para botones */
-        padding: 10px;
-    }
-}
-
-/* Tableta/Escritorio Pequeño */
-@media (min-width: 768px) and (max-width: 1199px) {
-    .galeria-slide {
-        width: 50%; /* Muestra dos imágenes a la vez */
-    }
-
-    .galeria-content {
-        max-width: 85%;
-        max-height: 85%;
-    }
-
-    .galeria-slide img {
-        height: 75vh; /* Ajuste para pantallas medianas */
-    }
-
-    .prev-btn, .next-btn {
-        font-size: 20px; /* Tamaño de fuente adecuado para pantallas medianas */
+        font-size: 24px; /* Ajuste del tamaño de los botones para mejor visibilidad */
         padding: 15px;
     }
 }
 
-/* Escritorio/Laptop Grande */
-@media (min-width: 1200px) {
-    .galeria-slide {
-        width: 25%; /* Muestra cuatro imágenes a la vez */
-    }
-
+/* Tabletas (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
     .galeria-content {
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 90%; /* Aumentado a 90% para tabletas */
+        max-height: 90%; /* Aumentado a 90% para tabletas */
+        margin-top: 30px;
     }
 
     .galeria-slide img {
-        height: 80vh; /* Ajuste para pantallas grandes */
+        max-height: calc(75vh - 20px); /* Ajusta la altura de la imagen con el padding */
+        width: auto; /* Ajusta la imagen para que se adapte al contenedor */
+        height: 100%;
+        object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
     }
 
     .prev-btn, .next-btn {
-        font-size: 24px; /* Tamaño de fuente grande para pantallas grandes */
+        font-size: 24px; /* Ajuste del tamaño de los botones para mejor visibilidad */
+        padding: 18px;
+    }
+}
+
+/* Escritorio (1025px y superior) */
+@media (min-width: 1025px) {
+    .galeria-content {
+        max-width: 90%; /* Ancho máximo del 90% para escritorio */
+        max-height: 90%; /* Altura máxima del 90% para escritorio */
+    }
+
+    .galeria-slide img {
+        max-height: 90vh; /* Ajusta la altura máxima de la imagen para escritorio */
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 24px; /* Tamaño de los botones para pantallas grandes */
         padding: 20px;
     }
 }

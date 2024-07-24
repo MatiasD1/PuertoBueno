@@ -1,4 +1,4 @@
-/* Estilos para el contenedor principal */
+/* Estilos generales para el contenedor principal */
 .encabezado {
     position: relative;
     height: 400px;
@@ -27,26 +27,63 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto; /* Ajustar la altura según el contenido */
-    z-index: 3; /* Elevar por encima de la imagen */
-    padding: 20px 40px; /* Espaciado interno para crear margen dentro del borde */
-    border: 2px solid $color1; /* Borde alrededor del contenedor del título */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para dar efecto de elevación */
+    padding: 20px 40px;
+    border: 2px solid #FFFFFF; /* Sustituye $color1 con el color deseado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 3;
 }
 
 /* Estilos para el título */
 .tituloEncabezado h1 {
-    font-family: 'Urbanist', sans-serif; /* 'sans-serif' como fallback (como alternativa si por un error no puede usarse urbanist)*/
+    font-family: 'Urbanist', sans-serif;
     font-weight: 400; 
     font-size: 60px;
-    color: $color1;
+    color: #FFFFFF; /* Sustituye $color1 con el color deseado */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
     text-align: center;
 }
 
-/* Elimina los pseudo-elementos que crean las líneas */
-.tituloEncabezado::before,
-.tituloEncabezado::after {
-    content: none;
+/* Media Queries para diseño responsive */
+
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    .encabezado {
+        height: 200px;
+    }
+    .tituloEncabezado {
+        padding: 10px 20px;
+        border: 1px solid #FFFFFF;
+    }
+    .tituloEncabezado h1 {
+        font-size: 24px;
+    }
+}
+
+/* Tabletas y portátiles pequeños (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .encabezado {
+        height: 300px;
+    }
+    .tituloEncabezado {
+        padding: 15px 30px;
+        border: 2px solid #FFFFFF;
+    }
+    .tituloEncabezado h1 {
+        font-size: 40px;
+    }
+}
+
+/* Escritorio (1025px y superior) */
+@media (min-width: 1025px) {
+    .encabezado {
+        height: 400px;
+    }
+    .tituloEncabezado {
+        padding: 20px 40px;
+        border: 2px solid #FFFFFF;
+    }
+    .tituloEncabezado h1 {
+        font-size: 60px;
+    }
 }
