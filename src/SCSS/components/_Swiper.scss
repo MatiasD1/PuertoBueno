@@ -1,4 +1,4 @@
-//CARRUSEL DE LUGARES DE INTERÉS #UBICACIÓN 
+/* CARRUSEL DE LUGARES DE INTERÉS #UBICACIÓN */
 .textoSlides {
     width: 100%;
     position: absolute;
@@ -7,10 +7,10 @@
     margin: 0;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: $color1;
-    font-family: "Urbanist",sans-serif;
+    color: #fff; /* Cambia $color1 por el color de texto deseado */
+    font-family: "Urbanist", sans-serif;
     font-weight: 400;
-    font-size: 20px;  /* Reducido el tamaño de la fuente para que se ajuste mejor */
+    font-size: 20px; /* Reducido el tamaño de la fuente para que se ajuste mejor */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     text-align: center; /* Centra el texto */
 }
@@ -19,14 +19,21 @@
 .custom-swiper {
     max-width: 100%;
     margin: 20px 30px;
+    
+    /* Asegura que los slides ocupen el ancho completo */
+    .swiper-wrapper {
+        display: flex; /* Asegura que los slides se alineen horizontalmente */
+    }
 
-    /* Estilos específicos para cada slide dentro de este Swiper */
     .custom-slide {
         position: relative;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5); /* Sombra suave */
         transition: transform 0.3s ease-in-out; /* Transición suave al hacer hover */
-        margin: 15px; /* Añadir margen alrededor de cada slide */
-        
+        margin: 0; /* Elimina el margen para evitar espacios extra */
+        width: 100%; /* Ancho completo del contenedor Swiper */
+        height: 100%; /* Altura completa del contenedor Swiper */
+        overflow: hidden; /* Asegura que las imágenes no sobresalgan del contenedor */
+
         &:hover {
             transform: scale(1.05); /* Efecto de aumento al hacer hover */
         }
@@ -43,8 +50,45 @@
         /* Estilos para las imágenes dentro de los slides personalizados */
         img {
             width: 100%;
-            height: 400px;
+            height: 100%;
             object-fit: cover; /* Ajusta la imagen para que cubra el contenedor manteniendo la proporción */
+            display: block; /* Elimina el espacio debajo de la imagen */
         }
+    }
+}
+
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    .custom-slide {
+        height: 200px; /* Ajusta la altura de los slides para pantallas pequeñas */
+    }
+
+    .textoSlides {
+        font-size: 16px; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+        padding: 8px; /* Ajusta el padding para pantallas pequeñas */
+    }
+}
+
+/* Tabletas (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .custom-slide {
+        height: 300px; /* Ajusta la altura de los slides para tabletas */
+    }
+
+    .textoSlides {
+        font-size: 18px; /* Ajusta el tamaño de la fuente para tabletas */
+        padding: 10px; /* Ajusta el padding para tabletas */
+    }
+}
+
+/* Escritorio (1025px y superior) */
+@media (min-width: 1025px) {
+    .custom-slide {
+        height: 400px; /* Altura estándar para pantallas grandes */
+    }
+
+    .textoSlides {
+        font-size: 20px; /* Tamaño de la fuente estándar para pantallas grandes */
+        padding: 10px; /* Padding estándar para pantallas grandes */
     }
 }

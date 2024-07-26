@@ -46,7 +46,7 @@ footer {
 
 .logosRedes {
     display: flex;
-    justify-content: space-between;
+    gap: 50px;
     margin: 20px auto; /* Ajustar para que no cause desbordamiento */
     max-width: 300px; /* Limitar el ancho máximo para evitar desbordamiento */
 }

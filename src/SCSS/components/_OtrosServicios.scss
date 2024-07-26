@@ -1,0 +1,98 @@
+.OtrosServicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+    grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
+    gap: 20px; /* Espacio entre los elementos (ajusta según sea necesario) */
+    padding: 20px;
+}
+
+.item1 {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: flex-start; /* Alinea al inicio de la columna */
+    grid-column: 1 / 3; /* Ocupa dos columnas en la primera fila */
+}
+
+.item2 {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: flex-end; /* Alinea al final de la columna */
+    grid-column: 1 / 3; /* Ocupa dos columnas en la segunda fila */
+}
+
+.textoServicios {
+    display: flex;
+    margin: 0; /* Elimina el margen alrededor del texto */
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+    justify-content: center;
+}
+
+/* Ajusta el estilo del swiper si es necesario */
+.swiper {
+    width: 100%; /* Asegúrate de que el swiper ocupe el ancho completo */
+}
+
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    .OtrosServicios {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
+    }
+
+    .item1, .item2 {
+        flex-direction: column; /* Coloca el texto y el swiper en columna */
+        justify-content: center; /* Centra verticalmente en cada celda */
+    }
+
+    .textoServicios {
+        width: auto; /* Ajusta el ancho del texto para pantallas pequeñas */
+    }
+}
+
+/* Tabletas (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .OtrosServicios {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en tabletas */
+        grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
+    }
+
+    .item1 {
+        flex-direction: row; /* Coloca el swiper y el texto en fila */
+        justify-content: flex-start; /* El swiper a la izquierda, texto a la derecha */
+    }
+
+    .item2 {
+        flex-direction: row; /* Coloca el texto y el swiper en fila */
+        justify-content: flex-end; /* El texto a la izquierda, swiper a la derecha */
+    }
+
+    .textoOtrosServicios{
+        display: flex;
+        flex-direction: column;
+    }
+    .tituloOtrosServicios {
+        width: auto; /* Ajusta el ancho del texto */
+    }
+}
+
+/* Escritorio (1025px y superior) */
+@media (min-width: 1025px) {
+    .OtrosServicios {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en escritorios */
+        grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
+    }
+
+    .item1 {
+        flex-direction: row; /* Coloca el swiper y el texto en fila */
+        justify-content: flex-start; /* El swiper a la izquierda, texto a la derecha */
+    }
+
+    .item2 {
+        flex-direction: row; /* Coloca el texto y el swiper en fila */
+        justify-content: flex-end; /* El texto a la izquierda, swiper a la derecha */
+    }
+
+    .textoServicios {
+        width: auto; /* Ajusta el ancho del texto según sea necesario */
+    }
+}

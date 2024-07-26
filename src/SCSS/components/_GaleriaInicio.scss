@@ -1,29 +1,23 @@
 .galeriaInicio {
-    height: 600px;
     margin: auto;
-    background-color: $color4;
-    text-align: center; /* Centramos el contenido del contenedor */
-    padding-bottom: 20px;
+    text-align: center;
     color: $color1;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-bottom: 20px; /* Asegúrate de que este valor sea el adecuado */
 }
 
-.grid-container {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr); /* 2 filas de igual altura */
-}
+/* Estilos generales para el grid */
 
 .grid-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+    margin-bottom: 0; /* Elimina margen inferior si es necesario */
 }
 
 .fotosDeptosInicio {
     position: relative;
-    width: 100%;
-    height: 270px; /* Altura fija para cada contenedor de imagen */
-    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del contenedor */
+    overflow: hidden;
     transition: 0.3s;
+    padding: 3px; /* Ajusta según sea necesario */
 }
 
 .fotoSimboloInicio {
@@ -34,13 +28,13 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
     z-index: 1;
-    transition: opacity 0.3s, transform 0.3s; /* Transición para la opacidad y transformación */
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 .fotoDeptoInicio {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen mantenga la relación de aspecto */
+    object-fit: cover;
     transition: 0.3s;
 }
 
@@ -50,15 +44,11 @@
 }
 
 .fotosDeptosInicio:hover .fotoSimboloInicio {
-    display: block; /* Mostrar al hacer hover en .fotosDeptos */
-    cursor: pointer;
-    transform: translate(-50%, -50%) scale(1); /* Escala a tamaño completo */
-    opacity: 1; /* Hace el icono visible */
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
 }
 
-.fotoSimboloInicio:hover + .fotoDeptoInicio {
-    opacity: 0.5; /* Reducir la opacidad al hacer hover en .fotoSimbolo */
-}
 /* Estilos para el overlay y el contenedor del carrusel */
 .overlay {
     position: fixed;
@@ -66,21 +56,54 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+    z-index: 1000;
 }
 
 .carrusel-container {
     position: relative;
-    z-index: 1001; /* Asegúrate de que esté sobre el overlay */
+    z-index: 1001;
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    max-width: 90%; /* Para hacerlo responsive */
-    max-height: 90%; /* Para hacerlo responsive */
-    overflow: auto; /* Permitir scroll si es necesario */
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+}
+
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    .grid-row {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en móviles */
+    }
+
+    .fotosDeptosInicio {
+        height: 200px; /* Altura ajustada para pantallas pequeñas */
+    }
+}
+
+/* Tabletas (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .grid-row {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+    }
+
+    .fotosDeptosInicio {
+        height: 250px; /* Altura ajustada para tabletas */
+    }
+}
+
+/* Escritorio (1025px y superior) */
+@media (min-width: 1025px) {
+    .grid-row {
+        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en escritorios */
+    }
+
+    .fotosDeptosInicio {
+        height: 270px; /* Altura ajustada para escritorios */
+    }
 }
