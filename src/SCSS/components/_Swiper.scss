@@ -1,89 +1,31 @@
-/* CARRUSEL DE LUGARES DE INTERÉS #UBICACIÓN */
-.textoSlides {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-family: "Urbanist", sans-serif;
-    font-weight: 400;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
-}
-
-.custom-swiper {
-    width: 100%;
-    margin: 20px 0;
-    overflow: hidden; /* Previene el desbordamiento de las imágenes */
-
-    .swiper-wrapper {
-        display: flex;
-        align-items: center; /* Alinea verticalmente el contenido */
-    }
-
-    .custom-slide {
-        position: relative;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s ease-in-out;
-        margin: 0;
-        overflow: hidden; /* Asegura que el contenido no se desborde */
-        border-radius: 8px; /* Bordes redondeados para un estilo moderno */
-        height: 100%; /* Permite que el slide ajuste su altura en función del contenedor */
-        display: flex;
-        align-items: center; /* Centra verticalmente el contenido */
-        justify-content: center; /* Centra horizontalmente el contenido */
-        box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
-    }
-
-    img {
+// Swiper Container Styles
+.swiper-container1 {
+    margin: 20px 20px;
+  
+    .swiper-slide {
+      position: relative;
+      display: block;
+  
+      img {
         width: 100%;
-        height: auto; /* Permite que la altura se ajuste automáticamente */
-        max-height: 100%; /* Limita la altura máxima para mantener la proporción */
-        object-fit: cover; /* Asegura que la imagen cubra el contenedor manteniendo su proporción */
-        display: block;
-        border-radius: 8px; /* Bordes redondeados en la imagen */
-    }
-}
-
-/* Móviles (hasta 767px) */
-@media (max-width: 767px) {
-    .custom-slide {
-        flex: 1 0 100%;
-        min-height: 200px; /* Altura mínima para móviles */
-    }
-
-    .textoSlides {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
-
-/* Tabletas (768px a 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .custom-slide {
-        flex: 1 0 50%; /* Dos slides por fila en tabletas */
-        min-height: 250px; /* Altura mínima para tabletas */
-    }
-
-    .textoSlides {
-        font-size: 16px;
+        height: 400px;
+        object-fit: cover; // Ensures images cover the container
+      }
+  
+      .textoSlides {
+        position: absolute;
+        margin: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%; // Ensure the text block spans the entire width of the slide
         padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 25px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.705);
+        text-align: center; // Center the text horizontally
+        box-sizing: border-box; // Include padding in width calculation
+      }
     }
-}
-
-/* Escritorio (1025px y superior) */
-@media (min-width: 1025px) {
-    .custom-slide {
-        flex: 1 0 25%; /* Cuatro slides por fila en escritorios */
-        min-height: 300px; /* Altura mínima para escritorios */
-    }
-
-    .textoSlides {
-        font-size: 18px;
-        padding: 10px;
-    }
-}
+  }
+  

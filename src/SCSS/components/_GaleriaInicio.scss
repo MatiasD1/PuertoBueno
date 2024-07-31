@@ -78,22 +78,22 @@
 /* Móviles (hasta 767px) */
 @media (max-width: 767px) {
     .grid-row {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en móviles */
+        grid-template-columns: repeat(4, 1fr); /* Dos columnas en móviles */
     }
 
     .fotosDeptosInicio {
-        height: 200px; /* Altura ajustada para pantallas pequeñas */
+        height: 100px; /* Altura ajustada para pantallas pequeñas */
     }
 }
 
 /* Tabletas (768px a 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .grid-row {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+        grid-template-columns: repeat(4, 1fr); /* Dos columnas en tabletas */
     }
 
     .fotosDeptosInicio {
-        height: 250px; /* Altura ajustada para tabletas */
+        height: 200px; /* Altura ajustada para tabletas */
     }
 }
 
