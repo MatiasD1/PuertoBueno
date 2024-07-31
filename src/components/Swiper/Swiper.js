@@ -1,10 +1,5 @@
-//SWIPER PUNTOS DE INTERÉS
-
-// import Swiper core and required modules
 import { A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
@@ -21,19 +16,18 @@ import torreAgua from "../../img/torreDelAgua.jpg";
 import centroGuemes from "../../img/centroGuemes.jpg";
 import playaVarese from "../../img/playaVarese.jpg";
 
-
 const SwiperComponent = () => {
   return (
     <Swiper
       modules={[Autoplay, A11y]}
-      spaceBetween={30}
+      spaceBetween={20}
       slidesPerView={4}
       autoplay={{ delay: 3000 }}
-      className="custom-swiper" // Aplicar clase específica al contenedor Swiper
+      className="custom-swiper"
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide className="custom-slide"> {/* Aplicar clase específica a cada slide */}
+      <SwiperSlide className="custom-slide">
         <img src={Aldrey} alt="Paseo Aldrey"/>
         <p className='textoSlides'>Paseo Aldrey 1.2Km</p>
       </SwiperSlide>

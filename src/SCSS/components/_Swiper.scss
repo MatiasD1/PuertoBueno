@@ -7,88 +7,83 @@
     margin: 0;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff; /* Cambia $color1 por el color de texto deseado */
+    color: #fff;
     font-family: "Urbanist", sans-serif;
     font-weight: 400;
-    font-size: 20px; /* Reducido el tamaño de la fuente para que se ajuste mejor */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center; /* Centra el texto */
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
 }
 
-/* Estilos generales para el Swiper */
 .custom-swiper {
-    max-width: 100%;
-    margin: 20px 30px;
-    
-    /* Asegura que los slides ocupen el ancho completo */
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden; /* Previene el desbordamiento de las imágenes */
+
     .swiper-wrapper {
-        display: flex; /* Asegura que los slides se alineen horizontalmente */
+        display: flex;
+        align-items: center; /* Alinea verticalmente el contenido */
     }
 
     .custom-slide {
         position: relative;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5); /* Sombra suave */
-        transition: transform 0.3s ease-in-out; /* Transición suave al hacer hover */
-        margin: 0; /* Elimina el margen para evitar espacios extra */
-        width: 100%; /* Ancho completo del contenedor Swiper */
-        height: 100%; /* Altura completa del contenedor Swiper */
-        overflow: hidden; /* Asegura que las imágenes no sobresalgan del contenedor */
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease-in-out;
+        margin: 0;
+        overflow: hidden; /* Asegura que el contenido no se desborde */
+        border-radius: 8px; /* Bordes redondeados para un estilo moderno */
+        height: 100%; /* Permite que el slide ajuste su altura en función del contenedor */
+        display: flex;
+        align-items: center; /* Centra verticalmente el contenido */
+        justify-content: center; /* Centra horizontalmente el contenido */
+        box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    }
 
-        &:hover {
-            transform: scale(1.05); /* Efecto de aumento al hacer hover */
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-        }
-
-        /* Estilos para las imágenes dentro de los slides personalizados */
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ajusta la imagen para que cubra el contenedor manteniendo la proporción */
-            display: block; /* Elimina el espacio debajo de la imagen */
-        }
+    img {
+        width: 100%;
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        max-height: 100%; /* Limita la altura máxima para mantener la proporción */
+        object-fit: cover; /* Asegura que la imagen cubra el contenedor manteniendo su proporción */
+        display: block;
+        border-radius: 8px; /* Bordes redondeados en la imagen */
     }
 }
 
 /* Móviles (hasta 767px) */
 @media (max-width: 767px) {
     .custom-slide {
-        height: 200px; /* Ajusta la altura de los slides para pantallas pequeñas */
+        flex: 1 0 100%;
+        min-height: 200px; /* Altura mínima para móviles */
     }
 
     .textoSlides {
-        font-size: 16px; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
-        padding: 8px; /* Ajusta el padding para pantallas pequeñas */
+        font-size: 14px;
+        padding: 8px;
     }
 }
 
 /* Tabletas (768px a 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .custom-slide {
-        height: 300px; /* Ajusta la altura de los slides para tabletas */
+        flex: 1 0 50%; /* Dos slides por fila en tabletas */
+        min-height: 250px; /* Altura mínima para tabletas */
     }
 
     .textoSlides {
-        font-size: 18px; /* Ajusta el tamaño de la fuente para tabletas */
-        padding: 10px; /* Ajusta el padding para tabletas */
+        font-size: 16px;
+        padding: 10px;
     }
 }
 
 /* Escritorio (1025px y superior) */
 @media (min-width: 1025px) {
     .custom-slide {
-        height: 400px; /* Altura estándar para pantallas grandes */
+        flex: 1 0 25%; /* Cuatro slides por fila en escritorios */
+        min-height: 300px; /* Altura mínima para escritorios */
     }
 
     .textoSlides {
-        font-size: 20px; /* Tamaño de la fuente estándar para pantallas grandes */
-        padding: 10px; /* Padding estándar para pantallas grandes */
+        font-size: 18px;
+        padding: 10px;
     }
 }
