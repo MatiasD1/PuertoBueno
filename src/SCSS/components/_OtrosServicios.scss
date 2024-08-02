@@ -37,11 +37,15 @@
     .OtrosServicios {
         grid-template-columns: 1fr; /* Una columna en móviles */
         grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
+        flex-direction: column;
     }
 
-    .item1, .item2 {
-        flex-direction: column; /* Coloca el texto y el swiper en columna */
-        justify-content: center; /* Centra verticalmente en cada celda */
+    .item1 {
+        flex-direction: column; /* Coloca el swiper y el texto en fila */
+    }
+
+    .item2 {
+        flex-direction: column; /* Coloca el texto y el swiper en fila */
     }
 
     .textoServicios {
@@ -58,12 +62,10 @@
 
     .item1 {
         flex-direction: row; /* Coloca el swiper y el texto en fila */
-        justify-content: flex-start; /* El swiper a la izquierda, texto a la derecha */
     }
 
     .item2 {
-        flex-direction: row; /* Coloca el texto y el swiper en fila */
-        justify-content: flex-end; /* El texto a la izquierda, swiper a la derecha */
+        flex-direction: row-reverse; /* Coloca el texto y el swiper en fila */
     }
 
     .textoOtrosServicios{
@@ -84,12 +86,10 @@
 
     .item1 {
         flex-direction: row; /* Coloca el swiper y el texto en fila */
-        justify-content: flex-start; /* El swiper a la izquierda, texto a la derecha */
     }
 
     .item2 {
-        flex-direction: row; /* Coloca el texto y el swiper en fila */
-        justify-content: flex-end; /* El texto a la izquierda, swiper a la derecha */
+        flex-direction: row-reverse; /* Coloca el texto y el swiper en fila */
     }
 
     .textoServicios {

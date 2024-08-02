@@ -5,8 +5,13 @@ const NavBar = ({ isVisible }) => {
 
   return (
     <nav className={`NavBar ${isVisible ? 'fixed' : ''}`}>
-      <h2 className="tituloNavBar">Puerto Bueno</h2>
-      <h3 className="subtituloNavBar">- Mar del Plata -</h3>
+      {/* Condicionalmente renderiza los elementos h2 y h3 */}
+      {!showMenu && (
+        <>
+          <h2 className="tituloNavBar">Puerto Bueno</h2>
+          <h3 className="subtituloNavBar">- Mar del Plata -</h3>
+        </>
+      )}
 
       <button className="hamburger" onClick={() => setShowMenu(!showMenu)}>
         ☰

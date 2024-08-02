@@ -39,7 +39,7 @@
 
     .nav-item {
         text-align: center;
-        margin: 10px 0;
+        margin: 0px;
     }
 
     .NavBar {
@@ -269,6 +269,11 @@
     }
 }
 
+.nav.show + .NavBar h2,
+    .nav.show + .NavBar h3 {
+        display: none;
+    }
+    
 /* Asegúrate de que el body y el html ocupen el 100% del ancho */
 html, body {
     width: 100%;

@@ -1096,7 +1096,7 @@ footer {
     font-size: 0.7rem; /* Tamaño de fuente más pequeño para pantallas pequeñas */
   }
   .iconosServicios .iconos img {
-    width: 20px; /* Tamaño ajustado de los iconos */
+    width: 30px; /* Tamaño ajustado de los iconos */
     height: auto;
   }
 }
@@ -1370,7 +1370,7 @@ body {
   }
   .nav-item {
     text-align: center;
-    margin: 10px 0;
+    margin: 0px;
   }
   .NavBar {
     flex-direction: column;
@@ -1563,6 +1563,11 @@ body {
   background-image: linear-gradient(to bottom, rgba(61, 61, 61, 0.5), transparent) !important;
 }
 
+.nav.show + .NavBar h2,
+.nav.show + .NavBar h3 {
+  display: none;
+}
+
 /* Asegúrate de que el body y el html ocupen el 100% del ancho */
 html, body {
   width: 100%;
@@ -1610,10 +1615,13 @@ html, body {
   .OtrosServicios {
     grid-template-columns: 1fr; /* Una columna en móviles */
     grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
+    flex-direction: column;
   }
-  .item1, .item2 {
-    flex-direction: column; /* Coloca el texto y el swiper en columna */
-    justify-content: center; /* Centra verticalmente en cada celda */
+  .item1 {
+    flex-direction: column; /* Coloca el swiper y el texto en fila */
+  }
+  .item2 {
+    flex-direction: column; /* Coloca el texto y el swiper en fila */
   }
   .textoServicios {
     width: auto; /* Ajusta el ancho del texto para pantallas pequeñas */
@@ -1627,11 +1635,9 @@ html, body {
   }
   .item1 {
     flex-direction: row; /* Coloca el swiper y el texto en fila */
-    justify-content: flex-start; /* El swiper a la izquierda, texto a la derecha */
   }
   .item2 {
-    flex-direction: row; /* Coloca el texto y el swiper en fila */
-    justify-content: flex-end; /* El texto a la izquierda, swiper a la derecha */
+    flex-direction: row-reverse; /* Coloca el texto y el swiper en fila */
   }
   .textoOtrosServicios {
     display: flex;
@@ -1649,11 +1655,9 @@ html, body {
   }
   .item1 {
     flex-direction: row; /* Coloca el swiper y el texto en fila */
-    justify-content: flex-start; /* El swiper a la izquierda, texto a la derecha */
   }
   .item2 {
-    flex-direction: row; /* Coloca el texto y el swiper en fila */
-    justify-content: flex-end; /* El texto a la izquierda, swiper a la derecha */
+    flex-direction: row-reverse; /* Coloca el texto y el swiper en fila */
   }
   .textoServicios {
     width: auto; /* Ajusta el ancho del texto según sea necesario */
@@ -1900,6 +1904,44 @@ html, body {
   transition: opacity 0.15s ease;
 }
 
+.swiper-container {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+.swiper-container .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.swiper-container .slide-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.swiper-container .swiper-button-custom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4vw;
+  height: 4vw;
+  z-index: 10;
+  cursor: pointer;
+}
+.swiper-container .swiper-button-custom img {
+  width: 100%;
+  height: 100%;
+}
+.swiper-container .swiper-button-custom.swiper-button-prev-custom {
+  left: 10px;
+}
+.swiper-container .swiper-button-custom.swiper-button-next-custom {
+  right: 10px;
+}
+.swiper-container .swiper-pagination {
+  bottom: 10px;
+}
 .swiper-container .swiper-pagination .swiper-pagination-bullet {
   background-color: #00c1bb;
   opacity: 0.5;
@@ -1910,9 +1952,6 @@ html, body {
 }
 .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
   opacity: 1;
-}
-.swiper-container .slide-image {
-  height: 500px !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,25 +1,59 @@
 // CARRUSELES QUINCHO Y ESTACIONAMIENTO #SERVICIOS
 .swiper-container {
+  width: 100%; // Asegúrate de que el contenedor ocupe el 100% del ancho
+  margin: auto;
+  position: relative; // Para posicionar las flechas de navegación
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; // Asegúrate de que cada diapositiva ocupe el 100% del ancho del contenedor
+  }
+
+  .slide-image {
+    width: 100%; // Asegúrate de que la imagen ocupe el 100% del ancho de la diapositiva
+    height: auto; // Mantén la proporción de la imagen
+    object-fit: cover; // Cubrir el contenedor sin deformarse
+  }
+
+  .swiper-button-custom {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4vw; // Tamaño dinámico basado en el ancho de la pantalla
+    height: 4vw; // Tamaño dinámico basado en el ancho de la pantalla
+    z-index: 10;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.swiper-button-prev-custom {
+      left: 10px;
+    }
+
+    &.swiper-button-next-custom {
+      right: 10px;
+    }
+  }
+
   .swiper-pagination {
+    bottom: 10px; // Posición de la paginación en la parte inferior
     .swiper-pagination-bullet {
       background-color: $color3; // Color de fondo base
       opacity: 0.5; // Opacidad base
       transition: opacity 0.15s ease; // Transición de opacidad
-      
+
       &:hover {
         opacity: 1; // Opacidad al pasar el mouse
       }
     }
-    
+
     .swiper-pagination-bullet-active {
       opacity: 1; // Opacidad cuando está activo
-      
-      // Otros estilos adicionales si es necesario
     }
-  }
-  
-  // Estilos para las imágenes de las diapositivas
-  .slide-image {
-    height: 500px !important; // Altura de las imágenes
   }
 }
