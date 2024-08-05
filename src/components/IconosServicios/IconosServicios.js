@@ -18,7 +18,10 @@ import arena from '../../img/arena.jpg'
 function IconosServicios() {
     return (
        <div className='iconosServicios'>
-            <h1>Servicios y Facilidades</h1>
+        <h1>Servicios y Facilidades</h1>
+            <p>Te brindamos mucho de lo que podes necesitar para <br/>
+                que tu ocupación esencial sea disfrutar cada día. 
+            </p>
             <div className='iconosContenedor'>        
                 <img src={arena} className="serviciosFondo" alt="orilla del mar"/>
                 <div className='iconos'>

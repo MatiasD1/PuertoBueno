@@ -4,12 +4,22 @@
     overflow: hidden; /* Evita que la imagen de fondo se desborde */
     padding-bottom: 20px;
 
-    h1 {
+    h1{
         position: relative;
         font-family: 'Urbanist', sans-serif;
         font-weight: 500;
         color: $color1;
         padding-top: 50px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        text-align: center; /* Centra el texto en pantallas más pequeñas */
+    } 
+    p {
+        position: relative;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 500;
+        color: $color5;
+        padding-top: 14px;
         padding-bottom: 20px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         z-index: 2;
