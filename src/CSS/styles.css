@@ -103,10 +103,11 @@ $color6: #464646; //texto oscuro
 .contacto {
   display: flex;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  padding: 20px;
+  height: auto;
+  padding-top: 60px;
+  padding-right: 60px;
   background-color: black;
 }
 
@@ -117,36 +118,34 @@ $color6: #464646; //texto oscuro
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor sin distorsionarse */
+  object-fit: cover;
 }
 
 .textoContacto {
-  display: flex; /* Activar flexbox */
-  align-items: center; /* Centrar verticalmente */
-  justify-content: center; /* Centrar horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
   flex-direction: column;
-  padding-left: 155px;
-  padding-bottom: 20px;
+  text-align: center;
 }
 .textoContacto h3 {
-  color: #f4f4f4;
+  color: #ffffff;
   font-size: 36px;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-style: italic;
   white-space: nowrap;
-  letter-spacing: 1.5px; /* Espaciado entre letras */
-  word-spacing: 4px; /* Espaciado entre palabras */
-  line-height: 1.5; /* Altura de línea (interlineado) */
+  letter-spacing: 1.5px;
+  word-spacing: 4px;
+  line-height: 1.5;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .contact-form {
-  margin-top: 63px;
-  width: 400px; /* Ancho ajustado para entrar en el espacio */
-  max-width: 100%;
-  max-height: 550px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   background-color: rgba(0, 0, 0, 0.3490196078);
   padding: 10px;
@@ -154,11 +153,12 @@ $color6: #464646; //texto oscuro
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  margin-right: 48px;
   z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
 }
 .contact-form h2 {
-  color: #f4f4f4;
+  color: #ffffff;
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: "Urbanist", sans-serif;
@@ -169,18 +169,18 @@ $color6: #464646; //texto oscuro
 label {
   display: block;
   margin-bottom: 5px;
-  color: #cdcdcd;
+  color: #ffffff;
   text-align: start;
-  padding-left: 20px; /* Para alinear los label con el comienzo de los inputs */
+  padding-left: 20px;
 }
 
 input[type=text], input[type=date], input[type=number], input[type=email] {
   background-color: rgba(0, 0, 0, 0.3490196078);
-  color: #cdcdcd;
+  color: #ffffff;
   width: 90%;
-  padding: 6px; /* Reducir el relleno */
+  padding: 6px;
   margin-bottom: 8px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   box-sizing: border-box;
   height: 30px;
@@ -188,62 +188,59 @@ input[type=text], input[type=date], input[type=number], input[type=email] {
 
 textarea {
   background-color: rgba(0, 0, 0, 0.3490196078);
-  color: #131313;
+  color: #ffffff;
   width: 90%;
   padding: 6px;
   margin-bottom: 8px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   box-sizing: border-box;
   height: 100px;
 }
 
-/* Contenedor para las fechas de entrada y salida */
 .fechasContacto {
   display: flex;
-  justify-content: space-between; /* Distribuye el espacio entre los grupos de fecha */
-  width: 90%; /* Asegura que el ancho del contenedor de fechas se alinee con los demás inputs */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
   margin-bottom: 8px;
   margin-left: 19px;
-  gap: 20px; /* Espacio entre los grupos de fecha */
-  align-items: center; /* Centra verticalmente los elementos */
+  gap: 20px;
+  align-items: center;
 }
 
-/* Ajustes específicos para los contenedores de fecha */
 .fechasContacto .fecha1,
 .fechasContacto .fecha2 {
   display: flex;
-  flex-direction: column; /* Coloca el label sobre el input */
-  align-items: flex-start; /* Alinea los elementos al principio del contenedor */
-  width: 50%; /* Ocupa la mitad del espacio disponible para centrar horizontalmente */
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
-/* Ajuste específico para los label de fechas */
 .fechasContacto label {
-  margin-bottom: 5px; /* Espacio entre el label y el input */
-  color: #cdcdcd;
-  padding-left: 0; /* Quita cualquier padding añadido anteriormente */
+  margin-bottom: 5px;
+  color: #ffffff;
+  padding-left: 0;
 }
 
 .fechasContacto input {
-  width: 100%; /* Asegura que los inputs ocupen todo el ancho del contenedor de fecha */
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.3490196078);
-  color: #cdcdcd;
+  color: #ffffff;
   padding: 6px;
   margin-bottom: 8px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   box-sizing: border-box;
   height: 30px;
 }
 
 #mensaje {
-  resize: none; /* Desactiva el redimensionamiento */
+  resize: none;
 }
 
-/* Estilos para el botón de submit */
 button[type=submit] {
-  color: #cdcdcd;
+  color: #ffffff;
   background: #00a29d;
   padding: 10px 20px;
   border: none;
@@ -253,10 +250,79 @@ button[type=submit] {
 }
 button[type=submit]:hover {
   color: white;
-  background-color: #00c1bb;
+  background-color: #00796b;
   cursor: pointer;
 }
 
+@media (max-width: 767px) {
+  .contacto {
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+  }
+  .textoContacto h3 {
+    font-size: 20px;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .fechasContacto {
+    flex-direction: column;
+  }
+  .fechasContacto .fecha1,
+  .fechasContacto .fecha2 {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contacto {
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+  }
+  .textoContacto {
+    padding-left: 20px;
+    text-align: center;
+  }
+  .textoContacto h3 {
+    font-size: 20px;
+  }
+  .contact-form {
+    width: 80%;
+    max-width: 400px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .fechasContacto {
+    flex-direction: row;
+  }
+  .fechasContacto .fecha1,
+  .fechasContacto .fecha2 {
+    width: 45%;
+  }
+}
+@media (min-width: 1025px) {
+  .contacto {
+    flex-direction: row;
+    height: 100vh;
+  }
+  .textoContacto {
+    padding-left: 155px;
+  }
+  .contact-form {
+    width: 400px;
+    margin-right: 48px;
+  }
+  .fechasContacto {
+    flex-direction: row;
+  }
+  .fechasContacto .fecha1,
+  .fechasContacto .fecha2 {
+    width: 45%;
+  }
+}
 .carrusel2 {
   position: relative;
   width: 100%;
@@ -369,12 +435,6 @@ button[type=submit]:hover {
   overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
 }
 
-.dep2 .fotoDepto {
-  width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  object-fit: cover; /* Ajusta la imagen dentro del contenedor */
-}
-
 .dep4 {
   display: flex;
   flex-direction: row-reverse; /* Ordena los elementos hijos de derecha a izquierda */
@@ -388,12 +448,6 @@ button[type=submit]:hover {
 .dep4 .fotosDeptos {
   flex: 1; /* Ocupa la otra mitad del contenedor */
   overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
-}
-
-.dep4 .fotoDepto {
-  width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  object-fit: cover; /* Ajusta la imagen dentro del contenedor */
 }
 
 /* Móviles (hasta 767px) */
@@ -612,7 +666,7 @@ button[type=submit]:hover {
     height: 300px;
   }
   .textoEnlaceContacto {
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 10px 15px;
     top: 65%;
   }
@@ -1616,6 +1670,7 @@ html, body {
     grid-template-columns: 1fr; /* Una columna en móviles */
     grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
     flex-direction: column;
+    justify-content: center;
   }
   .item1 {
     flex-direction: column; /* Coloca el swiper y el texto en fila */
@@ -1634,10 +1689,10 @@ html, body {
     grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
   }
   .item1 {
-    flex-direction: row; /* Coloca el swiper y el texto en fila */
+    flex-direction: column; /* Coloca el swiper y el texto en fila */
   }
   .item2 {
-    flex-direction: row-reverse; /* Coloca el texto y el swiper en fila */
+    flex-direction: column; /* Coloca el texto y el swiper en fila */
   }
   .textoOtrosServicios {
     display: flex;
@@ -1765,18 +1820,33 @@ html, body {
 
 .presentacionUbicacion {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  grid-template-areas: "tituloUbicacion fraseUbicacion" ".               textoUbicacion";
-  padding: 40px;
-  gap: 20px; /* Espacio entre columnas */
+  grid-template-columns: 1fr;
+  grid-template-areas: "tituloUbicacion" "fraseUbicacion" "textoUbicacion";
+  padding: 20px;
+  gap: 10px;
+}
+@media (min-width: 768px) {
+  .presentacionUbicacion {
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales en pantallas medianas y grandes */
+    grid-template-areas: "tituloUbicacion fraseUbicacion" "textoUbicacion textoUbicacion";
+    padding: 30px;
+    gap: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  .presentacionUbicacion {
+    padding: 40px;
+  }
 }
 
 .tituloUbicacion {
   grid-area: tituloUbicacion;
+  font-size: 1.5rem;
 }
 
 .fraseUbicacion {
   grid-area: fraseUbicacion;
+  font-size: 1.2rem;
 }
 
 .textoUbicacion {
@@ -1785,7 +1855,7 @@ html, body {
 }
 
 .serviciosCercanos {
-  height: 520px;
+  height: auto;
   background-color: #000000;
 }
 .serviciosCercanos h2 {
@@ -1798,7 +1868,7 @@ html, body {
 }
 
 .mapaUbicacion {
-  height: 550px;
+  height: auto;
   padding: 20px;
   color: #EEEEEE;
   background-color: #131313;
@@ -1813,7 +1883,9 @@ html, body {
 }
 
 .swiper-container1 {
-  margin: 20px 20px;
+  padding: 20px;
+  margin: 20px auto;
+  position: relative;
 }
 .swiper-container1 .swiper-slide {
   position: relative;
@@ -1838,10 +1910,41 @@ html, body {
   text-align: center;
   box-sizing: border-box;
 }
+@media (max-width: 570px) {
+  .swiper-container1 .swiper-slide img {
+    height: 200px;
+  }
+  .swiper-container1 .textoSlides {
+    font-size: 12px !important;
+  }
+}
+@media (min-width: 571px) and (max-width: 767px) {
+  .swiper-container1 .swiper-slide img {
+    height: 200px;
+  }
+  .swiper-container1 .textoSlides {
+    font-size: 16px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .swiper-container1 .swiper-slide img {
+    height: 300px;
+  }
+  .swiper-container1 .textoSlides {
+    font-size: 20px !important;
+  }
+}
+@media (min-width: 1025px) {
+  .swiper-container1 .swiper-slide img {
+    height: 400px;
+  }
+  .swiper-container1 .textoSlides {
+    font-size: 25px !important;
+  }
+}
 
 .bordeSwiper2 {
   padding: 20px; /* Espacio entre el borde y el contenido del carrusel */
-  border: 4px solid #EEEEEE; /* Color y grosor del borde */
   margin: 20px auto; /* Ajusta según sea necesario */
   max-width: 1000px; /* Ajusta según sea necesario para incluir padding y tamaño del carrusel */
   position: relative;
@@ -1908,6 +2011,8 @@ html, body {
   width: 100%;
   margin: auto;
   position: relative;
+  border: solid 2px white;
+  padding: 10px;
 }
 .swiper-container .swiper-slide {
   display: flex;

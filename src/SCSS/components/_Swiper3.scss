@@ -3,6 +3,9 @@
   width: 100%; // Asegúrate de que el contenedor ocupe el 100% del ancho
   margin: auto;
   position: relative; // Para posicionar las flechas de navegación
+  border: solid 2px white;
+  padding: 10px;
+
 
   .swiper-slide {
     display: flex;

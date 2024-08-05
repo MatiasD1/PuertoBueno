@@ -38,6 +38,7 @@
         grid-template-columns: 1fr; /* Una columna en móviles */
         grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
         flex-direction: column;
+        justify-content: center;
     }
 
     .item1 {
@@ -46,6 +47,7 @@
 
     .item2 {
         flex-direction: column; /* Coloca el texto y el swiper en fila */
+
     }
 
     .textoServicios {
@@ -61,11 +63,11 @@
     }
 
     .item1 {
-        flex-direction: row; /* Coloca el swiper y el texto en fila */
+        flex-direction: column; /* Coloca el swiper y el texto en fila */
     }
 
     .item2 {
-        flex-direction: row-reverse; /* Coloca el texto y el swiper en fila */
+        flex-direction: column; /* Coloca el texto y el swiper en fila */
     }
 
     .textoOtrosServicios{

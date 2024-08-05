@@ -99,12 +99,6 @@
     overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
 }
 
-.dep2 .fotoDepto {
-    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
-}
-
 
 .dep4 {
     display: flex;
@@ -121,11 +115,7 @@
     overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
 }
 
-.dep4 .fotoDepto {
-    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
-}
+
 
 /* Móviles (hasta 767px) */
 @media (max-width: 767px) {

@@ -21,28 +21,45 @@
 
 .presentacionUbicacion {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "tituloUbicacion fraseUbicacion"
-        ".               textoUbicacion"; 
-    padding: 40px;
-    gap: 20px; /* Espacio entre columnas */
+        "tituloUbicacion"
+        "fraseUbicacion"
+        "textoUbicacion";
+    padding: 20px;
+    gap: 10px;
+    
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr; /* Dos columnas iguales en pantallas medianas y grandes */
+        grid-template-areas:
+            "tituloUbicacion fraseUbicacion"
+            "textoUbicacion textoUbicacion";
+        padding: 30px;
+        gap: 20px;
+    }
+
+    @media (min-width: 1025px) {
+        padding: 40px;
+    }
 }
 
 .tituloUbicacion {
     grid-area: tituloUbicacion;
+    font-size: 1.5rem;
 }
 
 .fraseUbicacion {
     grid-area: fraseUbicacion;
+    font-size: 1.2rem;
 }
 
 .textoUbicacion {
     grid-area: textoUbicacion;
     color: #464646;
 }
+
 .serviciosCercanos{
-    height: 520px;
+    height: auto;
     background-color: $color4;
 
     h2{
@@ -55,7 +72,7 @@
     }
 }
 .mapaUbicacion{
-    height: 550px;
+    height: auto;
     padding: 20px;
     color: $color1;
     background-color: $color2;
