@@ -14,7 +14,7 @@ const Inicio = () => {
                 <p className='textoInicio'>
                 Puerto Bueno es un complejo de departamentos para alquiler temporario, diseñados
                 para el descanso reparador de las familias, parejas o amigos, durante alguna escapada de un fin de
-                semana largo o en un período de vacaciones más prolongado.,<br/>,<br/>
+                semana largo o en un período de vacaciones más prolongado.<br/><br/>
                 Se encuentra a pocas cuadras de Playa Grande, uno de los balnearios más lindos de la ciudad, a
                 donde se puede llegar caminando y disfrutar de un hermoso día de arena, sol y mar, con buen
                 ambiente y servicios excelentes.
@@ -22,7 +22,7 @@ const Inicio = () => {
                 profesional, como el Hotel Sheraton o el Costa Galana, teniendo valor estratégico para quienes
                 viajan por trabajo o por la participación en algún congreso.,
                 Después de la playa, del trabajo o del estudio, la ubicación privilegiada del complejo, facilita un
-                acceso rápido a los principales centros gastronómicos y de esparcimiento de la ciudad.<br/>,<br/>
+                acceso rápido a los principales centros gastronómicos y de esparcimiento de la ciudad.<br/><br/>
                 Nos complace alojar a familias que participan en competencias deportivas, o en cualquier otro
                 evento cultural, porque los motivos para venir a Mar del Plata son innumerables.
                 Recibimos huéspedes todo el año.

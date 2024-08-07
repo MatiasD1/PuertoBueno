@@ -1,13 +1,13 @@
 .contacto {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    flex-direction: column;
     justify-content: space-between;
     height: auto;
     padding-top: 60px;
     padding-right: 60px;
     background-color: black;
-}  
+}
 
 .fotoCosta {
     opacity: 70%;
@@ -26,26 +26,27 @@
     z-index: 1;
     flex-direction: column;
     text-align: center;
+    width: 60%;
+    padding: 20px;
+}
 
-    h3 {
-        color: #ffffff;
-        font-size: 36px;
-        font-family: 'Urbanist', sans-serif;
-        font-weight: 400;
-        font-style: italic;
-        white-space: nowrap;
-        letter-spacing: 1.5px;
-        word-spacing: 4px;
-        line-height: 1.5;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
+.textoContacto h3 {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    white-space: normal; /* Permite el ajuste del texto */
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+    line-height: 1.5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .contact-form {
     margin-top: 20px;
     width: 100%;
     max-width: 400px;
-    height: auto;
     background-color: #00000059;
     padding: 10px;
     border-radius: 5px;
@@ -53,39 +54,35 @@
     font-weight: 300;
     font-size: 16px;
     z-index: 1;
-    margin-left: auto;
-    margin-right: auto;
+}
 
-    h2 {
-        color: #ffffff;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-family: 'Urbanist', sans-serif;
-        font-weight: 500;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
+.contact-form h2 {
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    color: #ffffff;
+    color: #ffffff; 
     text-align: start;
     padding-left: 20px;
 }
 
-input {
-    &[type="text"], &[type="date"], &[type="number"], &[type="email"] {
-        background-color: #00000059;
-        color: #ffffff;
-        width: 90%;
-        padding: 6px;
-        margin-bottom: 8px;
-        border: 1px solid #ffffff;
-        border-radius: 4px;
-        box-sizing: border-box;
-        height: 30px;
-    }
+input[type="text"], input[type="date"], input[type="number"], input[type="email"] {
+    background-color: #00000059;
+    color: #ffffff;
+    width: 90%;
+    padding: 6px;
+    margin-bottom: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 30px;
 }
 
 textarea {
@@ -111,8 +108,7 @@ textarea {
     align-items: center;
 }
 
-.fechasContacto .fecha1,
-.fechasContacto .fecha2 {
+.fechasContacto .fecha1, .fechasContacto .fecha2 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -149,99 +145,80 @@ button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.2s;
-
-    &:hover {
-        color: white;
-        background-color: #00796b;
-        cursor: pointer;
-    }
 }
 
+button[type="submit"]:hover {
+    color: white;
+    background-color: #00796b;
+}
+
+/* Media query para pantallas pequeñas */
 @media (max-width: 767px) {
     .contacto {
-        position: relative;
-        justify-content: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
         height: auto;
+        padding: 2px;
     }
-
     .textoContacto {
-        h3{
-            font-size: 20px;
-        }
-    }
-
-    .contact-form {
         width: 100%;
-
+        padding: 10px;
+        text-align: center;
     }
-
-    .fechasContacto {
-        flex-direction: column;
+    .contact-form {
+        width: 90%;
+        height: 70%;
+        margin-top: 10px;
     }
-
-    .fechasContacto .fecha1,
-    .fechasContacto .fecha2 {
+    .fechasContacto .fecha1, .fechasContacto .fecha2 {
         width: 100%;
     }
 }
 
+/* Media query para pantallas medianas */
 @media (min-width: 768px) and (max-width: 1024px) {
     .contacto {
-        position: relative;
         flex-direction: row;
+        align-items: center;
         height: auto;
-        width: auto;
+        padding: 20px;
     }
-
     .textoContacto {
-
-        padding-left: 20px;
-        text-align: center;
-        h3{
-            font-size: 20px;
-        }
-
-    }
-
-    .contact-form {
         width: 80%;
-        max-width: 400px;
-        margin-right: 20px;
-        margin-left: 20px;
+        padding: 15px;
     }
-
+    .contact-form {
+        width: 70%;
+        max-width: 400px;
+        margin-top: 20px;
+    }
     .fechasContacto {
         flex-direction: row;
     }
-
-    .fechasContacto .fecha1,
-    .fechasContacto .fecha2 {
+    .fechasContacto .fecha1, .fechasContacto .fecha2 {
         width: 45%;
     }
 }
 
+/* Media query para pantallas grandes */
 @media (min-width: 1025px) {
     .contacto {
         flex-direction: row;
         height: 100vh;
+        padding: 60px;
     }
-
     .textoContacto {
-        padding-left: 155px;
+        width: 60%;
+        padding: 20px;
     }
-
     .contact-form {
         width: 400px;
         margin-right: 48px;
     }
-
     .fechasContacto {
         flex-direction: row;
     }
-
-    .fechasContacto .fecha1,
-    .fechasContacto .fecha2 {
+    .fechasContacto .fecha1, .fechasContacto .fecha2 {
         width: 45%;
     }
 }

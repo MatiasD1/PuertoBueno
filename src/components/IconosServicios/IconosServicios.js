@@ -1,25 +1,25 @@
 import calefaccion from '../../img/icons/calefaccion.png'
 import cochera from '../../img/icons/cochera3.png'
 import frazadasSabanas from '../../img/icons/frazadasSabanas.png'
-import heladeraFreezer from '../../img/icons/heladeraFreezer.png'
-import microondas from '../../img/icons/microondas.png'
-import baulera from '../../img/icons/baulera.png'
+import heladeraFreezer from '../../img/icons/heladeraFreezer1.png'
+import microondas from '../../img/icons/microondas2.png'
+import baulera from '../../img/icons/baulera1.png'
 import sommier from '../../img/icons/sommier.png'
-import toallas from '../../img/icons/toallas.png'
-import TV from '../../img/icons/TV.png'
-import vajillaUtensillos from '../../img/icons/vajillaUtensillos.png'
+import toallas from '../../img/icons/toallas2.png'
+import TV from '../../img/icons/TV2.png'
+import vajillaUtensillos from '../../img/icons/vajillaUtensillos2.png'
 import wifi from '../../img/icons/wifi.png'
-import primerosAuxilios from '../../img/icons/primerosAuxilios.png'
+import primerosAuxilios from '../../img/icons/primerosAuxilios1.png'
 import alarma from '../../img/icons/alarma.png' 
-import cajaSeguridad from '../../img/icons/cajaSeguridad.png' 
-import secador from '../../img/icons/secador.png' 
+import cajaSeguridad from '../../img/icons/cajaSeguridad2.png' 
+import secador from '../../img/icons/secador2.png' 
 import arena from '../../img/arena.jpg' 
 
 function IconosServicios() {
     return (
        <div className='iconosServicios'>
-        <h1>Servicios y Facilidades</h1>
-            <p>Te brindamos mucho de lo que podes necesitar para <br/>
+        <h1>Lo que ofrecemos</h1>
+            <p className='textoIconosServicios'>Te brindamos mucho de lo que podes necesitar para <br/>
                 que tu ocupación esencial sea disfrutar cada día. 
             </p>
             <div className='iconosContenedor'>        
@@ -32,7 +32,7 @@ function IconosServicios() {
                     </div>
                     <div className='icono'>
                         <img src={calefaccion} alt="Icono calefaccion más"/>
-                        <p>Calefacción por radiadores</p>
+                        <p>Calefacción<br/>por radiadores</p>
                     </div>
                     <div className='icono'>
                         <img src={wifi} alt="Icono wifi"/>
@@ -41,7 +41,7 @@ function IconosServicios() {
 
                     <div className='icono'>
                         <img src={heladeraFreezer} alt="Icono heladeraFreezer"/>
-                        <p>Heladera y Freezer</p>
+                        <p>Heladera y<br/> Freezer</p>
                     </div>
                     <div className='icono'>
                         <img src={microondas} alt="Icono microondas"/>
@@ -58,7 +58,7 @@ function IconosServicios() {
                     </div>
                     <div className='icono'>
                         <img src={cajaSeguridad} alt="Icono caja de seguridad"/>
-                        <p>Caja de Seguridad</p>
+                        <p>Caja de<br/> Seguridad</p>
                     </div>
                     <div className='icono'>
                         <img src={alarma} alt="Icono alarma"/>
@@ -67,11 +67,11 @@ function IconosServicios() {
 
                     <div className='icono'>
                         <img src={vajillaUtensillos} alt="Icono vajillaUtensillos"/>
-                        <p>Vajilla y Utensilios</p>
+                        <p>Vajilla y<br/> Utensilios</p>
                     </div>
                     <div className='icono'>
                         <img src={frazadasSabanas} alt="Icono frazadasSabanas"/>
-                        <p>Sábanas y Frazadas</p>
+                        <p>Sábanas y<br/> Frazadas</p>
                     </div>
                     <div className='icono'>
                         <img src={sommier} alt="Icono sommier"/>

@@ -1,6 +1,6 @@
 // CARRUSELES QUINCHO Y ESTACIONAMIENTO #SERVICIOS
 .swiper-container {
-  width: 100%; // Asegúrate de que el contenedor ocupe el 100% del ancho
+  width: 60%; // Asegúrate de que el contenedor ocupe el 100% del ancho
   margin: auto;
   position: relative; // Para posicionar las flechas de navegación
   border: solid 2px white;
@@ -60,3 +60,48 @@
     }
   }
 }
+// Media query para pantallas pequeñas
+@media (max-width: 767px) {
+  .swiper-container {
+    width: 90%; // Ajusta el ancho para pantallas pequeñas
+    padding: 5px; // Reduce el padding para ahorrar espacio
+  }
+
+  .swiper-button-custom {
+    width: 8vw; // Tamaño más pequeño para botones en pantallas pequeñas
+    height: 8vw; // Tamaño más pequeño para botones en pantallas pequeñas
+    justify-content: space-between;
+  }
+
+}
+
+// Media query para pantallas medianas
+@media (min-width: 768px) and (max-width: 1024px) {
+  .swiper-container {
+    width: 80%; // Ajusta el ancho para pantallas medianas
+    padding: 8px; // Ajusta el padding para pantallas medianas
+  }
+
+  .swiper-button-custom {
+    width: 5vw; // Tamaño intermedio para botones en pantallas medianas
+    height: 5vw; // Tamaño intermedio para botones en pantallas medianas
+    justify-content: space-between;
+  }
+
+
+}
+
+// Media query para pantallas grandes
+@media (min-width: 1025px) {
+  .swiper-container {
+    width: 60%; // Ancho más amplio para pantallas grandes
+    padding: 10px; // Padding para pantallas grandes
+  }
+
+  .swiper-button-custom {
+    width: 4vw; // Tamaño para botones en pantallas grandes
+    height: 4vw; // Tamaño para botones en pantallas grandes
+    justify-content: space-between;
+  }
+
+  }

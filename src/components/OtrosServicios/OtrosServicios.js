@@ -5,9 +5,10 @@ const OtrosServicios = () => {
         <div className='OtrosServicios'>
             <div className='item1'>
                 <div className="textoOtrosServicios">
-                    <h3 className='tituloOtrosServicios'>Quincho</h3>
+                    <h3 className='tituloOtrosServicios'>Sala de usos múltiples</h3>
                     <p>
-                        Texto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto ParrafoTexto Parrafo
+                        Sala de usos múltiples para asados y reuniones familiares, con parrilla, mesada, pileta de acero
+                        inox, vajilla, utensillos para el asador, carbón y leña; una mesa y bancos.
                     </p>
                 </div>  
                 <Swiper3 className='swiper' />

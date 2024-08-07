@@ -21,13 +21,6 @@
     
 }
 
-.textoServicios {
-    display: flex;
-    margin: 0; /* Elimina el margen alrededor del texto */
-    flex: 1; /* Permite que el texto ocupe el espacio restante */
-    justify-content: center;
-}
-
 .textoOtrosServicios{
     h3{
         color: $color1;
@@ -57,10 +50,6 @@
     .item2 {
         flex-direction: column; /* Coloca el texto y el swiper en fila */
 
-    }
-
-    .textoServicios {
-        width: auto; /* Ajusta el ancho del texto para pantallas pequeñas */
     }
 }
 
@@ -101,9 +90,5 @@
 
     .item2 {
         flex-direction: row-reverse; /* Coloca el texto y el swiper en fila */
-    }
-
-    .textoServicios {
-        width: auto; /* Ajusta el ancho del texto según sea necesario */
     }
 }

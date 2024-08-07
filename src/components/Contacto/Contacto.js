@@ -44,7 +44,13 @@ const Contacto = () => {
             <img src={fotoCosta} className="fotoCosta" alt="Costa marplatense" />
 
             <div className="textoContacto">
-                <h3>"Tu hogar en la costa marplatense, <br/> a solo unos pasos del mar."</h3>
+                <h3>
+                    El tiempo de vacaciones suele ser poco,  idealmente, su calidad debe ser mucha. 
+                    Por lo tanto, para nosotros,  una reserva es sinónimo de responsabilidad y compromiso.<br/><br/> 
+                    Podés contar con la seguridad que da el trato directo con los propietarios de este proyecto.<br/><br/> 
+                    Queremos que te sientas tan a gusto, que nos recomiendes y nos vuelvas a elegir cada vez que
+                    visites MdP.<br/><br/>
+                </h3>
             </div>
             
             <div className="contact-form">
