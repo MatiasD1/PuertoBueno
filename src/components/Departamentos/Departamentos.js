@@ -8,13 +8,11 @@ import fotoHabitacion from "../../img/fotoHabitacion.JPG"
 import fotoSala from "../../img/fotoSala.jpg"
 import living from "../../img/Living.JPG"
 import simboloMas from "../../img/icons/simboloMas.png" 
-import Servicios from '../Servicios/Servicios.js';
 import aloeFooter from '../../img/icons/aloeFooter.png' 
 import imagenPlaya from '../../img/playa.jpg'
 import EnlaceContacto from '../EnlaceContacto/EnlaceContacto.js';
 import Encabezado from '../Encabezado/Encabezado.js'
 import fotoEncabezado from '../../img/costa.jpeg'
-import Swiper3 from '../../components/Swiper3/Swiper3.js';
 
 const Departamentos = () => {
     const [showCarrusel, setShowCarrusel] = useState(false);
@@ -49,20 +47,15 @@ const Departamentos = () => {
                     </div>
                     <div className="textoDepartamentos">
                         <h2 className='tituloDepto'>Departamento PB1</h2>
-                        {/*<p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>*/}
-                        <p className='subtituloDepto'>Tiene 2 ambientes y se desarrolla sobre una superficie de xx mts. cuadrados. Es un depto. externo. Disponibilidad para 3 personas.</p>
-                        {/*p className='textoDepto'>
-                            Living-Comedor: mesa con cuántas sillas. Sillones cuántos. Smart TV 43”. <br /> 
-                            Escritorio con silla de oficina, 1 sofa cama de 1 plaza <br />
-                            Cocina completa con qué. <br />
-                            Dormitorio principal: cama de dos plazas. <br />
-                            Baño: Cómo es. ventilación natural<br />
-                        </p> */}
+                        <p className='subtituloDepto'>
+                            Tiene 2 ambientes y se desarrolla sobre una superficie de xx mts. cuadrados. 
+                            Es un depto. externo. Disponibilidad para 3 personas.
+                        </p>
                         <p className='textoDepto'>
                             Cuenta con una cocina totalmente equipada; estar-comedor amplio, con una mesa de
                             0.80x1.60mts., sillas , sillones, un escritorio con 1 silla de oficina, 1 sofá cama de 1 plaza y un
                             smart tv 43”. El dormitorio tiene 1 cama de dos plazas. La habitación conecta por doble circulación
-                            con el baño ( que tiene ventilación natural) y el estar comedor .
+                            con el baño ( que tiene ventilación natural) y el estar comedor .<br />
                         </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
@@ -74,25 +67,17 @@ const Departamentos = () => {
                             <img src={fotoSala} alt="Imagen 1" className='fotoDepto'/>
                         </div>
                         <div className="textoDepartamentos">
-                            <h2 className='tituloDepto'>Departamento PB1</h2>
-                            {/*<p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>*/}
+                            <h2 className='tituloDepto'>Departamento PB2</h2>
                             <p className='subtituloDepto'>Tiene 3 ambientes y 2 baños y se desarrolla en una superficie de 66 mts. cuadrados. Es un
                             departamento interno. Disponibilidad para 4 personas.</p>
-                            {/*<p className='textoDepto'>
-                                Living-Comedor: mesa con cuántas sillas. Sillones cuántos. Smart TV 43”. <br /> 
-                                Escritorio con silla de oficina, 1 sofa cama de 1 plaza <br />
-                                Cocina completa con qué. <br />
-                                Dormitorio principal: cama de dos plazas. <br />
-                                Baño: Cómo es. ventilación natural<br />
-                            </p>*/}
                             <p className='textoDepto'>
-                                Cuenta con una cocina totalmente equipada ; estar-comedor amplio, con una mesa de
-                                0.8x1.60mts, sillas ,sillones y un smart tv de 43”. Tiene un baño de uso general dividido en dos
-                                espacios: toilette y baño prop. dicho, con ventilación natural y extractor de aire. 1 habitación con
-                                dos camas de 1 plaza y un placard grande.1 habitación con una cama de 2 plazas y 2 placares , en
-                                suite con el otro baño, que también tiene ventilación natural y extractor de aire.
+                            Cuenta con una cocina totalmente equipada ; estar-comedor amplio, con una mesa de
+                            0.8x1.60mts, sillas ,sillones y un smart tv de 43”. Tiene un baño de uso general dividido en dos
+                            espacios: toilette y baño prop. dicho, con ventilación natural y extractor de aire. 1 habitación con
+                            dos camas de 1 plaza y un placard grande.1 habitación con una cama de 2 plazas y 2 placares , en
+                            suite con el otro baño, que también tiene ventilación natural y extractor de aire.<br />
+                    
                             </p>
-
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
                 </div>
@@ -104,16 +89,10 @@ const Departamentos = () => {
                     </div>
                     <div className="textoDepartamentos">
                         <h2 className='tituloDepto'>Departamento PB1</h2>
-                        {/*<p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>*/}
-                        <p className='subtituloDepto'>Tiene 3 ambientes y 2 baños, se desarrolla en dos niveles; ocupa una superficie de 83 mts.
-                        cuadrados. Es un departamento externo. Disponibilidad para 4 personas.</p>
-                        {/*<p className='textoDepto'>
-                            Living-Comedor: mesa con cuántas sillas. Sillones cuántos. Smart TV 43”. <br /> 
-                            Escritorio con silla de oficina, 1 sofa cama de 1 plaza <br />
-                            Cocina completa con qué. <br />
-                            Dormitorio principal: cama de dos plazas. <br />
-                            Baño: Cómo es. ventilación natural<br />
-                        </p>*/}
+                        <p className='subtituloDepto'>
+                        Tiene 3 ambientes y 2 baños, se desarrolla en dos niveles; ocupa una superficie de 83 mts.
+                        cuadrados. Es un departamento externo. Disponibilidad para 4 personas.
+                        </p>
                         <p className='textoDepto'>
                             En la planta baja tiene una cocina totalmente equipada; estar-comedor amplio, con una mesa de
                             0.80x1.60mts, sillas , sillones y un smart tv de 43”. Un baño de uso general y el dormitorio
@@ -121,7 +100,7 @@ const Departamentos = () => {
                             con un baño en suite que tiene ventilación exterior. Desde el comedor o desde la habitación se
                             tiene acceso a un balcón de 9 mts. cuadrados.
                             El nivel superior es un altillo de ..x .. mts. con dos camas de 1 plaza y un mueble para guardado de
-                            equipaje desarrollado sobre la totalidad del ancho del altillo.
+                            equipaje desarrollado sobre la totalidad del ancho del altillo.<br />
                         </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>
@@ -132,23 +111,18 @@ const Departamentos = () => {
                         <img src={fotoSala} alt="Imagen 1" className='fotoDepto'/>
                     </div>
                     <div className="textoDepartamentos">
-                        <h2 className='tituloDepto'>Departamento PB1</h2>
-                        {/*<p className='subtituloDepto'>2 amb. 1 baño. 66m2. 3 personas</p>*/}
-                        <p className='subtituloDepto'>Tiene 3 ambientes y 2 baños, se desarrolla en dos niveles; ocupa una superficie de 66 mts.
-                        cuadrados. Es un departamento interno. Disponibilidad para 4 personas.</p>
-                        {/*<p className='textoDepto'>
-                            Living-Comedor: mesa con cuántas sillas. Sillones cuántos. Smart TV 43”. <br /> 
-                            Escritorio con silla de oficina, 1 sofa cama de 1 plaza <br />
-                            Cocina completa con qué. <br />
-                            Dormitorio principal: cama de dos plazas. <br />
-                            Baño: Cómo es. ventilación natural<br />
-                        </p>*/}
+                        <h2 className='tituloDepto'>Departamento PB2</h2>
+                        <p className='subtituloDepto'>
+                            Tiene 3 ambientes y 2 baños, se desarrolla en dos niveles; ocupa una superficie de 66 mts.
+                            cuadrados. Es un departamento interno. Disponibilidad para 4 personas.
+                        </p>
                         <p className='textoDepto'>
                             En la planta baja tiene una cocina totalmente equipada; estar-comedor amplio, con una mesa de
                             0.80x1.60mts, sillas ,sillones y un smart tv de 43”. Un baño de uso general con ventilación al
-                            exterior y un dormitorio con 2 camas de 1 plaza, 1 escritorio con una silla de oficina y un placard
-                            grande. El nivel superior es un altillo de ..x.. mts. donde hay 1 dormitorio con una cama de 2 plazas y un
-                            placard grande. Conecta a un vestidor y a un baño en suite. El vanitory está integrado al ambiente del dormitorio.
+                            exterior y un dormitorio con 2 camas de 1 plaza, 1 escritorio con una silla de oficina y un placard grande.
+                            El nivel superior es un altillo de ..x.. mts. donde hay 1 dormitorio con una cama de 2 plazas y un
+                            placard grande. Conecta a un vestidor y a un baño en suite. El vanitory está integrado al ambiente
+                            del dormitorio.<br />
                         </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>

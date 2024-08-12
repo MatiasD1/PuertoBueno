@@ -1,5 +1,5 @@
 import calefaccion from '../../img/icons/calefaccion.png'
-import cochera from '../../img/icons/cochera3.png'
+import cochera from '../../img/icons/cochera.png'
 import frazadasSabanas from '../../img/icons/frazadasSabanas.png'
 import heladeraFreezer from '../../img/icons/heladeraFreezer1.png'
 import microondas from '../../img/icons/microondas2.png'

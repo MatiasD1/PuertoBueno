@@ -7,13 +7,15 @@
     box-sizing: border-box;
 }
 .tituloInicio{
-    padding-top: 20px;
     color: $color1;
+    padding-top: 60px;
 }
 .textoInicio{
-    font-size: 14px;
+    font-size: 20px;
     color: $color5;
-    margin: 20px;
+    margin: 0px 120px;
+    padding: 10px 20px 60px 20px;
+    
 }
 .carrusel,
 .galeria-container,

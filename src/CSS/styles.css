@@ -339,57 +339,31 @@ button[type=submit]:hover {
   height: auto;
   position: relative;
   z-index: 1;
-  background-color: #131313;
+  background-color: #131313; /* Asegúrate de reemplazar con el color correcto */
 }
 
 .containerDepartamentos {
   padding: 20px;
 }
 
-.textoDepartamentos {
-  padding: 20px 0px;
-  font-family: "Khula", sans-serif;
-  color: #cdcdcd;
-}
-
 .item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  height: 450px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
 }
 
-.tituloDepto {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 500;
-  font-size: 42px;
-  color: #f4f4f4;
-}
-
-.subtituloDepto {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-}
-
-.textoDepto {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-}
-
-.aloeFooter {
-  position: relative;
-  width: 40px;
+.fotosDeptos, .textoDepartamentos {
+  flex: 1;
 }
 
 .fotosDeptos {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Ajusta la altura según sea necesario */
   background-color: black;
-  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
 }
 
 .fotoSimbolo {
@@ -411,7 +385,7 @@ button[type=submit]:hover {
 
 .fotoDepto:hover {
   cursor: pointer;
-  opacity: 50%;
+  opacity: 0.7;
 }
 
 .fotosDeptos:hover .fotoSimbolo {
@@ -419,83 +393,97 @@ button[type=submit]:hover {
   cursor: pointer;
 }
 
-.dep2 {
-  display: flex;
-  flex-direction: row-reverse; /* Ordena los elementos hijos de derecha a izquierda */
-  align-items: center; /* Alinea los elementos verticalmente en el centro */
+.textoDepartamentos {
+  font-family: "Urbanist", sans-serif;
+  overflow: hidden; /* Evita que el texto desborde el contenedor */
 }
 
-.dep2 .textoDepartamentos {
-  flex: 1; /* Ocupa la mitad del contenedor */
+/* Altura fija para mantener filas consistentes */
+.item {
+  height: 350px; /* Ajusta la altura según sea necesario */
 }
 
-.dep2 .fotosDeptos {
-  flex: 1; /* Ocupa la otra mitad del contenedor */
-  overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
-}
-
-.dep4 {
-  display: flex;
-  flex-direction: row-reverse; /* Ordena los elementos hijos de derecha a izquierda */
-  align-items: center; /* Alinea los elementos verticalmente en el centro */
-}
-
-.dep4 .textoDepartamentos {
-  flex: 1; /* Ocupa la mitad del contenedor */
-}
-
-.dep4 .fotosDeptos {
-  flex: 1; /* Ocupa la otra mitad del contenedor */
-  overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
+/* Estilos para el icono */
+.aloeFooter {
+  width: 30px; /* Tamaño ajustado para icono */
+  height: auto; /* Mantiene la proporción del icono */
+  display: block;
+  margin: 20px auto; /* Centra el icono y agrega margen */
 }
 
 /* Móviles (hasta 767px) */
 @media (max-width: 767px) {
   .item {
     flex-direction: column;
-    grid-template-columns: 1fr; /* Una sola columna en móviles */
-    height: auto; /* Altura automática para mejor adaptabilidad */
+    height: auto; /* Altura automática para móviles */
+  }
+  .fotosDeptos {
+    height: 200px; /* Ajusta la altura para móviles */
   }
   .tituloDepto {
-    font-size: 30px; /* Tamaño más pequeño para pantallas pequeñas */
+    font-size: 20px; /* Tamaño más pequeño para pantallas pequeñas */
   }
   .subtituloDepto {
-    font-size: 20px; /* Tamaño ajustado para pantallas pequeñas */
+    font-size: 16px; /* Tamaño ajustado para pantallas pequeñas */
   }
   .textoDepto {
-    font-size: 16px; /* Tamaño ajustado para pantallas pequeñas */
+    font-size: 12px; /* Tamaño ajustado para pantallas pequeñas */
+  }
+  .aloeFooter {
+    width: 20px; /* Tamaño más pequeño para móviles */
   }
 }
 /* Tabletas (768px a 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .item {
-    grid-template-columns: 1fr 1fr; /* Dos columnas en tabletas */
-    height: 400px; /* Ajusta la altura de cada elemento */
+  .fotosDeptos {
+    height: 250px; /* Ajusta la altura para tabletas */
   }
   .tituloDepto {
-    font-size: 40px; /* Tamaño ajustado para pantallas medianas */
-  }
-  .subtituloDepto {
     font-size: 22px; /* Tamaño ajustado para pantallas medianas */
   }
+  .subtituloDepto {
+    font-size: 18px; /* Tamaño ajustado para pantallas medianas */
+  }
   .textoDepto {
-    font-size: 17px; /* Tamaño ajustado para pantallas medianas */
+    font-size: 14px; /* Tamaño ajustado para pantallas medianas */
+  }
+  .aloeFooter {
+    width: 25px; /* Tamaño ajustado para tabletas */
+  }
+  .dep2 {
+    flex-direction: row-reverse;
+  }
+  .dep4 {
+    flex-direction: row-reverse;
   }
 }
 /* Escritorio (1025px y superior) */
 @media (min-width: 1025px) {
   .item {
-    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas grandes */
-    height: 450px; /* Altura estándar para pantallas grandes */
+    flex-direction: row;
+    height: 350px; /* Mantiene una altura fija para pantallas grandes */
+  }
+  .fotosDeptos {
+    height: 100%; /* Ajusta la altura para pantallas grandes */
+    width: 50%;
   }
   .tituloDepto {
-    font-size: 50px; /* Tamaño ajustado para pantallas grandes */
+    font-size: 24px; /* Tamaño ajustado para pantallas grandes */
   }
   .subtituloDepto {
-    font-size: 25px; /* Tamaño ajustado para pantallas grandes */
+    font-size: 20px; /* Tamaño ajustado para pantallas grandes */
   }
   .textoDepto {
-    font-size: 18px; /* Tamaño ajustado para pantallas grandes */
+    font-size: 16px; /* Tamaño ajustado para pantallas grandes */
+  }
+  .aloeFooter {
+    width: 30px; /* Tamaño ajustado para pantallas grandes */
+  }
+  .dep2 {
+    flex-direction: row-reverse;
+  }
+  .dep4 {
+    flex-direction: row-reverse;
   }
 }
 /* Estilos generales para el contenedor principal */
@@ -710,7 +698,7 @@ button[type=submit]:hover {
 footer {
   padding-top: 20px;
   width: 100%;
-  background-color: #000000;
+  background-color: #131313;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
@@ -1002,6 +990,7 @@ footer {
   color: #EEEEEE;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding-bottom: 20px; /* Asegúrate de que este valor sea el adecuado */
+  background-color: #000000;
 }
 
 /* Estilos generales para el grid */
@@ -1207,14 +1196,15 @@ footer {
 }
 
 .tituloInicio {
-  padding-top: 20px;
   color: #EEEEEE;
+  padding-top: 60px;
 }
 
 .textoInicio {
-  font-size: 14px;
+  font-size: 20px;
   color: #f4f4f4;
-  margin: 20px;
+  margin: 0px 120px;
+  padding: 10px 20px 60px 20px;
 }
 
 .carrusel,
