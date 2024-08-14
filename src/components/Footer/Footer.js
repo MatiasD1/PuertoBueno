@@ -8,7 +8,7 @@ function Footer() {
         <footer>
             <div className='columnaFooter'>
                 <h3>Puerto Bueno</h3>
-                <p>Una descripcion del complejo de deptos para rellenar el espacio del footer.</p>
+                <p>Tu refugio marplatense para descansar y disfrutar a pocas cuadras del mar.</p>
             </div>
             <div className='columnaFooter'>
                 <h3>Accesos Rápidos</h3>

@@ -19,7 +19,7 @@ import balnearioPuntaMogotes from "../../img/balnearioPuntaMogotes.jpg";
 const Swiper2 = () => {
   return (
     <div className='bordeSwiper2'>
-        <div className="swiper-container">
+        <div className="swiper-container2">
         <Swiper
           modules={[Pagination, Autoplay, A11y, Navigation]}
           spaceBetween={30}

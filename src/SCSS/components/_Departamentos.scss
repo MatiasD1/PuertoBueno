@@ -61,6 +61,10 @@
 .textoDepartamentos {
     font-family: 'Urbanist', sans-serif;
     overflow: hidden; /* Evita que el texto desborde el contenedor */
+    color: $color6;
+    h2{
+        color: $color5;
+    }
 }
 
 /* Altura fija para mantener filas consistentes */

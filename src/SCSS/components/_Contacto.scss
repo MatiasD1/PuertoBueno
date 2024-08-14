@@ -10,7 +10,7 @@
 }
 
 .fotoCosta {
-    opacity: 70%;
+    opacity: 56%;
     position: absolute;
     top: 0;
     left: 0;
@@ -32,22 +32,22 @@
 
 .textoContacto h3 {
     color: #ffffff;
-    font-size: 20px;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 500;
+    font-size: 25px;
+    font-family: 'Urbanist';
+    font-weight: 600;
     font-style: italic;
     white-space: normal; /* Permite el ajuste del texto */
     letter-spacing: 1.5px;
     word-spacing: 3px;
     line-height: 1.5;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.914);
 }
 
 .contact-form {
     margin-top: 20px;
     width: 100%;
     max-width: 400px;
-    background-color: #00000059;
+    background-color: #000000ae;
     padding: 10px;
     border-radius: 5px;
     font-family: 'Urbanist', sans-serif;
@@ -149,7 +149,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     color: white;
-    background-color: #00796b;
+    background-color: #00ded7;
 }
 
 /* Media query para pantallas pequeñas */

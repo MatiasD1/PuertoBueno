@@ -30,12 +30,12 @@
         grid-template-areas:
             "tituloUbicacion fraseUbicacion"
             "textoUbicacion textoUbicacion";
-        padding: 30px;
+        padding: 10px 40px;
         gap: 20px;
     }
 
     @media (min-width: 1025px) {
-        padding: 40px;
+        padding: 10px;
     }
 }
 

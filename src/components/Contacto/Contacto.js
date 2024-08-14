@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import fotoCosta from '../../img/costa.jpeg';
+import fotoCosta from '../../img/barcos2.jpg';
 
 const Contacto = () => {
     const [formData, setFormData] = useState({

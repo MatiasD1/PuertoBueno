@@ -112,7 +112,7 @@ $color6: #464646; //texto oscuro
 }
 
 .fotoCosta {
-  opacity: 70%;
+  opacity: 56%;
   position: absolute;
   top: 0;
   left: 0;
@@ -134,22 +134,22 @@ $color6: #464646; //texto oscuro
 
 .textoContacto h3 {
   color: #ffffff;
-  font-size: 20px;
-  font-family: "Urbanist", sans-serif;
-  font-weight: 500;
+  font-size: 25px;
+  font-family: "Urbanist";
+  font-weight: 600;
   font-style: italic;
   white-space: normal; /* Permite el ajuste del texto */
   letter-spacing: 1.5px;
   word-spacing: 3px;
   line-height: 1.5;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.914);
 }
 
 .contact-form {
   margin-top: 20px;
   width: 100%;
   max-width: 400px;
-  background-color: rgba(0, 0, 0, 0.3490196078);
+  background-color: rgba(0, 0, 0, 0.6823529412);
   padding: 10px;
   border-radius: 5px;
   font-family: "Urbanist", sans-serif;
@@ -251,7 +251,7 @@ button[type=submit] {
 
 button[type=submit]:hover {
   color: white;
-  background-color: #00796b;
+  background-color: #00ded7;
 }
 
 /* Media query para pantallas pequeñas */
@@ -396,6 +396,10 @@ button[type=submit]:hover {
 .textoDepartamentos {
   font-family: "Urbanist", sans-serif;
   overflow: hidden; /* Evita que el texto desborde el contenedor */
+  color: #cdcdcd;
+}
+.textoDepartamentos h2 {
+  color: #f4f4f4;
 }
 
 /* Altura fija para mantener filas consistentes */
@@ -698,7 +702,7 @@ button[type=submit]:hover {
 footer {
   padding-top: 20px;
   width: 100%;
-  background-color: #131313;
+  background-color: #000000;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
@@ -1668,13 +1672,13 @@ html, body {
   .presentacionUbicacion {
     grid-template-columns: 1fr 1fr; /* Dos columnas iguales en pantallas medianas y grandes */
     grid-template-areas: "tituloUbicacion fraseUbicacion" "textoUbicacion textoUbicacion";
-    padding: 30px;
+    padding: 10px 40px;
     gap: 20px;
   }
 }
 @media (min-width: 1025px) {
   .presentacionUbicacion {
-    padding: 40px;
+    padding: 10px;
   }
 }
 
@@ -1781,22 +1785,24 @@ html, body {
 
 .bordeSwiper2 {
   padding: 20px; /* Espacio entre el borde y el contenido del carrusel */
-  margin: 20px auto; /* Ajusta según sea necesario */
+  margin: auto; /* Ajusta según sea necesario */
   max-width: 1000px; /* Ajusta según sea necesario para incluir padding y tamaño del carrusel */
   position: relative;
 }
 
-.swiper-container {
-  max-width: 1000px;
-  margin: 0 auto;
+.swiper-container2 {
+  max-width: 800px;
+  margin: auto;
   position: relative;
+  border: solid 2px white;
+  padding: 10px;
 }
-.swiper-container .slide-image {
+.swiper-container2 .slide-image {
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
-.swiper-container .swiper-button-custom {
+.swiper-container2 .swiper-button-custom {
   position: absolute;
   top: 50%;
   width: 40px;
@@ -1815,17 +1821,18 @@ html, body {
   border: 0;
   opacity: 0.5;
 }
-.swiper-container .swiper-button-custom:hover {
+.swiper-container2 .swiper-button-custom:hover {
   opacity: 100;
 }
-.swiper-container .swiper-button-prev-custom {
+.swiper-container2 .swiper-button-prev-custom {
   left: 10px;
 }
-.swiper-container .swiper-button-next-custom {
+.swiper-container2 .swiper-button-next-custom {
   right: 10px;
 }
 
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1843,6 +1850,49 @@ html, body {
   transition: opacity 0.15s ease;
 }
 
+/* Responsive Styles */
+/* Para pantallas pequeñas (max-width: 767px) */
+@media (max-width: 767px) {
+  .swiper-container2 {
+    max-width: 100%;
+    padding: 5px; /* Reducir el padding */
+  }
+  .swiper-container2 .slide-image {
+    height: 250px; /* Reducir la altura de las imágenes */
+  }
+  .swiper-container2 .swiper-button-custom {
+    width: 30px;
+    height: 30px;
+  }
+}
+/* Para pantallas medianas (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .swiper-container2 {
+    max-width: 600px;
+    padding: 8px;
+  }
+  .swiper-container2 .slide-image {
+    height: 400px;
+  }
+  .swiper-container2 .swiper-button-custom {
+    width: 35px;
+    height: 35px;
+  }
+}
+/* Para pantallas grandes (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .swiper-container2 {
+    max-width: 800px;
+    padding: 10px;
+  }
+  .swiper-container2 .slide-image {
+    height: 500px;
+  }
+  .swiper-container2 .swiper-button-custom {
+    width: 40px;
+    height: 40px;
+  }
+}
 .swiper-container {
   width: 60%;
   margin: auto;
