@@ -24,8 +24,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 4vw; // Tamaño dinámico basado en el ancho de la pantalla
-    height: 4vw; // Tamaño dinámico basado en el ancho de la pantalla
+    width: 3vw; // Tamaño dinámico basado en el ancho de la pantalla
+    height: 3vw; // Tamaño dinámico basado en el ancho de la pantalla
     z-index: 10;
     cursor: pointer;
 
@@ -99,8 +99,8 @@
   }
 
   .swiper-button-custom {
-    width: 4vw; // Tamaño para botones en pantallas grandes
-    height: 4vw; // Tamaño para botones en pantallas grandes
+    width: 3vw; // Tamaño para botones en pantallas grandes
+    height: 3vw; // Tamaño para botones en pantallas grandes
     justify-content: space-between;
   }
 

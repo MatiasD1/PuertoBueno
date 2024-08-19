@@ -10,9 +10,9 @@ const Inicio = () => {
             <Carrusel/>            
             <div className='presentacionInicio'>
                {/* <h2 className='fraseInicio'>Una frase aleatoria para rellenar,<br/> el espacio del contenedor de inicio.</h2>*/}
-                <h3 className='tituloInicio'>Titulo de inicio</h3>
+                <h3 className='tituloInicio'>Puerto Bueno</h3>
                 <p className='textoInicio'>
-                Puerto Bueno es un complejo de departamentos para alquiler temporario, diseñados
+                Somos un complejo de departamentos para alquiler temporario, diseñados
                 para el descanso reparador de las familias, parejas o amigos, durante alguna escapada de un fin de
                 semana largo o en un período de vacaciones más prolongado.<br/><br/>
                 Se encuentra a pocas cuadras de Playa Grande, uno de los balnearios más lindos de la ciudad, a

@@ -98,9 +98,7 @@ const Departamentos = () => {
                             0.80x1.60mts, sillas , sillones y un smart tv de 43”. Un baño de uso general y el dormitorio
                             principal, que es grande, con una cama de 2 plazas, un vestidor con dos placares, que conecta
                             con un baño en suite que tiene ventilación exterior. Desde el comedor o desde la habitación se
-                            tiene acceso a un balcón de 9 mts. cuadrados.
-                            El nivel superior es un altillo de ..x .. mts. con dos camas de 1 plaza y un mueble para guardado de
-                            equipaje desarrollado sobre la totalidad del ancho del altillo.<br />
+                            tiene acceso a un balcón de 9 mts. cuadrados.<br />
                         </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>

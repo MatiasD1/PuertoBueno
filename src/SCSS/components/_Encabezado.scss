@@ -36,7 +36,7 @@
 .tituloEncabezado h1 {
     font-family: 'Urbanist', sans-serif;
     font-weight: 400; 
-    font-size: 60px;
+    font-size: 70px; /* Tamaño de fuente predeterminado para escritorio */
     color: #FFFFFF; /* Sustituye $color1 con el color deseado */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
@@ -55,7 +55,7 @@
         border: 1px solid #FFFFFF;
     }
     .tituloEncabezado h1 {
-        font-size: 50px;
+        font-size: 30px; /* Tamaño ajustado para pantallas pequeñas */
     }
 }
 
@@ -69,7 +69,7 @@
         border: 2px solid #FFFFFF;
     }
     .tituloEncabezado h1 {
-        font-size: 65px;
+        font-size: 50px; /* Tamaño ajustado para pantallas medianas */
     }
 }
 
@@ -83,6 +83,6 @@
         border: 2px solid #FFFFFF;
     }
     .tituloEncabezado h1 {
-        font-size: 70px;
+        font-size: 70px; /* Tamaño de fuente predeterminado para pantallas grandes */
     }
 }

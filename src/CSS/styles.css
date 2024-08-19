@@ -333,7 +333,6 @@ button[type=submit]:hover {
   object-fit: cover;
 }
 
-/* Estilos generales */
 .departamentos {
   width: 100%;
   height: auto;
@@ -343,13 +342,17 @@ button[type=submit]:hover {
 }
 
 .containerDepartamentos {
-  padding: 20px;
+  padding: 20px 20px 5px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .item {
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten */
+  margin-bottom: 0; /* Elimina márgenes entre filas */
+  min-height: 350px; /* Mantiene una altura mínima de fila */
 }
 
 .fotosDeptos, .textoDepartamentos {
@@ -360,8 +363,9 @@ button[type=submit]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px; /* Ajusta la altura según sea necesario */
-  background-color: black;
+  width: 50%;
+  padding: 0; /* Elimina el padding para que las imágenes se toquen */
+  height: 100%; /* Ajusta la altura para que sea proporcional */
   overflow: hidden;
   position: relative;
 }
@@ -395,33 +399,34 @@ button[type=submit]:hover {
 
 .textoDepartamentos {
   font-family: "Urbanist", sans-serif;
-  overflow: hidden; /* Evita que el texto desborde el contenedor */
   color: #cdcdcd;
+  padding-top: 20px; /* Elimina padding para que se ajuste al contenedor */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que el contenido y el icono estén distribuidos */
+  position: relative;
+  min-height: 200px; /* Ajusta la altura mínima para asegurar que el icono esté en la parte inferior */
 }
 .textoDepartamentos h2 {
   color: #f4f4f4;
 }
-
-/* Altura fija para mantener filas consistentes */
-.item {
-  height: 350px; /* Ajusta la altura según sea necesario */
-}
-
-/* Estilos para el icono */
-.aloeFooter {
-  width: 30px; /* Tamaño ajustado para icono */
-  height: auto; /* Mantiene la proporción del icono */
+.textoDepartamentos .aloeFooter {
+  width: 30px;
+  height: auto;
   display: block;
-  margin: 20px auto; /* Centra el icono y agrega margen */
+  margin: auto; /* Centra el icono y añade espacio alrededor */
+  margin-bottom: 10px;
 }
 
 /* Móviles (hasta 767px) */
 @media (max-width: 767px) {
   .item {
     flex-direction: column;
-    height: auto; /* Altura automática para móviles */
+    min-height: auto; /* Altura automática para móviles */
   }
   .fotosDeptos {
+    width: 100%;
     height: 200px; /* Ajusta la altura para móviles */
   }
   .tituloDepto {
@@ -429,64 +434,69 @@ button[type=submit]:hover {
   }
   .subtituloDepto {
     font-size: 16px; /* Tamaño ajustado para pantallas pequeñas */
+    padding: 0px 20px;
   }
   .textoDepto {
     font-size: 12px; /* Tamaño ajustado para pantallas pequeñas */
+    padding: 0px 20px;
   }
   .aloeFooter {
     width: 20px; /* Tamaño más pequeño para móviles */
+    margin: 0px 20px; /* Añade espacio superior e inferior para móviles */
   }
 }
 /* Tabletas (768px a 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .fotosDeptos {
-    height: 250px; /* Ajusta la altura para tabletas */
+    height: 100%; /* Asegúrate de que la altura sea 100% de la fila */
   }
   .tituloDepto {
     font-size: 22px; /* Tamaño ajustado para pantallas medianas */
   }
   .subtituloDepto {
     font-size: 18px; /* Tamaño ajustado para pantallas medianas */
+    padding: 0px 20px;
   }
   .textoDepto {
     font-size: 14px; /* Tamaño ajustado para pantallas medianas */
+    padding: 0px 20px;
   }
   .aloeFooter {
     width: 25px; /* Tamaño ajustado para tabletas */
+    margin: 20px auto 20px; /* Añade margen superior e inferior para tabletas */
   }
-  .dep2 {
-    flex-direction: row-reverse;
-  }
-  .dep4 {
+  .dep2, .dep4 {
     flex-direction: row-reverse;
   }
 }
 /* Escritorio (1025px y superior) */
 @media (min-width: 1025px) {
+  .containerDepartamentos {
+    padding: 20px;
+  }
   .item {
     flex-direction: row;
-    height: 350px; /* Mantiene una altura fija para pantallas grandes */
+    min-height: 350px; /* Mantiene una altura mínima para pantallas grandes */
   }
   .fotosDeptos {
     height: 100%; /* Ajusta la altura para pantallas grandes */
-    width: 50%;
   }
   .tituloDepto {
-    font-size: 24px; /* Tamaño ajustado para pantallas grandes */
+    font-size: 28px; /* Tamaño ajustado para pantallas grandes */
   }
   .subtituloDepto {
-    font-size: 20px; /* Tamaño ajustado para pantallas grandes */
+    font-size: 22px; /* Tamaño ajustado para pantallas grandes */
+    padding: 0px 40px;
   }
   .textoDepto {
-    font-size: 16px; /* Tamaño ajustado para pantallas grandes */
+    font-size: 18px; /* Tamaño ajustado para pantallas grandes */
+    padding: 0px 40px;
   }
   .aloeFooter {
     width: 30px; /* Tamaño ajustado para pantallas grandes */
+    margin: 30px auto 30px; /* Añade un margen inferior para pantallas grandes */
   }
-  .dep2 {
-    flex-direction: row-reverse;
-  }
-  .dep4 {
+  .dep2, .dep4 {
     flex-direction: row-reverse;
   }
 }
@@ -528,7 +538,7 @@ button[type=submit]:hover {
 .tituloEncabezado h1 {
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  font-size: 60px;
+  font-size: 70px; /* Tamaño de fuente predeterminado para escritorio */
   color: #FFFFFF; /* Sustituye $color1 con el color deseado */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 0;
@@ -546,7 +556,7 @@ button[type=submit]:hover {
     border: 1px solid #FFFFFF;
   }
   .tituloEncabezado h1 {
-    font-size: 50px;
+    font-size: 30px; /* Tamaño ajustado para pantallas pequeñas */
   }
 }
 /* Tabletas y portátiles pequeños (768px a 1024px) */
@@ -559,7 +569,7 @@ button[type=submit]:hover {
     border: 2px solid #FFFFFF;
   }
   .tituloEncabezado h1 {
-    font-size: 65px;
+    font-size: 50px; /* Tamaño ajustado para pantallas medianas */
   }
 }
 /* Escritorio (1025px y superior) */
@@ -572,7 +582,7 @@ button[type=submit]:hover {
     border: 2px solid #FFFFFF;
   }
   .tituloEncabezado h1 {
-    font-size: 70px;
+    font-size: 70px; /* Tamaño de fuente predeterminado para pantallas grandes */
   }
 }
 .EnlaceContacto {
@@ -608,6 +618,7 @@ button[type=submit]:hover {
   top: 36%;
   font-size: 25px;
   z-index: 1;
+  padding: 0px 20px;
 }
 
 .fotoEnlaceContacto {
@@ -628,7 +639,7 @@ button[type=submit]:hover {
   font-family: "Urbanist", sans-serif;
   font-style: 500;
   background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejorar la legibilidad */
-  padding: 18px 25px 18px 25px; /* Espaciado interno para el texto */
+  padding: 0px 25px 18px 25px; /* Espaciado interno para el texto */
   border: 2px solid #EEEEEE;
   text-decoration: none;
   transition: 0.3s;
@@ -656,9 +667,9 @@ button[type=submit]:hover {
     height: 300px;
   }
   .textoEnlaceContacto {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 10px 15px;
-    top: 65%;
+    top: 72%;
   }
 }
 /* Tableta/Escritorio Pequeño */
@@ -675,9 +686,9 @@ button[type=submit]:hover {
     height: 400px;
   }
   .textoEnlaceContacto {
-    font-size: 2.5rem;
+    font-size: 3rem;
     padding: 15px 20px;
-    top: 70%;
+    top: 65%;
   }
 }
 /* Escritorio/Laptop Grande */
@@ -1201,7 +1212,8 @@ footer {
 
 .tituloInicio {
   color: #EEEEEE;
-  padding-top: 60px;
+  padding-top: 40px;
+  font-size: 30px;
 }
 
 .textoInicio {
@@ -1915,8 +1927,8 @@ html, body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 4vw;
-  height: 4vw;
+  width: 3vw;
+  height: 3vw;
   z-index: 10;
   cursor: pointer;
 }
@@ -1973,8 +1985,8 @@ html, body {
     padding: 10px;
   }
   .swiper-button-custom {
-    width: 4vw;
-    height: 4vw;
+    width: 3vw;
+    height: 3vw;
     justify-content: space-between;
   }
 }
