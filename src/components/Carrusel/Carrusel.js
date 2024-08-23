@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importar Bootstrap JS para el carrusel
 import fotoPieza from "../../img/fotoPieza.jpg";
 import fotoExterior from "../../img/fotoExterior.jpg";
@@ -7,21 +7,43 @@ import flechaDer from "../../img/icons/flechaDer.png";
 import flechaIzq from "../../img/icons/flechaIzq.png";
 
 const Carrusel = () => {
+
+    useEffect(() => {
+        const handleSlide = () => {
+            const activeText = document.querySelector('.carousel-item.active .textoCarruselInicio');
+            if (activeText) {
+                activeText.style.opacity = 0;
+                setTimeout(() => {
+                    activeText.style.animation = 'none'; // Resetea la animación
+                    void activeText.offsetWidth; // Fuerza el reflujo para reiniciar la animación
+                    activeText.style.animation = 'fadeIn 1s ease-in-out forwards'; // Aplica la animación
+                }, 10);
+            }
+        };
+
+        const carouselElement = document.getElementById('carouselExampleAutoplaying');
+        carouselElement.addEventListener('slide.bs.carousel', handleSlide);
+
+        return () => {
+            carouselElement.removeEventListener('slide.bs.carousel', handleSlide);
+        };
+    }, []);
+
     return (
         <div className='carrusel'>
-            <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                 <div className="carousel-inner carrusel">
                     <div className="carousel-item active">
-                        <img src={fotoPieza} className="d-block w-100" alt="Foto de la pieza" />
-                        <p className='textoCarruselInicio'>Texto para la primera imagen</p>
+                        <img src={fotoExterior} className="d-block w-100" alt="Foto del exterior" />
+                        <p className='textoCarruselInicio'>Departamentos para alquiler temporario donde conectarse con el bienestar</p>
                     </div>
                     <div className="carousel-item">
-                        <img src={fotoExterior} className="d-block w-100" alt="Foto del exterior" />
-                        <p className='textoCarruselInicio'>Texto para la segunda imagen</p>
+                        <img src={fotoPieza} className="d-block w-100" alt="Foto de la pieza" />
+                        <p className='textoCarruselInicio'>Un lugar donde vivir las vacaciones que merecés, encontrando paz, privacidad y calidez</p>
                     </div>
                     <div className="carousel-item">
                         <img src={fotoSala} className="d-block w-100" alt="Foto de la sala" />
-                        <p className='textoCarruselInicio'>Texto para la tercera imagen</p>
+                        <p className='textoCarruselInicio'>Disfrutá de momentos memorables y volvé renovado</p>
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">

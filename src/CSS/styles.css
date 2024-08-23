@@ -19,7 +19,7 @@ $color6: #464646; //texto oscuro
 
 .App {
   text-align: center;
-  background-color: #131313;
+  background-color: #000000;
   overflow: hidden;
 }
 
@@ -39,7 +39,6 @@ $color6: #464646; //texto oscuro
 }
 
 #carouselExampleAutoplaying {
-  opacity: 60%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Alinea el contenido en la parte inferior */
@@ -50,19 +49,38 @@ $color6: #464646; //texto oscuro
 .carrusel .carousel-item {
   position: relative; /* Necesario para posicionar el texto absolutamente dentro del item */
 }
-
-.textoCarruselInicio {
-  position: absolute; /* Posiciona el texto absolutamente dentro del carousel-item */
-  top: 70%; /* Ajusta según sea necesario */
-  left: 40%; /* Ajusta según sea necesario */
-  color: white; /* Cambia el color del texto */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
-  padding: 10px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  font-size: 16px; /* Tamaño del texto */
-  z-index: 99999; /* Asegura que el texto esté por encima de la imagen */
+.carrusel .carousel-item img {
+  opacity: 60%;
 }
 
+.textoCarruselInicio {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 36px;
+  z-index: 99999 !important;
+  text-align: center;
+  opacity: 0; /* Inicialmente oculto */
+  animation: fadeIn 1s ease-in-out forwards; /* Aplica la animación */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra del texto */
+  font-family: "Urbanist", sans-serif;
+}
+
+/* Definir la animación fadeIn */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
 /* Media Queries para diseño responsive */
 /* Teléfono Móvil */
 @media (max-width: 767px) {
@@ -72,7 +90,6 @@ $color6: #464646; //texto oscuro
   }
   .textoCarruselInicio {
     top: 80%; /* Ajusta según sea necesario */
-    left: 20%; /* Ajusta según sea necesario */
     font-size: 14px;
   }
 }
@@ -84,7 +101,6 @@ $color6: #464646; //texto oscuro
   }
   .textoCarruselInicio {
     top: 75%; /* Ajusta según sea necesario */
-    left: 30%; /* Ajusta según sea necesario */
     font-size: 15px;
   }
 }
@@ -96,8 +112,7 @@ $color6: #464646; //texto oscuro
   }
   .textoCarruselInicio {
     top: 70%; /* Ajusta según sea necesario */
-    left: 40%; /* Ajusta según sea necesario */
-    font-size: 16px;
+    font-size: 36px;
   }
 }
 .contacto {
@@ -134,15 +149,17 @@ $color6: #464646; //texto oscuro
 
 .textoContacto h3 {
   color: #ffffff;
-  font-size: 25px;
-  font-family: "Urbanist";
-  font-weight: 600;
-  font-style: italic;
+  font-size: 18px; /* Aumenta el tamaño para mejor legibilidad */
+  font-family: "Urbanist", sans-serif; /* Asegúrate de que 'Urbanist' esté cargado */
+  font-weight: 400;
   white-space: normal; /* Permite el ajuste del texto */
   letter-spacing: 1.5px;
   word-spacing: 3px;
   line-height: 1.5;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.914);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Ajusta la sombra para mejor contraste */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para contraste adicional */
+  padding: 15px; /* Espaciado adicional para separar el texto del borde */
+  border-radius: 5px; /* Bordes redondeados para un efecto más suave */
 }
 
 .contact-form {
@@ -338,7 +355,7 @@ button[type=submit]:hover {
   height: auto;
   position: relative;
   z-index: 1;
-  background-color: #131313; /* Asegúrate de reemplazar con el color correcto */
+  background-color: #000000; /* Asegúrate de reemplazar con el color correcto */
 }
 
 .containerDepartamentos {
@@ -1657,7 +1674,7 @@ html, body {
 .ubicacion {
   min-height: calc(100vh - 200px); /* Calcula la altura mínima de la ubicación para que el footer quede al final de la página para solucionar el problema de que el footer quedaba en el medio */
   width: 100%;
-  background-color: #131313;
+  background-color: #000000;
   display: flex;
   flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
 }
@@ -1722,7 +1739,7 @@ html, body {
   height: auto;
   padding: 20px;
   color: #EEEEEE;
-  background-color: #131313;
+  background-color: #000000;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .mapaUbicacion img {

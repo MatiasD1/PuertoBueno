@@ -32,17 +32,19 @@
 
 .textoContacto h3 {
     color: #ffffff;
-    font-size: 25px;
-    font-family: 'Urbanist';
-    font-weight: 600;
-    font-style: italic;
+    font-size: 18px; /* Aumenta el tamaño para mejor legibilidad */
+    font-family: 'Urbanist', sans-serif; /* Asegúrate de que 'Urbanist' esté cargado */
+    font-weight: 400;
+
     white-space: normal; /* Permite el ajuste del texto */
     letter-spacing: 1.5px;
     word-spacing: 3px;
     line-height: 1.5;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.914);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Ajusta la sombra para mejor contraste */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para contraste adicional */
+    padding: 15px; /* Espaciado adicional para separar el texto del borde */
+    border-radius: 5px; /* Bordes redondeados para un efecto más suave */
 }
-
 .contact-form {
     margin-top: 20px;
     width: 100%;
