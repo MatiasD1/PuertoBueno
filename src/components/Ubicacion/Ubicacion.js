@@ -17,7 +17,7 @@ const Ubicacion = () => {
                     del Club de Golf Mar del Plata. Es un lugar de fácil acceso, sereno y seguro. Ideal para quienes
                     buscan paz y tranquilidad en sus vacaciones. Está muy cerca de la intensidad de Playa Grande,
                     pero no se ve influido ni por el ruido ni por el tráfico; propiciando un entorno pacífico para
-                    relajarse y descansar.
+                    relajarse y descansar.<br/><br/>
                     Predominan las casas de no más de dos plantas, con jardines cuidados y sobre lotes grandes; las
                     calles están bien conservadas y limpias.
                     Puerto Bueno está muy próximo a una amplia gama de comodidades y servicios:

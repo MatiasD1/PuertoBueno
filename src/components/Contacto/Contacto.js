@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import fotoCosta from '../../img/barcos2.jpg';
 
 const Contacto = () => {
     const [formData, setFormData] = useState({
@@ -41,7 +40,6 @@ const Contacto = () => {
 
     return (
         <div className="contacto">
-            <img src={fotoCosta} className="fotoCosta" alt="Costa marplatense" />
             
             <div className="contact-form">
                 <h2>Contacto</h2>

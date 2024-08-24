@@ -1,12 +1,16 @@
 .contacto {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
     height: auto;
     padding-top: 60px;
     padding-right: 60px;
-    background-color: black;
+    background-image: url('/absolute/../src/img/barcos23.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Esto permitirá que .fotoCosta se posicione correctamente */
 }
 
 .fotoCosta {
@@ -17,6 +21,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
 }
 
 .textoContacto {
@@ -32,19 +37,19 @@
 
 .textoContacto h3 {
     color: #ffffff;
-    font-size: 18px; /* Aumenta el tamaño para mejor legibilidad */
-    font-family: 'Urbanist', sans-serif; /* Asegúrate de que 'Urbanist' esté cargado */
+    font-size: 18px;
+    font-family: 'Urbanist', sans-serif;
     font-weight: 400;
-
-    white-space: normal; /* Permite el ajuste del texto */
+    white-space: normal;
     letter-spacing: 1.5px;
     word-spacing: 3px;
     line-height: 1.5;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Ajusta la sombra para mejor contraste */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para contraste adicional */
-    padding: 15px; /* Espaciado adicional para separar el texto del borde */
-    border-radius: 5px; /* Bordes redondeados para un efecto más suave */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
 }
+
 .contact-form {
     margin-top: 20px;
     width: 100%;
@@ -67,15 +72,16 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Formularios e inputs */
 label {
     display: block;
     margin-bottom: 5px;
-    color: #ffffff; 
+    color: #ffffff;
     text-align: start;
     padding-left: 20px;
 }
 
-input[type="text"], input[type="date"], input[type="number"], input[type="email"] {
+input[type="text"], input[type="date"], input[type="number"], input[type="email"], textarea {
     background-color: #00000059;
     color: #ffffff;
     width: 90%;
@@ -84,55 +90,10 @@ input[type="text"], input[type="date"], input[type="number"], input[type="email"
     border: 1px solid #ffffff;
     border-radius: 4px;
     box-sizing: border-box;
-    height: 30px;
 }
 
 textarea {
-    background-color: #00000059;
-    color: #ffffff;
-    width: 90%;
-    padding: 6px;
-    margin-bottom: 8px;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    box-sizing: border-box;
     height: 100px;
-}
-
-.fechasContacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 90%;
-    margin-bottom: 8px;
-    margin-left: 19px;
-    gap: 20px;
-    align-items: center;
-}
-
-.fechasContacto .fecha1, .fechasContacto .fecha2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.fechasContacto label {
-    margin-bottom: 5px;
-    color: #ffffff;
-    padding-left: 0;
-}
-
-.fechasContacto input {
-    width: 100%;
-    background-color: #00000059;
-    color: #ffffff;
-    padding: 6px;
-    margin-bottom: 8px;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    box-sizing: border-box;
-    height: 30px;
 }
 
 #mensaje {
@@ -154,10 +115,28 @@ button[type="submit"]:hover {
     background-color: #00ded7;
 }
 
-/* Media query para pantallas pequeñas */
+.fechasContacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 8px;
+    margin-left: 19px;
+    gap: 20px;
+    align-items: center;
+}
+
+.fechasContacto .fecha1, .fechasContacto .fecha2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* Media queries */
 @media (max-width: 767px) {
     .contacto {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
         height: auto;
         padding: 2px;
@@ -165,24 +144,21 @@ button[type="submit"]:hover {
     .textoContacto {
         width: 100%;
         padding: 10px;
-        text-align: center;
     }
     .contact-form {
         width: 90%;
-        height: 70%;
-        margin-top: 10px;
+        height: auto;
+        margin-top: 30px;
     }
     .fechasContacto .fecha1, .fechasContacto .fecha2 {
         width: 100%;
     }
 }
 
-/* Media query para pantallas medianas */
 @media (min-width: 768px) and (max-width: 1024px) {
     .contacto {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        height: auto;
         padding: 20px;
     }
     .textoContacto {
@@ -190,9 +166,9 @@ button[type="submit"]:hover {
         padding: 15px;
     }
     .contact-form {
+
         width: 70%;
-        max-width: 400px;
-        margin-top: 20px;
+        margin-top: 60px;
     }
     .fechasContacto {
         flex-direction: row;
@@ -202,20 +178,23 @@ button[type="submit"]:hover {
     }
 }
 
-/* Media query para pantallas grandes */
 @media (min-width: 1025px) {
     .contacto {
-        flex-direction: row;
-        height: 100vh;
+        flex-direction: row-reverse;
+        height: 100vh; /* Mantén esto para asegurar que la imagen de fondo cubra toda la pantalla */
         padding: 60px;
+        align-items: flex-end; /* Alinea los elementos al fondo del contenedor */
     }
     .textoContacto {
         width: 60%;
-        padding: 20px;
+        align-self: flex-end; /* Alinea el texto al fondo */
+        padding-left: 100px;
     }
     .contact-form {
         width: 400px;
         margin-right: 48px;
+        align-self: flex-end; /* Alinea el texto al fondo */
+
     }
     .fechasContacto {
         flex-direction: row;
