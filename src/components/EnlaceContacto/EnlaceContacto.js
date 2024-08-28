@@ -14,4 +14,3 @@ const EnlaceContacto = ({ imageSrc }) => {
 }
 
 export default EnlaceContacto;
- 

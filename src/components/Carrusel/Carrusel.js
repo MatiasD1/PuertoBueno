@@ -35,7 +35,7 @@ const Carrusel = () => {
                 <div className="carousel-inner carrusel">
                     <div className="carousel-item active">
                         <img src={fotoExterior} className="d-block w-100" alt="Foto del exterior" />
-                        <p className='textoCarruselInicio'>Departamentos para alquiler temporario donde conectarse con el bienestar</p>
+                        <p className='textoCarruselInicio'>Tu refugio cerca del mar donde conectarse con el bienestar</p>
                     </div>
                     <div className="carousel-item">
                         <img src={fotoPieza} className="d-block w-100" alt="Foto de la pieza" />

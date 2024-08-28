@@ -75,7 +75,7 @@ const Contacto = () => {
                     Por lo tanto, para nosotros,  una reserva es sinónimo de responsabilidad y compromiso.<br/><br/> 
                     Podés contar con la seguridad que da el trato directo con los propietarios de este proyecto.<br/><br/> 
                     Queremos que te sientas tan a gusto, que nos recomiendes y nos vuelvas a elegir cada vez que
-                    visites MdP.<br/><br/>
+                    visites MdP.<br/>
                 </h3>
             </div>
         </div>

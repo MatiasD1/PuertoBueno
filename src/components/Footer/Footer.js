@@ -8,7 +8,7 @@ function Footer() {
         <footer>
             <div className='columnaFooter'>
                 <h3>Puerto Bueno</h3>
-                <p>Tu refugio marplatense para descansar y disfrutar a pocas cuadras del mar.</p>
+                <p>Tu refugio cerca del mar donde conectarse con el bienestar.</p>
             </div>
             <div className='columnaFooter'>
                 <h3>Accesos Rápidos</h3>
