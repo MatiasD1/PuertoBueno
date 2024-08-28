@@ -39,7 +39,7 @@ const Carrusel = () => {
                     </div>
                     <div className="carousel-item">
                         <img src={fotoPieza} className="d-block w-100" alt="Foto de la pieza" />
-                        <p className='textoCarruselInicio'>Un lugar donde vivir las vacaciones que merecés, encontrando paz, privacidad y calidez</p>
+                        <p className='textoCarruselInicio'>Un lugar donde vivir las vacaciones que merecés, encontrando paz y privacidad</p>
                     </div>
                     <div className="carousel-item">
                         <img src={fotoSala} className="d-block w-100" alt="Foto de la sala" />

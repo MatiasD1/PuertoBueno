@@ -17,7 +17,7 @@
     font-style: 400;
     position: absolute;
     top: 20%;
-    color: $color1;
+    color: $color5;
     font-size: 46px;
     z-index: 1;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -47,13 +47,13 @@
     top: 72%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $color1; /* Cambia el color del texto si es necesario */
+    color: $color5; /* Cambia el color del texto si es necesario */
     font-size: 4.3rem; /* Ajusta el tamaño del texto según sea necesario */
     font-family: 'Urbanist', sans-serif;
     font-style: 500;
     background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejorar la legibilidad */
     padding: 0px 25px 18px 25px; /* Espaciado interno para el texto */
-    border: 2px solid $color1;
+    border: 2px solid $color5;
     text-decoration: none;
     transition: 0.3s;
 }

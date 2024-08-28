@@ -621,7 +621,7 @@ button[type=submit]:hover {
   font-style: 400;
   position: absolute;
   top: 20%;
-  color: #f4f4f4;
+  color: #EEEEEE;
   font-size: 46px;
   z-index: 1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -651,13 +651,13 @@ button[type=submit]:hover {
   top: 72%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #f4f4f4; /* Cambia el color del texto si es necesario */
+  color: #EEEEEE; /* Cambia el color del texto si es necesario */
   font-size: 4.3rem; /* Ajusta el tamaño del texto según sea necesario */
   font-family: "Urbanist", sans-serif;
   font-style: 500;
   background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejorar la legibilidad */
   padding: 0px 25px 18px 25px; /* Espaciado interno para el texto */
-  border: 2px solid #f4f4f4;
+  border: 2px solid #EEEEEE;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -730,7 +730,7 @@ button[type=submit]:hover {
 footer {
   padding-top: 20px;
   width: 100%;
-  background-color: black;
+  background-color: #D9BE6C;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
@@ -746,7 +746,7 @@ footer {
 .columnaFooter h3 {
   margin-bottom: 10px;
   font-size: 25px;
-  color: #f4f4f4;
+  color: #EEEEEE;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -757,17 +757,17 @@ footer {
   font-size: 14px;
   max-width: 150px;
   margin: auto;
-  color: #cdcdcd;
+  color: #EEEEEE;
   text-decoration: none;
 }
 
 .accesoNav {
-  color: #cdcdcd;
+  color: #EEEEEE;
   text-decoration: none;
   transition: text-shadow 0.3s ease;
 }
 .accesoNav:hover {
-  text-shadow: 2px 2px 5px #9e0039;
+  text-shadow: 2px 2px 5px #EEEEEE;
 }
 
 .logosRedes {
@@ -797,7 +797,7 @@ footer {
 
 .copyright {
   margin-top: 10px;
-  color: #cdcdcd;
+  color: #EEEEEE;
   font-size: 14px;
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
@@ -962,7 +962,7 @@ footer {
 }
 
 .dot.active {
-  background-color: #9e0039;
+  background-color: #EEEEEE;
 }
 
 /* Estilos responsivos */
@@ -1019,7 +1019,7 @@ footer {
 .galeriaInicio {
   margin: auto;
   text-align: center;
-  color: #9e0039;
+  color: #EEEEEE;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding-bottom: 20px; /* Asegúrate de que este valor sea el adecuado */
   background-color: #D9BE6C;
@@ -1130,7 +1130,7 @@ footer {
   position: relative;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
-  color: #f4f4f4;
+  color: #EEEEEE;
   padding-top: 40px;
   padding-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -1167,7 +1167,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta el número de columnas automáticamente */
   gap: 5px;
-  color: #f4f4f4;
+  color: #EEEEEE;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
@@ -1228,7 +1228,7 @@ footer {
 }
 
 .tituloInicio {
-  color: #9e0039;
+  color: #EEEEEE;
   padding-top: 40px;
   font-size: 30px;
 }
@@ -1465,7 +1465,7 @@ footer {
   left: 20px;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  color: #f4f4f4;
+  color: #EEEEEE;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 1600;
 }
@@ -1532,7 +1532,7 @@ html, body {
 }
 
 .textoOtrosServicios h3 {
-  color: #9e0039;
+  color: #EEEEEE;
 }
 .textoOtrosServicios p {
   color: #f4f4f4;
@@ -1607,7 +1607,7 @@ html, body {
   height: 40px;
   top: 70%;
   margin-top: -20px;
-  color: #9e0039;
+  color: #EEEEEE;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
   font-size: 50px;
@@ -1663,7 +1663,7 @@ html, body {
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
   position: absolute;
-  color: #9e0039;
+  color: #EEEEEE;
   display: flex;
   top: 65px;
   left: 200px;
@@ -1714,7 +1714,7 @@ html, body {
 .fraseUbicacion {
   grid-area: fraseUbicacion;
   font-size: 1.6rem;
-  color: #9e0039;
+  color: #EEEEEE;
 }
 
 .textoUbicacion {
@@ -1727,7 +1727,7 @@ html, body {
   background-color: #D9BE6C;
 }
 .serviciosCercanos h2 {
-  color: #9e0039;
+  color: #EEEEEE;
   font-family: "Urbanist";
   font-weight: 500;
   font-size: 30px;
@@ -1738,7 +1738,7 @@ html, body {
 .mapaUbicacion {
   height: auto;
   padding: 20px;
-  color: #9e0039;
+  color: #EEEEEE;
   background-color: #D9BE6C;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -1844,7 +1844,7 @@ html, body {
   align-items: center;
   justify-content: center;
   padding: 0;
-  color: #9e0039;
+  color: #EEEEEE;
   text-align: center;
   background: 0 0;
   border: 0;
@@ -1871,7 +1871,7 @@ html, body {
   justify-content: center;
   width: 15%;
   padding: 0;
-  color: #9e0039;
+  color: #EEEEEE;
   text-align: center;
   background: 0 0;
   border: 0;
@@ -2008,4 +2008,4 @@ html, body {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=s.map */
