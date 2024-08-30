@@ -40,7 +40,7 @@ footer {
     transition: text-shadow 0.3s ease;
 
     &:hover {
-        text-shadow: 2px 2px 5px $color1;
+        text-shadow: 2px 2px 5px $color5;
     }
 }
 
@@ -65,7 +65,7 @@ footer {
 .footer-line {
     width: 90%;
     height: 1px;
-    background-color: $color3;
+    background-color: $color1;
     margin: 0 auto;
 }
 

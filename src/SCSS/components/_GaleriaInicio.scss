@@ -2,11 +2,14 @@
     margin: auto;
     text-align: center;
     color: $color1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    padding-bottom: 20px; /* Asegúrate de que este valor sea el adecuado */
+    //text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     background-color: $color4;
+    padding-bottom: 20px;
 }
 
+.tituloGaleriaInicio{
+    padding-bottom: 20px;
+}
 /* Estilos generales para el grid */
 
 .grid-row {

@@ -32,7 +32,7 @@ const NavBar = ({ isVisible }) => {
           <a href="/ubicacion" className="nav-link">Ubicación</a>
         </li>
         <li className="nav-item">
-          <a href="/contacto" className="nav-link">Contacto</a>
+          <a href="/contacto" className="nav-link contacto-link">Contacto</a>
         </li>
       </ul>
     </nav>

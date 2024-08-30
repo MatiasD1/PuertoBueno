@@ -12,9 +12,28 @@
     z-index: 1200;
 }
 
+/* Estilos para el enlace de contacto */
+.contacto-link {
+    background-color: $color1;
+    color: white; /* Asegura que el texto sea visible sobre el fondo */
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid transparent; /* Borde inferior inicial transparente */
+    transition: background-color 0.6s ease; /* Incluye border-bottom-color en la transición */
+}
+
+.contacto-link:hover {
+    background-color: #78002c; /* Cambia el fondo al hacer hover */
+    color: white !important; /* Cambia el color del texto al hacer hover */
+    border-bottom: #78002c; /* Cambia el color del borde inferior al hacer hover */
+}
+
+
+
 /* Media queries para la responsividad */
 
-/* Móviles (hasta 767px) */
+/* Móviles (hasta 849px) */
 @media (max-width: 849px) {
     .hamburger {
         display: block;
@@ -39,7 +58,7 @@
 
     .nav-item {
         text-align: center;
-        margin: 0px;
+        margin: 0;
     }
 
     .NavBar {
@@ -76,11 +95,10 @@
         color: $color3 !important;
         transition: color 0.3s ease;
     }
-    
 }
 
-/* Tabletas (768px a 1024px) */
-@media (min-width: 850px) and (max-width: 1200) {
+/* Tabletas (850px a 1200px) */
+@media (min-width: 850px) and (max-width: 1200px) {
     .hamburger {
         display: none; /* Ocultar el botón de hamburguesa en tabletas */
     }
@@ -129,12 +147,12 @@
     }
 
     .nav-link:hover {
-        color: $color3 !important;
+        color: $color7 !important;
         transition: color 0.3s ease;
     }
 }
 
-/* Escritorio (1025px y superior) */
+/* Escritorio (1201px y superior) */
 @media (min-width: 1201px) {
     .hamburger {
         display: none; /* Ocultar el botón de hamburguesa en escritorios */
@@ -184,13 +202,14 @@
     }
 
     .nav-link:hover {
-        color: $color3 !important;
+        color: $color3;
         transition: color 0.5s ease, border-bottom-color 0.5s ease;
     }
 }
 
+/* Estilos para el enlace de navegación */
 .nav-link {
-    color: $color5 !important;
+    color: $color5;
     margin-top: 1rem;
     border-bottom: 2px solid transparent;
     padding: 17px 20px;
@@ -199,7 +218,7 @@
     font-family: 'Urbanist', sans-serif;
 
     &:hover {
-        color: $color3 !important;
+        color: $color7 !important;
         border-bottom-color: rgb(255, 255, 255);
         transition: color 0.5s ease, border-bottom-color 0.5s ease;
         text-shadow: 2px 2px 4px rgba(245, 240, 240, 0.26);
@@ -213,7 +232,6 @@
     z-index: 1000;
     padding-right: 30px;
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-    
 }
 
 .NavBar {
@@ -221,7 +239,6 @@
     align-items: flex-start; /* Alinea los elementos en la esquina superior izquierda */
     width: 100%; /* Asegura que ocupe el 100% del ancho */
     position: relative; /* Para que los elementos se posicionen relativamente dentro del navbar */
-   
 
     h2 {
         font-size: 24px; /* Tamaño ajustado para pantallas grandes */
@@ -250,11 +267,10 @@
     .fixed {
 
         .nav {
-            background-color: rgba(0, 0, 0), 0.5 !important;
+            background-color: rgba(0, 0, 0, 0.5) !important;
         }
     }
 }
-
 
 .fixed {
     position: fixed;
@@ -270,10 +286,10 @@
 }
 
 .nav.show + .NavBar h2,
-    .nav.show + .NavBar h3 {
-        display: none;
-    }
-    
+.nav.show + .NavBar h3 {
+    display: none;
+}
+
 /* Asegúrate de que el body y el html ocupen el 100% del ancho */
 html, body {
     width: 100%;
@@ -281,4 +297,3 @@ html, body {
     padding: 0;
     box-sizing: border-box;
 }
-

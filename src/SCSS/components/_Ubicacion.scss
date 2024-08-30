@@ -45,6 +45,7 @@
     grid-area: fraseUbicacion;
     font-size: 1.6rem;
     color: $color1;
+    font-weight: 600;
 }
 
 .textoUbicacion {
@@ -59,10 +60,10 @@
     h2{
         color: $color1;
         font-family: 'Urbanist';
-        font-weight: 500;
+        font-weight: 600;
         font-size: 30px;
         padding-top: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        //text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 }
 .mapaUbicacion{
@@ -70,7 +71,7 @@
     padding: 20px;
     color: $color1;
     background-color: $color2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    //text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     
     img{
         padding: 20px;

@@ -39,6 +39,16 @@ const Departamentos = () => {
     return (
         <div className='departamentos'>    
             <Encabezado imageSrc={fotoEncabezado} seccion={"Departamentos"}/>
+            <div className='presentacionDepartamentos'>        
+                <h2 className='tituloPresentacionDepartamentos'>Te proponemos 4 opciones para quedarte</h2>
+                <p className='textoPresentacionDepartamentos'>
+                    Disponemos de 4 departamentos distribuidos en 2 plantas. Esto favorece la circulacion fluida por los espacios comunes y la privacidad de cada unidad..<br/><br/>
+                    Cada departamento cuenta con una baulera y un módulo de estacionamiento fijo, semicubierto, en el sector posterior del edificio, al que se puede acceder con facilidad.
+                    En el frente al sector de cocheras, están las bauleras, con una superficie promedio de xxm2.<br/><br/>
+                    Todos los departamentos tienen un desarrollo distinto, pero comparten la cualidad de la amplitud y del confort y la atencion enfocada en una decoracion con producciones artísticas que transmiten calma, paz o alegría,
+                    para reforzar las cualidades de departamentos con muchas necesidades cubiertas, donde poder pasarla bien.<br/> 
+                </p>
+            </div>
             <div className="containerDepartamentos">
                 <div className="item dep1">
                     <div className='fotosDeptos' onClick={() => handleImageClick(0)}>
@@ -55,7 +65,7 @@ const Departamentos = () => {
                             Cuenta con una cocina totalmente equipada; estar-comedor amplio, con una mesa de
                             0.80x1.60mts., sillas , sillones, un escritorio con 1 silla de oficina, 1 sofá cama de 1 plaza y un
                             smart tv 43”. El dormitorio tiene 1 cama de dos plazas. La habitación conecta por doble circulación
-                            con el baño ( que tiene ventilación natural) y el estar comedor .<br />
+                            con el baño ( que tiene ventilación natural) y el estar comedor .<br/>
                         </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
                     </div>

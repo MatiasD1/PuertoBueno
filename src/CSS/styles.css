@@ -19,7 +19,7 @@ $color6: #464646; //texto oscuro
 
 .App {
   text-align: center;
-  background-color: #D9BE6C;
+  background-color: #fffbb1;
   overflow: hidden;
 }
 
@@ -358,7 +358,18 @@ button[type=submit]:hover {
   height: auto;
   position: relative;
   z-index: 1;
-  background-color: #D9BE6C; /* Asegúrate de reemplazar con el color correcto */
+  background-color: #fffbb1; /* Asegúrate de reemplazar con el color correcto */
+}
+
+.presentacionDepartamentos {
+  padding: 40px;
+}
+.presentacionDepartamentos h2 {
+  padding-bottom: 20px;
+  color: #f4f4f4;
+}
+.presentacionDepartamentos p {
+  color: #cdcdcd;
 }
 
 .containerDepartamentos {
@@ -770,7 +781,7 @@ footer {
   transition: text-shadow 0.3s ease;
 }
 .accesoNav:hover {
-  text-shadow: 2px 2px 5px #9e0039;
+  text-shadow: 2px 2px 5px #f4f4f4;
 }
 
 .logosRedes {
@@ -794,7 +805,7 @@ footer {
 .footer-line {
   width: 90%;
   height: 1px;
-  background-color: #00c1bb;
+  background-color: #9e0039;
   margin: 0 auto;
 }
 
@@ -1023,9 +1034,12 @@ footer {
   margin: auto;
   text-align: center;
   color: #9e0039;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  padding-bottom: 20px; /* Asegúrate de que este valor sea el adecuado */
-  background-color: #D9BE6C;
+  background-color: #fffbb1;
+  padding-bottom: 20px;
+}
+
+.tituloGaleriaInicio {
+  padding-bottom: 20px;
 }
 
 /* Estilos generales para el grid */
@@ -1283,8 +1297,25 @@ footer {
   z-index: 1200;
 }
 
+/* Estilos para el enlace de contacto */
+.contacto-link {
+  background-color: #9e0039;
+  color: white; /* Asegura que el texto sea visible sobre el fondo */
+  border-radius: 5px;
+  padding: 10px 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid transparent; /* Borde inferior inicial transparente */
+  transition: background-color 0.6s ease; /* Incluye border-bottom-color en la transición */
+}
+
+.contacto-link:hover {
+  background-color: #78002c; /* Cambia el fondo al hacer hover */
+  color: white !important; /* Cambia el color del texto al hacer hover */
+  border-bottom: #78002c; /* Cambia el color del borde inferior al hacer hover */
+}
+
 /* Media queries para la responsividad */
-/* Móviles (hasta 767px) */
+/* Móviles (hasta 849px) */
 @media (max-width: 849px) {
   .hamburger {
     display: block;
@@ -1306,7 +1337,7 @@ footer {
   }
   .nav-item {
     text-align: center;
-    margin: 0px;
+    margin: 0;
   }
   .NavBar {
     flex-direction: column;
@@ -1338,8 +1369,8 @@ footer {
     transition: color 0.3s ease;
   }
 }
-/* Tabletas (768px a 1024px) */
-@media (min-width: 850px) and (max-width: 1200) {
+/* Tabletas (850px a 1200px) */
+@media (min-width: 850px) and (max-width: 1200px) {
   .hamburger {
     display: none; /* Ocultar el botón de hamburguesa en tabletas */
   }
@@ -1380,11 +1411,11 @@ footer {
     font-size: 18px; /* Ajuste para tamaño de fuente en tabletas */
   }
   .nav-link:hover {
-    color: #00c1bb !important;
+    color: #D9BE6C !important;
     transition: color 0.3s ease;
   }
 }
-/* Escritorio (1025px y superior) */
+/* Escritorio (1201px y superior) */
 @media (min-width: 1201px) {
   .hamburger {
     display: none; /* Ocultar el botón de hamburguesa en escritorios */
@@ -1426,12 +1457,13 @@ footer {
     font-size: 20px; /* Tamaño de fuente ajustado para escritorios */
   }
   .nav-link:hover {
-    color: #00c1bb !important;
+    color: #00c1bb;
     transition: color 0.5s ease, border-bottom-color 0.5s ease;
   }
 }
+/* Estilos para el enlace de navegación */
 .nav-link {
-  color: #f4f4f4 !important;
+  color: #f4f4f4;
   margin-top: 1rem;
   border-bottom: 2px solid transparent;
   padding: 17px 20px;
@@ -1440,7 +1472,7 @@ footer {
   font-family: "Urbanist", sans-serif;
 }
 .nav-link:hover {
-  color: #00c1bb !important;
+  color: #D9BE6C !important;
   border-bottom-color: rgb(255, 255, 255);
   transition: color 0.5s ease, border-bottom-color 0.5s ease;
   text-shadow: 2px 2px 4px rgba(245, 240, 240, 0.26);
@@ -1484,7 +1516,7 @@ footer {
   z-index: 1600;
 }
 .NavBar .fixed .nav {
-  background-color: rgb(0, 0, 0), 0.5 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .fixed {
@@ -1677,7 +1709,7 @@ html, body {
 .ubicacion {
   min-height: calc(100vh - 200px); /* Calcula la altura mínima de la ubicación para que el footer quede al final de la página para solucionar el problema de que el footer quedaba en el medio */
   width: 100%;
-  background-color: #D9BE6C;
+  background-color: #fffbb1;
   display: flex;
   flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
 }
@@ -1720,6 +1752,7 @@ html, body {
   grid-area: fraseUbicacion;
   font-size: 1.6rem;
   color: #9e0039;
+  font-weight: 600;
 }
 
 .textoUbicacion {
@@ -1729,23 +1762,21 @@ html, body {
 
 .serviciosCercanos {
   height: auto;
-  background-color: #D9BE6C;
+  background-color: #fffbb1;
 }
 .serviciosCercanos h2 {
   color: #9e0039;
   font-family: "Urbanist";
-  font-weight: 500;
+  font-weight: 600;
   font-size: 30px;
   padding-top: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .mapaUbicacion {
   height: auto;
   padding: 20px;
   color: #9e0039;
-  background-color: #D9BE6C;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: #fffbb1;
 }
 .mapaUbicacion img {
   padding: 20px;
