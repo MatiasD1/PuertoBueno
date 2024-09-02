@@ -17,7 +17,7 @@
     font-style: 400;
     position: absolute;
     top: 20%;
-    color: $color5;
+    color: $Encabezado;
     font-size: 46px;
     z-index: 1;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -27,7 +27,7 @@
     font-family: 'Urbanist', sans-serif;
     font-style: 300;
     position: absolute;
-    color: $color6;
+    color: $TextoBlanco;
     top: 36%;
     font-size: 25px;
     z-index: 1;
@@ -47,20 +47,20 @@
     top: 72%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $color5; /* Cambia el color del texto si es necesario */
+    color: $Encabezado; /* Cambia el color del texto si es necesario */
     font-size: 4.3rem; /* Ajusta el tamaño del texto según sea necesario */
     font-family: 'Urbanist', sans-serif;
     font-style: 500;
     background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejorar la legibilidad */
     padding: 0px 25px 18px 25px; /* Espaciado interno para el texto */
-    border: 2px solid $color5;
+    border: 2px solid $Encabezado;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .textoEnlaceContacto:hover {
     color: rgb(211, 211, 211);
-    border: 2px solid $color3;
+    border: 2px solid $Componentes;
     background: rgba(0, 0, 0, 0.6);
     cursor: pointer;
 }

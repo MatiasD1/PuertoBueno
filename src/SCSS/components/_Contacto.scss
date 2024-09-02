@@ -6,11 +6,10 @@
     width: 100%;
     height: auto;
     padding-top: 60px;
-    padding-right: 60px;
     background-image: url('/absolute/../src/img/barcos23.jpg');
     background-size: cover;
     background-position: center;
-    position: relative; /* Esto permitirá que .fotoCosta se posicione correctamente */
+    position: relative;
 }
 
 .fotoCosta {
@@ -21,7 +20,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+    z-index: -1;
 }
 
 .textoContacto {
@@ -31,7 +30,7 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    width: 60%;
+    width: 100%;
 }
 
 .textoContacto h3 {
@@ -75,7 +74,7 @@
 label {
     display: block;
     margin-bottom: 5px;
-    color: #ffffff; 
+    color: #ffffff;
     text-align: start;
     padding-left: 20px;
 }
@@ -146,7 +145,7 @@ textarea {
 
 button[type="submit"] {
     color: #ffffff;
-    background: #00a29d;
+    background: $Componentes;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -156,25 +155,27 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     color: white;
-    background-color: #00ded7;
+    background-color: #d1004d;
 }
+
 /* Media queries */
 @media (max-width: 767px) {
     .contacto {
         flex-direction: column;
         align-items: center;
-        height: auto;
         padding: 2px;
     }
+
     .textoContacto {
         width: 100%;
-        padding: 10px;
+        padding: 50px 20px;
     }
+
     .contact-form {
         width: 90%;
-        height: auto;
         margin-top: 30px;
     }
+
     .fechasContacto .fecha1, .fechasContacto .fecha2 {
         width: 100%;
     }
@@ -186,18 +187,22 @@ button[type="submit"]:hover {
         align-items: center;
         padding: 20px;
     }
+
     .textoContacto {
         width: 80%;
-        padding: 15px;
+        padding: 20px;
     }
-    .contact-form {
 
+    .contact-form {
+        padding-top: 20px;
         width: 70%;
-        margin-top: 60px;
+        margin-top: 100px;
     }
+
     .fechasContacto {
         flex-direction: row;
     }
+
     .fechasContacto .fecha1, .fechasContacto .fecha2 {
         width: 45%;
     }
@@ -206,24 +211,27 @@ button[type="submit"]:hover {
 @media (min-width: 1025px) {
     .contacto {
         flex-direction: row-reverse;
-        height: 100vh; /* Mantén esto para asegurar que la imagen de fondo cubra toda la pantalla */
-        padding: 60px;
-        align-items: flex-end; /* Alinea los elementos al fondo del contenedor */
+        height: 100vh;
+        padding: 50px 40px;
+        align-items: flex-end;
     }
+
     .textoContacto {
-        width: 60%;
-        align-self: flex-end; /* Alinea el texto al fondo */
+        width: 56%;
+        align-self: flex-end;
         padding: 20px 20px 0px 100px;
     }
+
     .contact-form {
         width: 400px;
         margin-right: 48px;
-        align-self: flex-end; /* Alinea el texto al fondo */
-
+        align-self: flex-end;
     }
+
     .fechasContacto {
         flex-direction: row;
     }
+
     .fechasContacto .fecha1, .fechasContacto .fecha2 {
         width: 45%;
     }

@@ -1,7 +1,7 @@
 .ubicacion {
     min-height: calc(100vh - 200px); /* Calcula la altura mínima de la ubicación para que el footer quede al final de la página para solucionar el problema de que el footer quedaba en el medio */
     width: 100%;
-    background-color: $color2;
+    background-color: $Fondo;
     display: flex;
     flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
 }
@@ -44,21 +44,21 @@
 .fraseUbicacion {
     grid-area: fraseUbicacion;
     font-size: 1.6rem;
-    color: $color1;
+    color: $Componentes;
     font-weight: 600;
 }
 
 .textoUbicacion {
     grid-area: textoUbicacion;
-    color: $color5;
+    color: $TextoNegro;
 }
 
 .serviciosCercanos{
     height: auto;
-    background-color: $color4;
+    background-color: $Fondo;
 
     h2{
-        color: $color1;
+        color: $Componentes;
         font-family: 'Urbanist';
         font-weight: 600;
         font-size: 30px;
@@ -69,8 +69,8 @@
 .mapaUbicacion{
     height: auto;
     padding: 20px;
-    color: $color1;
-    background-color: $color2;
+    color: $Componentes;
+    background-color: $Fondo;
     //text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     
     img{

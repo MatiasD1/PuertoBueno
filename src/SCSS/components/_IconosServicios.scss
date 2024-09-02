@@ -8,7 +8,7 @@
         position: relative;
         font-family: 'Urbanist', sans-serif;
         font-weight: 500;
-        color: $color5;
+        color: $Encabezado;
         padding-top: 40px;
         padding-bottom: 10px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -21,7 +21,7 @@
         position: relative;
         font-family: 'Urbanist', sans-serif;
         font-weight: 400;
-        color: $color5;
+        color: $Encabezado;
         padding-bottom: 25px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         z-index: 20;
@@ -48,7 +48,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta el número de columnas automáticamente */
         gap: 5px;
-        color: $color5;
+        color: $Encabezado;
         font-family: 'Urbanist', sans-serif;
         font-weight: 400;
         font-size: 1.2rem;

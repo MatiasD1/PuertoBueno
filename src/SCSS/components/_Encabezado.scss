@@ -27,7 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #FFFFFF; /* Sustituye $color1 con el color deseado */
+    border: 2px solid #FFFFFF;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 3;
 }
@@ -37,7 +37,7 @@
     font-family: 'Urbanist', sans-serif;
     font-weight: 400; 
     font-size: 70px; /* Tamaño de fuente predeterminado para escritorio */
-    color: #FFFFFF; /* Sustituye $color1 con el color deseado */
+    color: #FFFFFF; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
     text-align: center;

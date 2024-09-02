@@ -3,17 +3,17 @@
     height: auto;
     position: relative;
     z-index: 1;
-    background-color: $color2; /* Asegúrate de reemplazar con el color correcto */
+    background-color: $Fondo; /* Asegúrate de reemplazar con el color correcto */
 }
 
 .presentacionDepartamentos{
     padding: 40px;
     h2{
         padding-bottom: 20px;
-        color: $color5;
+        color: $TituloNegro;
     }
     p{
-        color: $color6;
+        color: $TextoNegro;
     }
 }
 
@@ -44,6 +44,7 @@
     height: 100%; /* Ajusta la altura para que sea proporcional */
     overflow: hidden;
     position: relative;
+    background-color: black;
 }
 
 .fotoSimbolo {
@@ -61,6 +62,7 @@
     height: 100%;
     object-fit: cover;
     transition: 0.3s;
+    background-color: black !important;
 }
 
 .fotoDepto:hover {
@@ -74,8 +76,8 @@
 }
 
 .textoDepartamentos {
-    font-family: 'Urbanist', sans-serif;
-    color: $color6;
+    font-family: 'Natural', sans-serif;
+    color: $TextoNegro;
     padding-top: 20px; /* Elimina padding para que se ajuste al contenedor */
     box-sizing: border-box;
     display: flex;
@@ -85,7 +87,7 @@
     min-height: 200px; /* Ajusta la altura mínima para asegurar que el icono esté en la parte inferior */
 
     h2 {
-        color: $color5;
+        color: $TituloNegro;
     }
 
     .aloeFooter {

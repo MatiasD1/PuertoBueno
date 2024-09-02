@@ -4,7 +4,7 @@
     font-size: 30px;
     background: none;
     border: none;
-    color: $color5;
+    color: $Encabezado;
     cursor: pointer;
     position: absolute;
     right: 20px;
@@ -14,19 +14,19 @@
 
 /* Estilos para el enlace de contacto */
 .contacto-link {
-    background-color: $color1;
+    background-color: $Componentes;
     color: white; /* Asegura que el texto sea visible sobre el fondo */
     border-radius: 5px;
-    padding: 10px 10px;
+    margin-top: 1.5rem !important;
+    padding: 10px 10px !important;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid transparent; /* Borde inferior inicial transparente */
-    transition: background-color 0.6s ease; /* Incluye border-bottom-color en la transición */
+    transition: background-color 0.3s ease !important; /* Incluye border-bottom-color en la transición */
 }
 
 .contacto-link:hover {
-    background-color: #78002c; /* Cambia el fondo al hacer hover */
+    background-color: #d1004d;
     color: white !important; /* Cambia el color del texto al hacer hover */
-    border-bottom: #78002c; /* Cambia el color del borde inferior al hacer hover */
 }
 
 
@@ -66,6 +66,7 @@
         align-items: flex-start; /* Alinea los elementos en la parte superior izquierda */
         padding: 42px 0;
         width: 100%;
+        background-color: black;
     }
 
     .NavBar h2, .NavBar h3 {
@@ -85,14 +86,14 @@
 
     .nav-link {
         padding: 10px 0;
-        color: $color5 !important;
+        color: $Encabezado !important;
         font-size: 18px;
         text-shadow: none;
         border-bottom: none;
     }
 
     .nav-link:hover {
-        color: $color3 !important;
+        color: $Componentes;
         transition: color 0.3s ease;
     }
 }
@@ -147,7 +148,7 @@
     }
 
     .nav-link:hover {
-        color: $color7 !important;
+        color: $color7;
         transition: color 0.3s ease;
     }
 }
@@ -202,14 +203,14 @@
     }
 
     .nav-link:hover {
-        color: $color3;
-        transition: color 0.5s ease, border-bottom-color 0.5s ease;
+        color: $Componentes;
+        transition: color 0.5s ease;
     }
 }
 
 /* Estilos para el enlace de navegación */
 .nav-link {
-    color: $color5;
+    color: $Encabezado;
     margin-top: 1rem;
     border-bottom: 2px solid transparent;
     padding: 17px 20px;
@@ -218,9 +219,10 @@
     font-family: 'Urbanist', sans-serif;
 
     &:hover {
-        color: $color7 !important;
-        border-bottom-color: rgb(255, 255, 255);
-        transition: color 0.5s ease, border-bottom-color 0.5s ease;
+        color: $color7;
+        //border-bottom-color: rgb(255, 255, 255);
+        //transition: color 0.5s ease, border-bottom-color 0.5s ease;
+        transition: color 0.5s ease;
         text-shadow: 2px 2px 4px rgba(245, 240, 240, 0.26);
     }
 }
@@ -247,7 +249,7 @@
         left: 20px;
         font-family: "Urbanist", sans-serif;
         font-weight: 400;
-        color: $color5;
+        color: $Encabezado;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         z-index: 1600;
     }
@@ -259,7 +261,7 @@
         font-size: 16px; /* Tamaño ajustado para pantallas grandes */
         font-family: "Urbanist", sans-serif;
         font-weight: 400;
-        color: $color3;
+        color: $Componentes;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         z-index: 1600;
     }

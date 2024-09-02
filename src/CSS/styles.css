@@ -19,7 +19,7 @@ $color6: #464646; //texto oscuro
 
 .App {
   text-align: center;
-  background-color: #fffbb1;
+  background-color: #ffffc1;
   overflow: hidden;
 }
 
@@ -123,11 +123,10 @@ $color6: #464646; //texto oscuro
   width: 100%;
   height: auto;
   padding-top: 60px;
-  padding-right: 60px;
   background-image: url("/absolute/../src/img/barcos23.jpg");
   background-size: cover;
   background-position: center;
-  position: relative; /* Esto permitirá que .fotoCosta se posicione correctamente */
+  position: relative;
 }
 
 .fotoCosta {
@@ -138,7 +137,7 @@ $color6: #464646; //texto oscuro
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+  z-index: -1;
 }
 
 .textoContacto {
@@ -148,7 +147,7 @@ $color6: #464646; //texto oscuro
   flex-direction: column;
   text-align: center;
   align-items: center;
-  width: 60%;
+  width: 100%;
 }
 
 .textoContacto h3 {
@@ -263,7 +262,7 @@ textarea {
 
 button[type=submit] {
   color: #ffffff;
-  background: #00a29d;
+  background: #b60043;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
@@ -273,7 +272,7 @@ button[type=submit] {
 
 button[type=submit]:hover {
   color: white;
-  background-color: #00ded7;
+  background-color: #d1004d;
 }
 
 /* Media queries */
@@ -281,16 +280,14 @@ button[type=submit]:hover {
   .contacto {
     flex-direction: column;
     align-items: center;
-    height: auto;
     padding: 2px;
   }
   .textoContacto {
     width: 100%;
-    padding: 10px;
+    padding: 50px 20px;
   }
   .contact-form {
     width: 90%;
-    height: auto;
     margin-top: 30px;
   }
   .fechasContacto .fecha1, .fechasContacto .fecha2 {
@@ -305,11 +302,12 @@ button[type=submit]:hover {
   }
   .textoContacto {
     width: 80%;
-    padding: 15px;
+    padding: 20px;
   }
   .contact-form {
+    padding-top: 20px;
     width: 70%;
-    margin-top: 60px;
+    margin-top: 100px;
   }
   .fechasContacto {
     flex-direction: row;
@@ -321,19 +319,19 @@ button[type=submit]:hover {
 @media (min-width: 1025px) {
   .contacto {
     flex-direction: row-reverse;
-    height: 100vh; /* Mantén esto para asegurar que la imagen de fondo cubra toda la pantalla */
-    padding: 60px;
-    align-items: flex-end; /* Alinea los elementos al fondo del contenedor */
+    height: 100vh;
+    padding: 50px 40px;
+    align-items: flex-end;
   }
   .textoContacto {
-    width: 60%;
-    align-self: flex-end; /* Alinea el texto al fondo */
+    width: 56%;
+    align-self: flex-end;
     padding: 20px 20px 0px 100px;
   }
   .contact-form {
     width: 400px;
     margin-right: 48px;
-    align-self: flex-end; /* Alinea el texto al fondo */
+    align-self: flex-end;
   }
   .fechasContacto {
     flex-direction: row;
@@ -358,7 +356,7 @@ button[type=submit]:hover {
   height: auto;
   position: relative;
   z-index: 1;
-  background-color: #fffbb1; /* Asegúrate de reemplazar con el color correcto */
+  background-color: #ffffc1; /* Asegúrate de reemplazar con el color correcto */
 }
 
 .presentacionDepartamentos {
@@ -366,10 +364,10 @@ button[type=submit]:hover {
 }
 .presentacionDepartamentos h2 {
   padding-bottom: 20px;
-  color: #f4f4f4;
+  color: black;
 }
 .presentacionDepartamentos p {
-  color: #cdcdcd;
+  color: #333333;
 }
 
 .containerDepartamentos {
@@ -399,6 +397,7 @@ button[type=submit]:hover {
   height: 100%; /* Ajusta la altura para que sea proporcional */
   overflow: hidden;
   position: relative;
+  background-color: black;
 }
 
 .fotoSimbolo {
@@ -416,6 +415,7 @@ button[type=submit]:hover {
   height: 100%;
   object-fit: cover;
   transition: 0.3s;
+  background-color: black !important;
 }
 
 .fotoDepto:hover {
@@ -429,8 +429,8 @@ button[type=submit]:hover {
 }
 
 .textoDepartamentos {
-  font-family: "Urbanist", sans-serif;
-  color: #cdcdcd;
+  font-family: "Natural", sans-serif;
+  color: #333333;
   padding-top: 20px; /* Elimina padding para que se ajuste al contenedor */
   box-sizing: border-box;
   display: flex;
@@ -440,7 +440,7 @@ button[type=submit]:hover {
   min-height: 200px; /* Ajusta la altura mínima para asegurar que el icono esté en la parte inferior */
 }
 .textoDepartamentos h2 {
-  color: #f4f4f4;
+  color: black;
 }
 .textoDepartamentos .aloeFooter {
   width: 30px;
@@ -560,7 +560,7 @@ button[type=submit]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #FFFFFF; /* Sustituye $color1 con el color deseado */
+  border: 2px solid #FFFFFF;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 3;
 }
@@ -570,7 +570,7 @@ button[type=submit]:hover {
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-size: 70px; /* Tamaño de fuente predeterminado para escritorio */
-  color: #FFFFFF; /* Sustituye $color1 con el color deseado */
+  color: #FFFFFF;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 0;
   text-align: center;
@@ -635,7 +635,7 @@ button[type=submit]:hover {
   font-style: 400;
   position: absolute;
   top: 20%;
-  color: #f4f4f4;
+  color: #ffffff;
   font-size: 46px;
   z-index: 1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -645,7 +645,7 @@ button[type=submit]:hover {
   font-family: "Urbanist", sans-serif;
   font-style: 300;
   position: absolute;
-  color: #cdcdcd;
+  color: #f8f8f8;
   top: 36%;
   font-size: 25px;
   z-index: 1;
@@ -665,20 +665,20 @@ button[type=submit]:hover {
   top: 72%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #f4f4f4; /* Cambia el color del texto si es necesario */
+  color: #ffffff; /* Cambia el color del texto si es necesario */
   font-size: 4.3rem; /* Ajusta el tamaño del texto según sea necesario */
   font-family: "Urbanist", sans-serif;
   font-style: 500;
   background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para mejorar la legibilidad */
   padding: 0px 25px 18px 25px; /* Espaciado interno para el texto */
-  border: 2px solid #f4f4f4;
+  border: 2px solid #ffffff;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .textoEnlaceContacto:hover {
   color: rgb(211, 211, 211);
-  border: 2px solid #00c1bb;
+  border: 2px solid #b60043;
   background: rgba(0, 0, 0, 0.6);
   cursor: pointer;
 }
@@ -760,7 +760,7 @@ footer {
 .columnaFooter h3 {
   margin-bottom: 10px;
   font-size: 25px;
-  color: #f4f4f4;
+  color: #ffffff;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -771,17 +771,17 @@ footer {
   font-size: 14px;
   max-width: 150px;
   margin: auto;
-  color: #cdcdcd;
+  color: #f8f8f8;
   text-decoration: none;
 }
 
 .accesoNav {
-  color: #cdcdcd;
+  color: #f8f8f8;
   text-decoration: none;
   transition: text-shadow 0.3s ease;
 }
 .accesoNav:hover {
-  text-shadow: 2px 2px 5px #f4f4f4;
+  text-shadow: 2px 2px 5px #ffffff;
 }
 
 .logosRedes {
@@ -805,13 +805,13 @@ footer {
 .footer-line {
   width: 90%;
   height: 1px;
-  background-color: #9e0039;
+  background-color: #b60043;
   margin: 0 auto;
 }
 
 .copyright {
   margin-top: 10px;
-  color: #cdcdcd;
+  color: #f8f8f8;
   font-size: 14px;
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
@@ -825,6 +825,7 @@ footer {
     padding-top: 20px;
     grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas más pequeñas */
     text-align: center; /* Centrar contenido */
+    margin: 0;
   }
   .accesoNav {
     display: none;
@@ -976,7 +977,7 @@ footer {
 }
 
 .dot.active {
-  background-color: #9e0039;
+  background-color: #b60043;
 }
 
 /* Estilos responsivos */
@@ -1033,8 +1034,8 @@ footer {
 .galeriaInicio {
   margin: auto;
   text-align: center;
-  color: #9e0039;
-  background-color: #fffbb1;
+  color: #b60043;
+  background-color: #ffffc1;
   padding-bottom: 20px;
 }
 
@@ -1147,7 +1148,7 @@ footer {
   position: relative;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
-  color: #f4f4f4;
+  color: #ffffff;
   padding-top: 40px;
   padding-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -1159,7 +1160,7 @@ footer {
   position: relative;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  color: #f4f4f4;
+  color: #ffffff;
   padding-bottom: 25px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 20;
@@ -1184,7 +1185,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta el número de columnas automáticamente */
   gap: 5px;
-  color: #f4f4f4;
+  color: #ffffff;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
@@ -1245,14 +1246,14 @@ footer {
 }
 
 .tituloInicio {
-  color: #9e0039;
+  color: #b60043;
   padding-top: 40px;
   font-size: 30px;
 }
 
 .textoInicio {
   font-size: 20px;
-  color: #f4f4f4;
+  color: #333333;
   margin: 0px 120px;
   padding: 10px 20px 60px 20px;
 }
@@ -1280,7 +1281,7 @@ footer {
   padding-top: 50px;
   height: 500px;
   width: 70%;
-  background-color: #00c1bb;
+  background-color: #b60043;
 }
 
 /* Estilos para el botón de hamburguesa */
@@ -1289,7 +1290,7 @@ footer {
   font-size: 30px;
   background: none;
   border: none;
-  color: #f4f4f4;
+  color: #ffffff;
   cursor: pointer;
   position: absolute;
   right: 20px;
@@ -1299,19 +1300,19 @@ footer {
 
 /* Estilos para el enlace de contacto */
 .contacto-link {
-  background-color: #9e0039;
+  background-color: #b60043;
   color: white; /* Asegura que el texto sea visible sobre el fondo */
   border-radius: 5px;
-  padding: 10px 10px;
+  margin-top: 1.5rem !important;
+  padding: 10px 10px !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid transparent; /* Borde inferior inicial transparente */
-  transition: background-color 0.6s ease; /* Incluye border-bottom-color en la transición */
+  transition: background-color 0.3s ease !important; /* Incluye border-bottom-color en la transición */
 }
 
 .contacto-link:hover {
-  background-color: #78002c; /* Cambia el fondo al hacer hover */
+  background-color: #d1004d;
   color: white !important; /* Cambia el color del texto al hacer hover */
-  border-bottom: #78002c; /* Cambia el color del borde inferior al hacer hover */
 }
 
 /* Media queries para la responsividad */
@@ -1344,6 +1345,7 @@ footer {
     align-items: flex-start; /* Alinea los elementos en la parte superior izquierda */
     padding: 42px 0;
     width: 100%;
+    background-color: black;
   }
   .NavBar h2, .NavBar h3 {
     position: static;
@@ -1359,13 +1361,13 @@ footer {
   }
   .nav-link {
     padding: 10px 0;
-    color: #f4f4f4 !important;
+    color: #ffffff !important;
     font-size: 18px;
     text-shadow: none;
     border-bottom: none;
   }
   .nav-link:hover {
-    color: #00c1bb !important;
+    color: #b60043;
     transition: color 0.3s ease;
   }
 }
@@ -1411,7 +1413,7 @@ footer {
     font-size: 18px; /* Ajuste para tamaño de fuente en tabletas */
   }
   .nav-link:hover {
-    color: #D9BE6C !important;
+    color: #D9BE6C;
     transition: color 0.3s ease;
   }
 }
@@ -1457,13 +1459,13 @@ footer {
     font-size: 20px; /* Tamaño de fuente ajustado para escritorios */
   }
   .nav-link:hover {
-    color: #00c1bb;
-    transition: color 0.5s ease, border-bottom-color 0.5s ease;
+    color: #b60043;
+    transition: color 0.5s ease;
   }
 }
 /* Estilos para el enlace de navegación */
 .nav-link {
-  color: #f4f4f4;
+  color: #ffffff;
   margin-top: 1rem;
   border-bottom: 2px solid transparent;
   padding: 17px 20px;
@@ -1472,9 +1474,8 @@ footer {
   font-family: "Urbanist", sans-serif;
 }
 .nav-link:hover {
-  color: #D9BE6C !important;
-  border-bottom-color: rgb(255, 255, 255);
-  transition: color 0.5s ease, border-bottom-color 0.5s ease;
+  color: #D9BE6C;
+  transition: color 0.5s ease;
   text-shadow: 2px 2px 4px rgba(245, 240, 240, 0.26);
 }
 
@@ -1500,7 +1501,7 @@ footer {
   left: 20px;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  color: #f4f4f4;
+  color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 1600;
 }
@@ -1511,7 +1512,7 @@ footer {
   font-size: 16px; /* Tamaño ajustado para pantallas grandes */
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  color: #00c1bb;
+  color: #b60043;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 1600;
 }
@@ -1567,10 +1568,10 @@ html, body {
 }
 
 .textoOtrosServicios h3 {
-  color: #9e0039;
+  color: #b60043;
 }
 .textoOtrosServicios p {
-  color: #f4f4f4;
+  color: #333333;
 }
 
 /* Ajusta el estilo del swiper si es necesario */
@@ -1642,7 +1643,7 @@ html, body {
   height: 40px;
   top: 70%;
   margin-top: -20px;
-  color: #9e0039;
+  color: #b60043;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
   font-size: 50px;
@@ -1698,7 +1699,7 @@ html, body {
   font-family: "Urbanist", sans-serif;
   font-weight: 300;
   position: absolute;
-  color: #9e0039;
+  color: #b60043;
   display: flex;
   top: 65px;
   left: 200px;
@@ -1709,7 +1710,7 @@ html, body {
 .ubicacion {
   min-height: calc(100vh - 200px); /* Calcula la altura mínima de la ubicación para que el footer quede al final de la página para solucionar el problema de que el footer quedaba en el medio */
   width: 100%;
-  background-color: #fffbb1;
+  background-color: #ffffc1;
   display: flex;
   flex-direction: column; /* Asegura que los elementos internos se apilen verticalmente */
 }
@@ -1751,21 +1752,21 @@ html, body {
 .fraseUbicacion {
   grid-area: fraseUbicacion;
   font-size: 1.6rem;
-  color: #9e0039;
+  color: #b60043;
   font-weight: 600;
 }
 
 .textoUbicacion {
   grid-area: textoUbicacion;
-  color: #f4f4f4;
+  color: #333333;
 }
 
 .serviciosCercanos {
   height: auto;
-  background-color: #fffbb1;
+  background-color: #ffffc1;
 }
 .serviciosCercanos h2 {
-  color: #9e0039;
+  color: #b60043;
   font-family: "Urbanist";
   font-weight: 600;
   font-size: 30px;
@@ -1775,8 +1776,8 @@ html, body {
 .mapaUbicacion {
   height: auto;
   padding: 20px;
-  color: #9e0039;
-  background-color: #fffbb1;
+  color: #b60043;
+  background-color: #ffffc1;
 }
 .mapaUbicacion img {
   padding: 20px;
@@ -1880,7 +1881,7 @@ html, body {
   align-items: center;
   justify-content: center;
   padding: 0;
-  color: #9e0039;
+  color: #b60043;
   text-align: center;
   background: 0 0;
   border: 0;
@@ -1907,7 +1908,7 @@ html, body {
   justify-content: center;
   width: 15%;
   padding: 0;
-  color: #9e0039;
+  color: #b60043;
   text-align: center;
   background: 0 0;
   border: 0;
@@ -1999,7 +2000,7 @@ html, body {
   bottom: 10px;
 }
 .swiper-container .swiper-pagination .swiper-pagination-bullet {
-  background-color: #00c1bb;
+  background-color: #b60043;
   opacity: 0.5;
   transition: opacity 0.15s ease;
 }
