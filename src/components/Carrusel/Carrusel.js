@@ -35,17 +35,19 @@ const Carrusel = () => {
                 <div className="carousel-inner carrusel">
                     <div className="carousel-item active">
                         <img src={fotoExterior} className="d-block w-100" alt="Foto del exterior" />
-                        <p className='textoCarruselInicio'>Tu refugio cerca del mar donde conectarse con el bienestar</p>
+                        <p className='textoCarruselInicio'>Tu refugio cerca del mar donde conectar con el bienestar</p>
                     </div>
                     <div className="carousel-item">
                         <img src={fotoPieza} className="d-block w-100" alt="Foto de la pieza" />
-                        <p className='textoCarruselInicio'>Un lugar donde vivir las vacaciones que merecés, encontrando paz y privacidad</p>
+                        <p className='textoCarruselInicio'>Vivir las vacaciones que merecés</p>
                     </div>
                     <div className="carousel-item">
                         <img src={fotoSala} className="d-block w-100" alt="Foto de la sala" />
-                        <p className='textoCarruselInicio'>Disfrutá de momentos memorables y volvé renovado</p>
+                        <p className='textoCarruselInicio'>Encontrar paz y privacidad</p>
                     </div>
                 </div>
+                {/*Compartir momentos memorables*/}
+                {/*Volver renovado*/}
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                     <img src={flechaIzq} alt="Anterior" className="flecha" />
                     <span className="visually-hidden">Previous</span>

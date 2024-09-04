@@ -1,3 +1,5 @@
+
+
 .departamentos {
     width: 100%;
     height: auto;
@@ -10,7 +12,7 @@
     padding: 40px;
     h2{
         padding-bottom: 20px;
-        color: $TituloNegro;
+        color: $Componentes;
     }
     p{
         color: $TextoNegro;
@@ -87,7 +89,7 @@
     min-height: 200px; /* Ajusta la altura mínima para asegurar que el icono esté en la parte inferior */
 
     h2 {
-        color: $TituloNegro;
+        color: $Componentes;
     }
 
     .aloeFooter {

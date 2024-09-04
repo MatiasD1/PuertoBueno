@@ -1,5 +1,5 @@
 import calefaccion from '../../img/icons/calefaccion.png'
-import cochera from '../../img/icons/cochera.png'
+import InfoTuristica from '../../img/icons/InfoTuristica.png'
 import frazadasSabanas from '../../img/icons/frazadasSabanas.png'
 import heladeraFreezer from '../../img/icons/heladeraFreezer1.png'
 import microondas from '../../img/icons/microondas2.png'
@@ -27,8 +27,8 @@ function IconosServicios() {
                 <div className='iconos'>
 
                     <div className='icono'>
-                        <img src={cochera} alt="Icono cochera"/>
-                        <p>Cochera</p>
+                        <img src={InfoTuristica} alt="Icono InfoTuristica"/>
+                        <p>Información<br/> turística</p>
                     </div>
                     <div className='icono'>
                         <img src={calefaccion} alt="Icono calefaccion más"/>

@@ -8,12 +8,13 @@ function Footer() {
         <footer>
             <div className='columnaFooter'>
                 <h3>Puerto Bueno</h3>
-                <p>Tu refugio cerca del mar donde conectarse con el bienestar.</p>
+                <p>Tu refugio cerca del mar donde conectar con el bienestar.</p>
             </div>
             <div className='columnaFooter'>
                 <h3>Accesos Rápidos</h3>
                 <a className="accesoNav" href="/">Inicio</a>
                 <a className="accesoNav" href="/Departamentos">Departamentos</a>
+                <a className="accesoNav" href="/Servicios">Servicios</a>
                 <a className="accesoNav" href="/Ubicacion">Ubicacion</a>
                 <a className="accesoNav" href="/Contacto">Contacto</a>
             </div>

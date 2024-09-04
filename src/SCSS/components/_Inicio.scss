@@ -1,34 +1,68 @@
+.presentacionInicio {
+    padding: 20px; /* Espaciado general */
+    text-align: justify;
 
-/* Añadir estos estilos para asegurar que .Inicio ocupe el 100% del ancho y no cause desbordamiento */
-.Inicio {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.tituloInicio{
-    color: $Componentes;
-    padding-top: 40px;
-    font-size: 30px;
-}
-.textoInicio{
-    font-size: 20px;
-    color: $TextoNegro;
-    margin: 0px 120px;
-    padding: 10px 20px 60px 20px;
-    
-}
-.carrusel,
-.galeria-container,
-.EnlaceContacto {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    .tituloInicio {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+        color: $Componentes;
+        font-family: "Kalam", cursive;
+    }
+
+    .textoInicio {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: justify;
+        padding: 0px 20px 0px 20px;
+    }
 }
 
-/* Ajustar el estilo de las imágenes del carrusel */
-.carousel-item img {
-    width: 100%;
-    height: auto;
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    .presentacionInicio {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+
+        .tituloInicio {
+            font-size: 2rem; /* Disminuye el tamaño del título */
+        }
+
+        .textoInicio {
+            font-size: 1rem; /* Ajusta el tamaño del texto */
+            line-height: 1.4;
+        }
+    }
+}
+
+/* Tabletas (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .presentacionInicio {
+        padding: 15px; /* Ajusta el padding para tabletas */
+
+        .tituloInicio {
+            font-size: 2.3rem; /* Tamaño del título ligeramente más pequeño */
+        }
+
+        .textoInicio {
+            font-size: 1.1rem; /* Ajusta el tamaño del texto */
+            line-height: 1.5;
+        }
+    }
+}
+
+/* Escritorio (1025px y superior) */
+@media (min-width: 1025px) {
+    .presentacionInicio {
+        padding: 30px; /* Mayor padding para pantallas grandes */
+
+        .tituloInicio {
+            font-size: 3rem; /* Aumenta el tamaño del título */
+        }
+
+        .textoInicio {
+            font-size: 1.3rem; /* Tamaño más grande para el texto */
+            line-height: 1.7;
+        }
+    }
 }

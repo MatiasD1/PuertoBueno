@@ -89,8 +89,8 @@ $color6: #464646; //texto oscuro
     margin: 10px;
   }
   .textoCarruselInicio {
-    top: 80%; /* Ajusta según sea necesario */
-    font-size: 14px;
+    top: 60%; /* Ajusta según sea necesario */
+    font-size: 18px;
   }
 }
 /* Tableta/Escritorio Pequeño */
@@ -100,8 +100,8 @@ $color6: #464646; //texto oscuro
     margin: 15px;
   }
   .textoCarruselInicio {
-    top: 75%; /* Ajusta según sea necesario */
-    font-size: 15px;
+    top: 65%; /* Ajusta según sea necesario */
+    font-size: 40px;
   }
 }
 /* Escritorio/Laptop Grande */
@@ -364,7 +364,7 @@ button[type=submit]:hover {
 }
 .presentacionDepartamentos h2 {
   padding-bottom: 20px;
-  color: black;
+  color: #b60043;
 }
 .presentacionDepartamentos p {
   color: #333333;
@@ -440,7 +440,7 @@ button[type=submit]:hover {
   min-height: 200px; /* Ajusta la altura mínima para asegurar que el icono esté en la parte inferior */
 }
 .textoDepartamentos h2 {
-  color: black;
+  color: #b60043;
 }
 .textoDepartamentos .aloeFooter {
   width: 30px;
@@ -635,7 +635,7 @@ button[type=submit]:hover {
   font-style: 400;
   position: absolute;
   top: 20%;
-  color: #ffffff;
+  color: #ffffc1;
   font-size: 46px;
   z-index: 1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -1036,30 +1036,34 @@ footer {
   text-align: center;
   color: #b60043;
   background-color: #ffffc1;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 
 .tituloGaleriaInicio {
   padding-bottom: 20px;
+  font-family: "Kalam", cursive;
 }
 
 /* Estilos generales para el grid */
 .grid-row {
   display: grid;
+  gap: 10px;
   margin-bottom: 0; /* Elimina margen inferior si es necesario */
 }
 
+/* Ajuste para imágenes y overlays */
 .fotosDeptosInicio {
   position: relative;
   overflow: hidden;
   transition: 0.3s;
-  padding: 3px; /* Ajusta según sea necesario */
+  border-radius: 8px;
+  background-color: black;
 }
 
 .fotoSimboloInicio {
   display: none;
   position: absolute;
-  width: 15%;
+  width: 20%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.1);
@@ -1076,7 +1080,7 @@ footer {
 
 .fotoDeptoInicio:hover {
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .fotosDeptosInicio:hover .fotoSimboloInicio {
@@ -1114,19 +1118,31 @@ footer {
 /* Móviles (hasta 767px) */
 @media (max-width: 767px) {
   .grid-row {
-    grid-template-columns: repeat(4, 1fr); /* Dos columnas en móviles */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en móviles para mejor visibilidad */
+  }
+  .tituloGaleriaInicio {
+    font-size: 34px;
   }
   .fotosDeptosInicio {
-    height: 100px; /* Altura ajustada para pantallas pequeñas */
+    height: 150px; /* Ajustado para pantallas pequeñas */
+  }
+  .fotoSimboloInicio {
+    width: 30%; /* Aumentado para pantallas pequeñas */
   }
 }
 /* Tabletas (768px a 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .grid-row {
-    grid-template-columns: repeat(4, 1fr); /* Dos columnas en tabletas */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en tabletas para mejor distribución */
+  }
+  .tituloGaleriaInicio {
+    font-size: 38px;
   }
   .fotosDeptosInicio {
-    height: 200px; /* Altura ajustada para tabletas */
+    height: 200px; /* Ajustado para tabletas */
+  }
+  .fotoSimboloInicio {
+    width: 25%; /* Ajustado para tabletas */
   }
 }
 /* Escritorio (1025px y superior) */
@@ -1134,8 +1150,14 @@ footer {
   .grid-row {
     grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en escritorios */
   }
+  .tituloGaleriaInicio {
+    font-size: 38px;
+  }
   .fotosDeptosInicio {
     height: 270px; /* Altura ajustada para escritorios */
+  }
+  .fotoSimboloInicio {
+    width: 20%; /* Ajustado para escritorios */
   }
 }
 .iconosServicios {
@@ -1148,7 +1170,7 @@ footer {
   position: relative;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
-  color: #ffffff;
+  color: #ffffc1;
   padding-top: 40px;
   padding-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -1237,42 +1259,64 @@ footer {
   transition: transform 0.3s;
 }
 
-/* Añadir estos estilos para asegurar que .Inicio ocupe el 100% del ancho y no cause desbordamiento */
-.Inicio {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.presentacionInicio {
+  padding: 20px; /* Espaciado general */
+  text-align: justify;
 }
-
-.tituloInicio {
+.presentacionInicio .tituloInicio {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
   color: #b60043;
-  padding-top: 40px;
-  font-size: 30px;
+  font-family: "Kalam", cursive;
+}
+.presentacionInicio .textoInicio {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  padding: 0px 20px 0px 20px;
 }
 
-.textoInicio {
-  font-size: 20px;
-  color: #333333;
-  margin: 0px 120px;
-  padding: 10px 20px 60px 20px;
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+  .presentacionInicio {
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+  .presentacionInicio .tituloInicio {
+    font-size: 2rem; /* Disminuye el tamaño del título */
+  }
+  .presentacionInicio .textoInicio {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    line-height: 1.4;
+  }
 }
-
-.carrusel,
-.galeria-container,
-.EnlaceContacto {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Tabletas (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .presentacionInicio {
+    padding: 15px; /* Ajusta el padding para tabletas */
+  }
+  .presentacionInicio .tituloInicio {
+    font-size: 2.3rem; /* Tamaño del título ligeramente más pequeño */
+  }
+  .presentacionInicio .textoInicio {
+    font-size: 1.1rem; /* Ajusta el tamaño del texto */
+    line-height: 1.5;
+  }
 }
-
-/* Ajustar el estilo de las imágenes del carrusel */
-.carousel-item img {
-  width: 100%;
-  height: auto;
+/* Escritorio (1025px y superior) */
+@media (min-width: 1025px) {
+  .presentacionInicio {
+    padding: 30px; /* Mayor padding para pantallas grandes */
+  }
+  .presentacionInicio .tituloInicio {
+    font-size: 3rem; /* Aumenta el tamaño del título */
+  }
+  .presentacionInicio .textoInicio {
+    font-size: 1.3rem; /* Tamaño más grande para el texto */
+    line-height: 1.7;
+  }
 }
-
 .Mapa {
   /*display: flex;
   justify-content: center;
@@ -1551,27 +1595,37 @@ html, body {
   grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
   gap: 20px; /* Espacio entre los elementos (ajusta según sea necesario) */
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .item1 {
   display: flex;
   align-items: center; /* Centra verticalmente */
-  justify-content: flex-start; /* Alinea al inicio de la columna */
+  justify-content: center; /* Centra horizontalmente */
   grid-column: 1/3; /* Ocupa dos columnas en la primera fila */
 }
 
 .item2 {
   display: flex;
   align-items: center; /* Centra verticalmente */
-  justify-content: flex-end; /* Alinea al final de la columna */
+  justify-content: center; /* Centra horizontalmente */
   grid-column: 1/3; /* Ocupa dos columnas en la segunda fila */
 }
 
+.textoOtrosServicios .iconoOtrosServicios {
+  width: 10% !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto; /* Centra el icono horizontalmente */
+}
 .textoOtrosServicios h3 {
   color: #b60043;
+  text-align: center; /* Centra el texto */
 }
 .textoOtrosServicios p {
   color: #333333;
+  padding: 20px;
+  text-align: center; /* Centra el texto */
 }
 
 /* Ajusta el estilo del swiper si es necesario */
@@ -1584,14 +1638,11 @@ html, body {
   .OtrosServicios {
     grid-template-columns: 1fr; /* Una columna en móviles */
     grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
-    flex-direction: column;
-    justify-content: center;
   }
-  .item1 {
+  .item1, .item2 {
     flex-direction: column; /* Coloca el swiper y el texto en fila */
-  }
-  .item2 {
-    flex-direction: column; /* Coloca el texto y el swiper en fila */
+    align-items: center; /* Centra el contenido en la columna */
+    justify-content: center; /* Centra el contenido en la columna */
   }
 }
 /* Tabletas (768px a 1024px) */
@@ -1600,15 +1651,16 @@ html, body {
     grid-template-columns: 1fr 1fr; /* Dos columnas en tabletas */
     grid-template-rows: auto auto; /* Dos filas ajustadas al contenido */
   }
-  .item1 {
+  .item1, .item2 {
     flex-direction: column; /* Coloca el swiper y el texto en fila */
-  }
-  .item2 {
-    flex-direction: column; /* Coloca el texto y el swiper en fila */
+    align-items: center; /* Centra el contenido en la columna */
+    justify-content: center; /* Centra el contenido en la columna */
   }
   .textoOtrosServicios {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centra el contenido */
+    justify-content: center; /* Centra el contenido */
   }
   .tituloOtrosServicios {
     width: auto; /* Ajusta el ancho del texto */
@@ -1622,9 +1674,13 @@ html, body {
   }
   .item1 {
     flex-direction: row; /* Coloca el swiper y el texto en fila */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
   }
   .item2 {
     flex-direction: row-reverse; /* Coloca el texto y el swiper en fila */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
   }
 }
 @keyframes fadeIn {

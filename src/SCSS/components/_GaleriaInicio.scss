@@ -2,32 +2,35 @@
     margin: auto;
     text-align: center;
     color: $Componentes;
-    //text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     background-color: $Fondo;
-    padding-bottom: 20px;
+    padding: 20px; // Ajustado para incluir un padding más consistente en todos los tamaños de pantalla
 }
 
-.tituloGaleriaInicio{
+.tituloGaleriaInicio {
     padding-bottom: 20px;
+    font-family: "Kalam", cursive;
 }
+
 /* Estilos generales para el grid */
-
 .grid-row {
     display: grid;
+    gap: 10px; // Añadido espacio entre los elementos del grid
     margin-bottom: 0; /* Elimina margen inferior si es necesario */
 }
 
+/* Ajuste para imágenes y overlays */
 .fotosDeptosInicio {
     position: relative;
     overflow: hidden;
     transition: 0.3s;
-    padding: 3px; /* Ajusta según sea necesario */
+    border-radius: 8px; // Añadido para bordes redondeados
+    background-color: black;
 }
 
 .fotoSimboloInicio {
     display: none;
     position: absolute;
-    width: 15%;
+    width: 20%; // Ajustado para mayor visibilidad
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
@@ -44,7 +47,7 @@
 
 .fotoDeptoInicio:hover {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.7; // Ajustado para mejor visibilidad
 }
 
 .fotosDeptosInicio:hover .fotoSimboloInicio {
@@ -82,22 +85,34 @@
 /* Móviles (hasta 767px) */
 @media (max-width: 767px) {
     .grid-row {
-        grid-template-columns: repeat(4, 1fr); /* Dos columnas en móviles */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en móviles para mejor visibilidad */
+    }
+    .tituloGaleriaInicio{
+        font-size: 34px;
+    }
+    .fotosDeptosInicio {
+        height: 150px; /* Ajustado para pantallas pequeñas */
     }
 
-    .fotosDeptosInicio {
-        height: 100px; /* Altura ajustada para pantallas pequeñas */
+    .fotoSimboloInicio {
+        width: 30%; /* Aumentado para pantallas pequeñas */
     }
 }
 
 /* Tabletas (768px a 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .grid-row {
-        grid-template-columns: repeat(4, 1fr); /* Dos columnas en tabletas */
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en tabletas para mejor distribución */
+    }
+    .tituloGaleriaInicio{
+        font-size: 38px;
+    }
+    .fotosDeptosInicio {
+        height: 200px; /* Ajustado para tabletas */
     }
 
-    .fotosDeptosInicio {
-        height: 200px; /* Altura ajustada para tabletas */
+    .fotoSimboloInicio {
+        width: 25%; /* Ajustado para tabletas */
     }
 }
 
@@ -106,8 +121,14 @@
     .grid-row {
         grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en escritorios */
     }
-
+    .tituloGaleriaInicio{
+        font-size: 38px;
+    }
     .fotosDeptosInicio {
         height: 270px; /* Altura ajustada para escritorios */
+    }
+
+    .fotoSimboloInicio {
+        width: 20%; /* Ajustado para escritorios */
     }
 }
