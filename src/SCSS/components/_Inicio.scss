@@ -1,20 +1,20 @@
 .presentacionInicio {
     padding: 20px; /* Espaciado general */
-    text-align: justify;
+    text-align: center;
 
     .tituloInicio {
-        font-size: 2.5rem;
+        font-size: 2.9rem;
         margin-bottom: 20px;
         text-align: center;
         color: $Componentes;
-        font-family: "Kalam", cursive;
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 400;
     }
 
     .textoInicio {
         font-size: 1.2rem;
         line-height: 1.6;
         margin-bottom: 20px;
-        text-align: justify;
         padding: 0px 20px 0px 20px;
     }
 }

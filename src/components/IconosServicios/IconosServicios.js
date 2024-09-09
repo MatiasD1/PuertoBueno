@@ -40,8 +40,8 @@ function IconosServicios() {
                     </div>
 
                     <div className='icono'>
-                        <img src={heladeraFreezer} alt="Icono heladeraFreezer"/>
-                        <p>Heladera y<br/> Freezer</p>
+                        <img src={alarma} alt="Icono alarma"/>
+                        <p>Sistema de<br/> Seguridad</p>
                     </div>
                     <div className='icono'>
                         <img src={microondas} alt="Icono microondas"/>
@@ -61,8 +61,8 @@ function IconosServicios() {
                         <p>Caja de<br/> Seguridad</p>
                     </div>
                     <div className='icono'>
-                        <img src={alarma} alt="Icono alarma"/>
-                        <p>Alarma</p>
+                        <img src={TV} alt="Icono TV"/>
+                        <p>TV</p>
                     </div>
 
                     <div className='icono'>
@@ -79,12 +79,12 @@ function IconosServicios() {
                     </div>
 
                     <div className='icono'>
-                        <img src={TV} alt="Icono TV"/>
-                        <p>TV</p>
-                    </div>
-                    <div className='icono'>
                         <img src={toallas} alt="Icono toallas"/>
                         <p>Toallas</p>
+                    </div>
+                    <div className='icono'>
+                        <img src={heladeraFreezer} alt="Icono heladeraFreezer"/>
+                        <p>Heladera y<br/> Freezer</p>
                     </div>
                     <div className='icono'>
                         <img src={primerosAuxilios} alt="Icono primerosAuxilios"/>

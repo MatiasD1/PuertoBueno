@@ -40,9 +40,9 @@ const Departamentos = () => {
         <div className='departamentos'>    
             <Encabezado imageSrc={fotoEncabezado} seccion={"Departamentos"}/>
             <div className='presentacionDepartamentos'>        
-                <h2 className='tituloPresentacionDepartamentos'>Te proponemos 4 opciones para quedarte</h2>
+                <h2 className='tituloPresentacionDepartamentos'>Te proponemos 4 opciones para garantizar tu descanso</h2>
                 <p className='textoPresentacionDepartamentos'>
-                    Disponemos de 4 departamentos distribuidos en 2 plantas. Esto favorece la circulacion fluida por los espacios comunes y la privacidad de cada unidad..<br/><br/>
+                    Disponemos de 4 departamentos distribuidos en 2 plantas. Esto favorece la circulacion fluida por los espacios comunes y la privacidad de cada unidad.
                     Cada departamento cuenta con una baulera y un módulo de estacionamiento fijo, semicubierto, en el sector posterior del edificio, al que se puede acceder con facilidad.
                     En el frente al sector de cocheras, están las bauleras, con una superficie promedio de xxm2.<br/><br/>
                     Todos los departamentos tienen un desarrollo distinto, pero comparten la cualidad de la amplitud y del confort y la atencion enfocada en una decoracion con producciones artísticas que transmiten calma, paz o alegría,
@@ -63,8 +63,9 @@ const Departamentos = () => {
                         </p>
                         <p className='textoDepto'>
                             Cuenta con una cocina totalmente equipada; estar-comedor amplio, con una mesa de
-                            0.80x1.60mts., sillas , sillones, un escritorio con 1 silla de oficina, 1 sofá cama de 1 plaza y un
-                            smart tv 43”. El dormitorio tiene 1 cama de dos plazas. La habitación conecta por doble circulación
+                            0.80x1.60mts., sillas , sillones, 1 sofá cama de 1 plaza y un
+                            smart tv 43”. Un espacio de trabajo compuesto por un escritorio, iluminación focalizada y una silla de oficina.
+                            El dormitorio tiene 1 cama de dos plazas. La habitación conecta por doble circulación
                             con el baño ( que tiene ventilación natural) y el estar comedor .<br/>
                         </p>
                         <img src={aloeFooter} alt="icono flor decorativo" className='aloeFooter'/>
@@ -98,13 +99,13 @@ const Departamentos = () => {
                         <img src={fotoSala} alt="Imagen 1" className='fotoDepto'/>
                     </div>
                     <div className="textoDepartamentos">
-                        <h2 className='tituloDepto'>Departamento PB1</h2>
+                        <h2 className='tituloDepto'>Departamento PA1</h2>
                         <p className='subtituloDepto'>
                         Tiene 3 ambientes y 2 baños, se desarrolla en dos niveles; ocupa una superficie de 83 mts.
                         cuadrados. Es un departamento externo. Disponibilidad para 4 personas.
                         </p>
                         <p className='textoDepto'>
-                            En la planta baja tiene una cocina totalmente equipada; estar-comedor amplio, con una mesa de
+                            La planta baja tiene una cocina totalmente equipada; estar-comedor amplio, con una mesa de
                             0.80x1.60mts, sillas , sillones y un smart tv de 43”. Un baño de uso general y el dormitorio
                             principal, que es grande, con una cama de 2 plazas, un vestidor con dos placares, que conecta
                             con un baño en suite que tiene ventilación exterior. Desde el comedor o desde la habitación se
@@ -119,15 +120,16 @@ const Departamentos = () => {
                         <img src={fotoSala} alt="Imagen 1" className='fotoDepto'/>
                     </div>
                     <div className="textoDepartamentos">
-                        <h2 className='tituloDepto'>Departamento PB2</h2>
+                        <h2 className='tituloDepto'>Departamento PA2</h2>
                         <p className='subtituloDepto'>
                             Tiene 3 ambientes y 2 baños, se desarrolla en dos niveles; ocupa una superficie de 66 mts.
                             cuadrados. Es un departamento interno. Disponibilidad para 4 personas.
                         </p>
                         <p className='textoDepto'>
                             En la planta baja tiene una cocina totalmente equipada; estar-comedor amplio, con una mesa de
-                            0.80x1.60mts, sillas ,sillones y un smart tv de 43”. Un baño de uso general con ventilación al
-                            exterior y un dormitorio con 2 camas de 1 plaza, 1 escritorio con una silla de oficina y un placard grande.
+                            0.80x1.60mts, sillas ,sillones y un smart tv de 43”. Un espacio de trabajo compuesto por un escritorio, iluminación focalizada y una silla de oficina.
+                            Un baño de uso general con ventilación al
+                            exterior y un dormitorio con 2 camas de 1 plaza y un placard grande.
                             El nivel superior es un altillo de ..x.. mts. donde hay 1 dormitorio con una cama de 2 plazas y un
                             placard grande. Conecta a un vestidor y a un baño en suite. El vanitory está integrado al ambiente
                             del dormitorio.<br />

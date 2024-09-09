@@ -365,9 +365,14 @@ button[type=submit]:hover {
 .presentacionDepartamentos h2 {
   padding-bottom: 20px;
   color: #b60043;
+  font-family: "Natural", sans-serif;
+  font-size: 45px;
 }
 .presentacionDepartamentos p {
   color: #333333;
+  font-size: 18px;
+  padding: 0px 20px;
+  font-family: "Urbanist", sans-serif;
 }
 
 .containerDepartamentos {
@@ -429,7 +434,7 @@ button[type=submit]:hover {
 }
 
 .textoDepartamentos {
-  font-family: "Natural", sans-serif;
+  font-family: "Urbanist", sans-serif;
   color: #333333;
   padding-top: 20px; /* Elimina padding para que se ajuste al contenedor */
   box-sizing: border-box;
@@ -516,7 +521,8 @@ button[type=submit]:hover {
     font-size: 28px; /* Tamaño ajustado para pantallas grandes */
   }
   .subtituloDepto {
-    font-size: 22px; /* Tamaño ajustado para pantallas grandes */
+    font-size: 18px; /* Tamaño ajustado para pantallas grandes */
+    font-weight: 500;
     padding: 0px 40px;
   }
   .textoDepto {
@@ -1041,7 +1047,7 @@ footer {
 
 .tituloGaleriaInicio {
   padding-bottom: 20px;
-  font-family: "Kalam", cursive;
+  font-family: "Urbanist", sans-serif;
 }
 
 /* Estilos generales para el grid */
@@ -1261,20 +1267,20 @@ footer {
 
 .presentacionInicio {
   padding: 20px; /* Espaciado general */
-  text-align: justify;
+  text-align: center;
 }
 .presentacionInicio .tituloInicio {
-  font-size: 2.5rem;
+  font-size: 2.9rem;
   margin-bottom: 20px;
   text-align: center;
   color: #b60043;
-  font-family: "Kalam", cursive;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
 }
 .presentacionInicio .textoInicio {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 20px;
-  text-align: justify;
   padding: 0px 20px 0px 20px;
 }
 
@@ -1788,6 +1794,7 @@ html, body {
   flex-direction: column;
   padding: 20px;
   gap: 10px;
+  font-family: "Urbanist", sans-serif;
 }
 @media (min-width: 768px) {
   .presentacionUbicacion {
@@ -1807,9 +1814,9 @@ html, body {
 
 .fraseUbicacion {
   grid-area: fraseUbicacion;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #b60043;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .textoUbicacion {
@@ -1824,8 +1831,8 @@ html, body {
 .serviciosCercanos h2 {
   color: #b60043;
   font-family: "Urbanist";
-  font-weight: 600;
-  font-size: 30px;
+  font-weight: 500;
+  font-size: 2rem;
   padding-top: 20px;
 }
 
@@ -1842,6 +1849,9 @@ html, body {
 
 .tituloMapa {
   user-select: none;
+  font-family: "Urbanist", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .swiper-container1 {

@@ -22,7 +22,9 @@ addLinkToHead('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400.
 addLinkToHead('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 addLinkToHead('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap');
 addLinkToHead('https://fonts.googleapis.com/css2?family=Imprima&family=Khula:wght@300;400;600;700;800&display=swap');
-addLinkToHead('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap')
+addLinkToHead('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+addLinkToHead('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+
 
 // Agregar el script de Google Maps al <head> del documento
 const googleMapsScript = document.createElement('script');
