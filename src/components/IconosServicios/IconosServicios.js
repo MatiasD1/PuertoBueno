@@ -2,16 +2,16 @@ import calefaccion from '../../img/icons/calefaccion.png'
 import InfoTuristica from '../../img/icons/InfoTuristica.png'
 import frazadasSabanas from '../../img/icons/frazadasSabanas.png'
 import heladeraFreezer from '../../img/icons/heladeraFreezer1.png'
-import microondas from '../../img/icons/microondas2.png'
-import baulera from '../../img/icons/baulera1.png'
+import microondas from '../../img/icons/microondas.png'
+import baulera from '../../img/icons/baulera.png'
 import sommier from '../../img/icons/sommier.png'
 import toallas from '../../img/icons/toallas2.png'
 import TV from '../../img/icons/TV2.png'
 import vajillaUtensillos from '../../img/icons/vajillaUtensillos2.png'
 import wifi from '../../img/icons/wifi.png'
-import primerosAuxilios from '../../img/icons/primerosAuxilios1.png'
+import primerosAuxilios from '../../img/icons/primerosAuxilios.png'
 import alarma from '../../img/icons/alarma.png' 
-import cajaSeguridad from '../../img/icons/cajaSeguridad2.png' 
+import cajaSeguridad from '../../img/icons/cajaSeguridad.png' 
 import secador from '../../img/icons/secador2.png' 
 import arena from '../../img/arena.jpg' 
 
@@ -23,7 +23,7 @@ function IconosServicios() {
                 que tu ocupación esencial sea disfrutar cada día. 
             </p>
             <div className='iconosContenedor'>        
-                <img src={arena} className="serviciosFondo" alt="orilla del mar"/>
+               {/* <img src={arena} className="serviciosFondo" alt="orilla del mar"/> COLOR DE FONDO EN SCSS*/}
                 <div className='iconos'>
 
                     <div className='icono'>

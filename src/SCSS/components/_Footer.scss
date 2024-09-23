@@ -40,7 +40,8 @@ footer {
     transition: text-shadow 0.3s ease;
 
     &:hover {
-        text-shadow: 2px 2px 5px $Encabezado;
+        color: $color7;
+        transition: color 0.5s ease;
     }
 }
 

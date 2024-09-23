@@ -365,8 +365,7 @@ button[type=submit]:hover {
 .presentacionDepartamentos h2 {
   padding-bottom: 20px;
   color: #b60043;
-  font-family: "Natural", sans-serif;
-  font-size: 45px;
+  font-family: "Urbanist", sans-serif;
 }
 .presentacionDepartamentos p {
   color: #333333;
@@ -457,6 +456,9 @@ button[type=submit]:hover {
 
 /* Móviles (hasta 767px) */
 @media (max-width: 767px) {
+  .presentacionDepartamentos h2 {
+    font-size: 24px;
+  }
   .item {
     flex-direction: column;
     min-height: auto; /* Altura automática para móviles */
@@ -483,6 +485,9 @@ button[type=submit]:hover {
 }
 /* Tabletas (768px a 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .presentacionDepartamentos h2 {
+    font-size: 34px;
+  }
   .fotosDeptos {
     height: 100%; /* Asegúrate de que la altura sea 100% de la fila */
   }
@@ -507,6 +512,9 @@ button[type=submit]:hover {
 }
 /* Escritorio (1025px y superior) */
 @media (min-width: 1025px) {
+  .presentacionDepartamentos h2 {
+    font-size: 36px;
+  }
   .containerDepartamentos {
     padding: 20px;
   }
@@ -641,7 +649,7 @@ button[type=submit]:hover {
   font-style: 400;
   position: absolute;
   top: 20%;
-  color: #ffffc1;
+  color: #ffffff;
   font-size: 46px;
   z-index: 1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -787,7 +795,8 @@ footer {
   transition: text-shadow 0.3s ease;
 }
 .accesoNav:hover {
-  text-shadow: 2px 2px 5px #ffffff;
+  color: #D9BE6C;
+  transition: color 0.5s ease;
 }
 
 .logosRedes {
@@ -1168,7 +1177,6 @@ footer {
 }
 .iconosServicios {
   position: relative;
-  background-color: black;
   overflow: hidden;
   padding-bottom: 20px;
 }
@@ -1176,10 +1184,10 @@ footer {
   position: relative;
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
-  color: #ffffc1;
+  color: #b60043;
   padding-top: 40px;
   padding-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
   z-index: 2;
   text-align: center;
   font-size: 50px;
@@ -1188,9 +1196,9 @@ footer {
   position: relative;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
-  color: #ffffff;
-  padding-bottom: 25px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: black;
+  padding: 0px 20px 25px 20px;
+  /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
   z-index: 20;
   text-align: center;
   font-size: 1.6em;
@@ -1213,7 +1221,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta el número de columnas automáticamente */
   gap: 5px;
-  color: #ffffff;
+  color: #333333;
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
@@ -1417,7 +1425,6 @@ footer {
     border-bottom: none;
   }
   .nav-link:hover {
-    color: #b60043;
     transition: color 0.3s ease;
   }
 }

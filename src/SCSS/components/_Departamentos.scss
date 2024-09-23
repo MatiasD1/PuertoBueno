@@ -12,8 +12,7 @@
     h2{
         padding-bottom: 20px;
         color: $Componentes;
-        font-family: "Natural", sans-serif;
-        font-size: 45px;
+        font-family: "Urbanist", sans-serif;
     }
     p{
         color: $TextoNegro;
@@ -107,6 +106,12 @@
 
 /* Móviles (hasta 767px) */
 @media (max-width: 767px) {
+
+    .presentacionDepartamentos{
+        h2{
+            font-size: 24px;
+        }
+    }
     .item {
         flex-direction: column;
         min-height: auto; /* Altura automática para móviles */
@@ -139,6 +144,12 @@
 
 /* Tabletas (768px a 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
+    
+    .presentacionDepartamentos{
+        h2{
+            font-size: 34px;
+        }
+    }
     .fotosDeptos {
         height: 100%; /* Asegúrate de que la altura sea 100% de la fila */
     }
@@ -169,6 +180,11 @@
 /* Escritorio (1025px y superior) */
 @media (min-width: 1025px) {
 
+    .presentacionDepartamentos{
+        h2{
+            font-size: 36px;
+        }
+    }
     .containerDepartamentos {
         padding: 20px;
     }
