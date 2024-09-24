@@ -1,12 +1,13 @@
-import Swiper3 from "../Swiper3/Swiper3";
+import Swiper3 from "../Swiper3/Swiper3"
 import cochera from '../../img/icons/cochera.png'
+import parrilla from '../../img/icons/parrilla.png' 
 
 const OtrosServicios = () => {
     return (
         <div className='OtrosServicios'>
             <div className='item1'>
                 <div className="textoOtrosServicios">
-                    <img src={cochera} className="iconoOtrosServicios" alt="icono cochera"/>
+                    <img src={parrilla} className="iconoOtrosServicios" alt="icono parrilla"/>
                     <h3 className='tituloOtrosServicios'>Sala de usos múltiples</h3>
                     <p>
                         Sala de usos múltiples para asados y reuniones familiares, con parrilla, mesada, pileta de acero
